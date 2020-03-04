@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  width: 100vw;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  background: #0694c1;
+  border-radius: 0px;
+}
+.title {
+  position: absolute;
+  width: 100vw;
+  height: 21px;
+  left: auto;
+  right: auto;
+  top: 25px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 21px;
+  cursor: default;
+  /* identical to box height */
+
+  letter-spacing: 0.2em;
+
+  color: #ffffff;
+}
