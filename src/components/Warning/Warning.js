@@ -7,7 +7,7 @@ const Warning = () => {
       <h1 className={style.warnHeader}>UWAGA! Używaj tylko jako POMOC !!!</h1>
       <p>
         Każdy pacjent to indywidualna sytuacja. Farmakoterapie i jej dawki
-        powinny być weryfikowane pod względem każdego pacjenta.
+        powinny być weryfikowane indywidualnie pod względem każdego pacjenta.
       </p>
     </div>
   );
