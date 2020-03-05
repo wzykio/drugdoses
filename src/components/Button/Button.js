@@ -33,7 +33,7 @@ const Button = () => {
           checked={activeResuscytationDoses}
           onChange={selectResuscytationDoses}
         />
-      </label>git 
+      </label>
 
       <label className={activeEnyDoses ? style.button : style.buttonUnactive}>
         <FaCheck
