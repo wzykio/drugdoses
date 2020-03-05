@@ -1,0 +1,31 @@
+.warningBlock{
+    position: relative;
+    top:100px;
+    width: 100vw;
+    height: 10vh;
+   
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.warnHeader{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+color: #712121;
+margin-bottom: 15px;
+}
+.warningBlock p{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+align-items: center;
+
+color: #272727;
+}
