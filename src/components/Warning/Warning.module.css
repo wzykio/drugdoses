@@ -1,8 +1,10 @@
 .warningBlock {
   position: relative;
   top: 100px;
+  margin-bottom: 10px;
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
+  margin-bottom: 3vh;
   display: flex;
   flex-direction: column;
 }
@@ -24,6 +26,7 @@
   font-size: 14px;
   line-height: 16px;
   align-items: center;
+  margin-bottom: 2vh;
 
   color: #272727;
 }
