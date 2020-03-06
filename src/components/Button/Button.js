@@ -23,8 +23,7 @@ const Button = () => {
         <FaCheck
           className={
             activeResuscytationDoses
-              ? style.checkedIcon
-              : style.checkedIconUnactive
+              ? style.checkedIcon : style.checkedIconUnactive
           }
         />
         <p>Zatrzymanie krążenia</p>
@@ -41,7 +40,7 @@ const Button = () => {
             activeEnyDoses ? style.checkedIcon : style.checkedIconUnactive
           }
         />
-        <p>Inne leki</p>
+        <p>Lekki w innych przypadkach</p>
         <input
           type="radio"
           checked={activeEnyDoses}

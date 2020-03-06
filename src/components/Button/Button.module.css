@@ -1,3 +1,4 @@
+
 .buttonWrapper {
   position: relative;
   width: 100vw;
@@ -8,12 +9,12 @@
 }
 .button {
     
-  width: 30vw;
+  width: 40vw;
   height: 10vh;
   display: flex;
-  padding-left: 30px;
+ 
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background: #862727;
   box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px 0px 0px 4px;
@@ -22,7 +23,7 @@
   display: none;
 }
 .button p {
-  margin-left: 20px;
+ position: relative;
   font-family: Muli;
   font-style: normal;
   font-weight: 800;
@@ -30,16 +31,16 @@
   line-height: 37px;
   color: white;
   /* or 111% */
-
+ 
   text-align: center;
   letter-spacing: 0.1px;
 }
 .buttonUnactive {
   
-    width: 30vw;
+    width: 45vw;
     height: 10vh;
     display: flex;
-    padding-left: 30px;
+   
     align-items: center;
     justify-content: center;
   background: #f1f1f1;
@@ -52,15 +53,14 @@
 .buttonUnactive p {
     font-family: Muli;
   font-size: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+  
+  
 }
 .checkedIcon {
   font-size: 40px;
   color: white;
 }
 .checkedIconUnactive {
-  font-size: 40px;
-  color: white;
+  
   display: none;
 }
