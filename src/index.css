@@ -1,8 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=latin-ext');
-*{
-  margin:0;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=latin-ext");
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+#formulka1 {
+  position: absolute;
+  width: 306px;
+  height: 16px;
+  left: 53px;
+  top: 79px;
 
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 
+  color: #712121;
+}
+#formulka2 {
+  position: absolute;
+  width: 358px;
+  height: 28px;
+  left: 26px;
+  top: 100px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #272727;
+}
