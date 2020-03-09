@@ -1,29 +1,47 @@
 .header {
+  padding: 5px;
   position: absolute;
   width: 100vw;
   height: 70px;
   left: 0px;
-  top: 0px;
   background: #0694c1;
   border-radius: 0px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
 }
 .title {
   position: absolute;
-  width: 100vw;
+  width: 65vw;
   height: 21px;
-  left: auto;
-  right: auto;
-  top: 25px;
-
+  left: 10vw;
+  display: flex;
+  margin-top: 18px;
+  padding-left: 20px;
   font-family: Roboto;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 25px;
   line-height: 21px;
   cursor: default;
-  /* identical to box height */
-
   letter-spacing: 0.2em;
-
   color: #ffffff;
+  
+ 
+}
+.navicon {
+  position: static;
+  padding:3px;
+  width: 5vw;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  font-size: 35px;
+  outline: none;
+}
+.navicon:hover{
+  color: #d1c0c0;
 }
