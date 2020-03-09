@@ -1,7 +1,10 @@
 .App {
+ 
   width: 100vh;
-  height: 10vh;
+  height: 100vh;
   text-align: center;
+  flex-direction: column;
+  
 }
 
 
