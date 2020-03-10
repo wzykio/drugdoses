@@ -3,6 +3,7 @@
   width: 100vh;
   height: 100vh;
   text-align: center;
+  flex-direction: column;
   
 }
 
