@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Weight.module.css";
 
-const Weight = () => {
+const Weight = ({ get }) => {
   let [weight, setWeight] = useState(1);
+  useEffect(get.bind(null, weight));
   const minusOne = () => {
     if (weight >= 1) {
       const numMinusOne = Number(weight);
@@ -31,6 +32,7 @@ const Weight = () => {
   const chandleChangeInput = e => {
     setWeight(e.target.value);
   };
+
   return (
     <div className={style.weightWrapper}>
       <h1>Waga dziecka : </h1>
@@ -53,6 +55,7 @@ const Weight = () => {
         <button className={style.weightButton} onClick={plusFive}>
           +5kg
         </button>
+        
       </div>
     </div>
   );
