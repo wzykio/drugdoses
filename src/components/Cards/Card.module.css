@@ -1,0 +1,80 @@
+.cardWrapper {
+  width: 100vw;
+  height: 45vh;
+  position: relative;
+  margin-top: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec {
+  display: flex;
+  flex-direction: row;
+}
+.cardA {
+  width: 25vw;
+  height: 20vh;
+  background: #ddcf4f;
+  border-radius: 3px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  padding: 5px;
+}
+.cardA h3 {
+  line-height: 40px;
+  font-size: 20px;
+}
+.cardB {
+  width: 25vw;
+  height: 20vh;
+  background: #44a94e;
+  border-radius: 3px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  padding: 5px;
+}
+.cardB h3 {
+  line-height: 40px;
+  font-size: 20px;
+}
+.cardC {
+  width: 25vw;
+  height: 20vh;
+  background: #33b9e3;
+  border-radius: 3px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  padding: 5px;
+}
+.cardC h3 {
+  line-height: 40px;
+  font-size: 20px;
+}
+.cardD {
+  width: 25vw;
+  height: 20vh;
+  background: #f16f6f;
+  border-radius: 3px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.cardD h3 {
+  line-height: 40px;
+  font-size: 20px;
+}
