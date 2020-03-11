@@ -4,7 +4,7 @@ import style from "./Weight.module.css";
 const Weight = () => {
   let [weight, setWeight] = useState(1);
   const minusOne = () => {
-    if (weight >= 5) {
+    if (weight >= 1) {
       const numMinusOne = Number(weight);
       setWeight(numMinusOne - 1);
     } else {
