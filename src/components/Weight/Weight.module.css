@@ -75,19 +75,3 @@
 
   color: #737b7d;
 }
-
-.showAlertBox{
-  position: relative;
-  margin: auto;
-  padding: 5px;
-  background-color: #FF0000;
-  color: #fff;
-  opacity: 0.75;
-  width: 25%;
-  height: 40px;
-  border-radius: 4px;
-  font-family: Roboto;
-  font-weight: 600;
-  z-index: 2;
-  line-height: 25px;
-}

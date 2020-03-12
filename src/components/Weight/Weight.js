@@ -11,17 +11,13 @@ const Weight = ({ get }) => {
     if (weight >= 1) {
       const numMinusOne = Number(weight);
       setWeight(numMinusOne - 1);
-    } else {
-      ReactDOM.render(showAlertBox, document.getElementById('alertBox'));
-    }
+    } 
   };
   const minusFive = () => {
     if (weight >= 5) {
       const numMinusFive = Number(weight);
       setWeight(numMinusFive - 5);
-    } else {
-      alert("Waga nie może być ujemna!");
-    }
+    } 
   };
 
   const plusOne = () => {
@@ -59,9 +55,6 @@ const Weight = ({ get }) => {
           +5kg
         </button>
         
-      </div>
-      <div id="alertBox">
-
       </div>
     </div>
   );
