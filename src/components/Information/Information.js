@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Warning.module.css";
+import style from "./Information.module.css";
 
 const Warning = () => {
   return (
