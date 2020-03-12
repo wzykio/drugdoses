@@ -3,7 +3,7 @@ import style from "./Button.module.css";
 import { FaCheck } from "react-icons/fa";
 const Button = () => {
   const [activeEnyDoses, setActiveEnyDoses] = useState(false);
-  const [activeResuscytationDoses, setresuscytationDoses] = useState(false);
+  const [activeResuscytationDoses, setresuscytationDoses] = useState(true);
   const selectEnyDoses = () => {
     setActiveEnyDoses(true);
     setresuscytationDoses(false);
@@ -23,7 +23,8 @@ const Button = () => {
         <FaCheck
           className={
             activeResuscytationDoses
-              ? style.checkedIcon : style.checkedIconUnactive
+              ? style.checkedIcon
+              : style.checkedIconUnactive
           }
         />
         <p>Zatrzymanie krążenia</p>
@@ -40,7 +41,7 @@ const Button = () => {
             activeEnyDoses ? style.checkedIcon : style.checkedIconUnactive
           }
         />
-        <p>Lekki w innych przypadkach</p>
+        <p>Leki w innych przypadkach</p>
         <input
           type="radio"
           checked={activeEnyDoses}
