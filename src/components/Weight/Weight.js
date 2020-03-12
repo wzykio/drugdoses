@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import style from "./Weight.module.css";
 
 const Weight = ({ get }) => {
   let [weight, setWeight] = useState(1);
   useEffect(get.bind(null, weight));
+  const showAlertBox = <div className= {style.showAlertBox}>Waga nie może być ujemna!</div>;
+
   const minusOne = () => {
     if (weight >= 1) {
       const numMinusOne = Number(weight);
       setWeight(numMinusOne - 1);
     } else {
-      alert("Waga nie może być ujemna!");
+      ReactDOM.render(showAlertBox, document.getElementById('alertBox'));
     }
   };
   const minusFive = () => {
@@ -56,6 +59,9 @@ const Weight = ({ get }) => {
           +5kg
         </button>
         
+      </div>
+      <div id="alertBox">
+
       </div>
     </div>
   );
