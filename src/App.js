@@ -5,6 +5,7 @@ import Warning from "./components/Information/Information";
 import Button from "./components/Button/Button";
 import Weight from "./components/Weight/Weight";
 import Card from "./components/Cards/Card";
+import Kg_Ibs from "./components/Kg_Ibs/Kg_Ibs";
 
 function App() {
   const [finalweight, setFinalweight] = useState(null);
@@ -18,6 +19,7 @@ function App() {
       <Warning />
       <Button />
       <Weight get={addWeight} />
+      <Kg_Ibs />
       <Card weight={finalweight} />
     </div>
   );
