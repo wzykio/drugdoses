@@ -16,11 +16,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Warning />
+      {/*<Warning />
       <Button />
       <Weight get={addWeight} />
       <Kg_lbs />
-      <Card weight={finalweight} />
+      <Card weight={finalweight} /> */}
     </div>
   );
 }

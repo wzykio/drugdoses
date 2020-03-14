@@ -1,48 +1,34 @@
 .header {
-  padding: 5px;
-  position: absolute;
   width: 100vw;
-  height: 60px;
-  left: 0px;
   background: #0694c1;
-  border-radius: 0px;
+  color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
-  
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
 }
-.title {
-  position: absolute;
-  width: 65vw;
-  height: 21px;
-  left: 10vw;
-  display: flex;
-  margin-top: 18px;
-  padding-left: 20px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 21px;
-  cursor: default;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  
- 
-}
+
 .navicon {
-  position: static;
-  padding:3px;
-  width: 5vw;
-  height: 40px;
-  margin-left: 20px;
-  margin-top: 5px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  font-size: 35px;
-  outline: none;
+  padding: 13px;
+  padding-bottom: 8px;
+  background: #0694c1;
+  transition: opacity 0.3s ease;
 }
-.navicon:hover{
-  color: #d1c0c0;
+
+.navicon :hover{
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+.title {
+  padding: 8px;
+  background: #0694c1;
+}
+
+@media only screen and (max-width: 576px) {
+  .header{
+    justify-content: flex-start;
+  }
 }

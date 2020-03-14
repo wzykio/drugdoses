@@ -1,12 +1,34 @@
 .App {
-  
   width: 100vw;
   height: 100vh;
   display: flex;
   text-align: center;
   flex-direction: column;
   
+  font-family: Roboto;
+  font-size: 14px;
 }
 
+@media (min-width: 576px) { 
+  .App {
+    font-size: 16px;
+  }
+ }
 
+@media (min-width: 768px) { 
+  .App {
+    font-size: 18px;
+  }
+ }
 
+@media (min-width: 992px) { 
+  .App {
+    font-size: 20px;
+  }
+ }
+
+@media (min-width: 1200px) { 
+  .App {
+    font-size: 22px;
+  }
+ }

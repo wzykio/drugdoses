@@ -4,15 +4,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
   return (
-    <div className={style.header}>
-      <div className={style.navicon}>
-        <GiHamburgerMenu  />
-      </div>
+      <div className={style.header}>
+        <div className={style.navicon}>
+          <GiHamburgerMenu />
+        </div>
 
-      <div className={style.title}>
-        <p>Dawki leków u dzieci</p>
+        <div className={style.title}>
+          <p>Dawki leków u dzieci</p>
+        </div>
       </div>
-    </div>
   );
 };
 export default Header;
