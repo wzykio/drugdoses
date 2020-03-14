@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import style from "./Kg_Ibs.module.css";
+import style from "./Kg_lbs.module.css";
 import { FaCheck } from "react-icons/fa";
-const Kg_Ibs = () => {
-  const [activeIbs, setActiveIbs] = useState(false);
+const Kg_lbs = () => {
+  const [activelbs, setActivelbs] = useState(false);
   const [activeKg, setKg] = useState(true);
-  const selectIbs = () => {
-    setActiveIbs(true);
+  const selectlbs = () => {
+    setActivelbs(true);
     setKg(false);
   };
   const selectKg = () => {
     setKg(true);
-    setActiveIbs(false);
+    setActivelbs(false);
   };
   return (
     <div className={style.buttonWrapper}>
@@ -22,14 +22,14 @@ const Kg_Ibs = () => {
         <input type="radio" checked={activeKg} onChange={selectKg} />
       </label>
 
-      <label className={activeIbs ? style.button : style.buttonUnactive}>
+      <label className={activelbs ? style.button : style.buttonUnactive}>
         <FaCheck
-          className={activeIbs ? style.checkedIcon : style.checkedIconUnactive}
+          className={activelbs ? style.checkedIcon : style.checkedIconUnactive}
         />
-        <p>Ibs</p>
-        <input type="radio" checked={activeIbs} onChange={selectIbs} />
+        <p>lbs</p>
+        <input type="radio" checked={activelbs} onChange={selectlbs} />
       </label>
     </div>
   );
 };
-export default Kg_Ibs;
+export default Kg_lbs;
