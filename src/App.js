@@ -17,8 +17,8 @@ function App() {
     <div className="App">
       <Header />
       <Information />
-      {/*<Button />
-      <Weight get={addWeight} />
+      <Button />
+      {/*<Weight get={addWeight} />
       <Kg_lbs />
       <Card weight={finalweight} /> */}
     </div>

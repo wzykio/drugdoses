@@ -1,60 +1,52 @@
-.buttonWrapper {
-  position: relative;
-  width: 100vw;
-  top: 10vh;
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: aliceblue;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
 }
+
 .button {
-  width: 40vw;
-  height: 10vh;
   display: flex;
-
-  align-items: center;
-  justify-content: space-around;
-  background: #862727;
-  box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px 0px 0px 4px;
+    align-items: center;
+    color: #0d71b4;
+    font-weight: 500;
+    border-bottom: 4px solid;
+    padding: 4vw 8vw 4vw 6vw;
+    transition: 0.3s ease;
+    background-color: #e3f2ff;
 }
-.button input {
+
+
+
+.button input{
   display: none;
 }
+
+.button svg{
+  position: absolute;
+}
+
 .button p {
-  position: relative;
-  font-family: Muli;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 37px;
-  color: white;
-  /* or 111% */
+  margin-left: 6vh;
+}
 
-  text-align: center;
-  letter-spacing: 0.1px;
+.button.inactive {
+  /* background: #f1f1f1; */
+  border-bottom: 4px solid transparent;
+    color: #7c8ca9;
+    background: transparent;
+  /* box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.2); */
 }
-.buttonUnactive {
-  width: 45vw;
-  height: 10vh;
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
-  background: #f1f1f1;
-  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.18);
-  border-radius: 0px 4px 4px 0px;
+.button.inactive p {
+  /* margin: 15px 30px 15px 30px; */
 }
-.buttonUnactive input {
-  display: none;
+
+.button.inactive svg{
+  display:none;
 }
-.buttonUnactive p {
-  font-family: Muli;
-  font-size: 25px;
-}
-.checkedIcon {
-  font-size: 40px;
-  color: white;
-}
-.checkedIconUnactive {
-  display: none;
+
+.button:hover {
+  background-color: #d1e7fa;
 }
