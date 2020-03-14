@@ -1,5 +1,5 @@
 .wrapper {
-  width: 100vw;
+  width: 98vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,11 +11,11 @@
   display: flex;
     align-items: center;
     color: #0d71b4;
+    background-color: #e3f2ff;
     font-weight: 500;
     border-bottom: 4px solid;
     padding: 4vw 8vw 4vw 6vw;
     transition: 0.3s ease;
-    background-color: #e3f2ff;
 }
 
 .button input{
