@@ -19,8 +19,8 @@ function App() {
       <Information />
       <Button />
       <Weight get={addWeight} />
-      {/*<Kg_lbs />
-      <Card weight={finalweight} /> */}
+      <Kg_lbs />
+      <Card weight={finalweight} />
     </div>
   );
 }

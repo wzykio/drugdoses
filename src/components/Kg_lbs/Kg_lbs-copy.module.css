@@ -1,6 +1,7 @@
-.wrapper {
+.buttonWrapper {
+  position: relative;
   width: 100vw;
-  margin-top: 4vw;
+  top: 21vh;
   display: flex;
   align-items: center;
   justify-content: center;

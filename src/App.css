@@ -1,10 +1,6 @@
 .App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+  max-width: 50%;
   text-align: center;
-  flex-direction: column;
-  
   font-family: Roboto;
   font-size: 14px;
 }

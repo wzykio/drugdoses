@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import style from "./Weight.module.css";
-import classNames from 'classnames';
 
 const Weight = ({ get }) => {
   let [weight, setWeight] = useState(1)

@@ -1,4 +1,5 @@
 .wrapper {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,14 +18,14 @@
     background-color: #e3f2ff;
 }
 
-
-
 .button input{
   display: none;
 }
 
 .button svg{
   position: absolute;
+  opacity: 1;
+  transition: 0.3s ease;
 }
 
 .button p {
@@ -39,12 +40,8 @@
   /* box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.2); */
 }
 
-.button.inactive p {
-  /* margin: 15px 30px 15px 30px; */
-}
-
 .button.inactive svg{
-  display:none;
+  opacity: 0;
 }
 
 .button:hover {
