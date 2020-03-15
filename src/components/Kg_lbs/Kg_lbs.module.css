@@ -1,59 +1,46 @@
-.buttonWrapper {
-  position: relative;
-  width: 100vw;
-  top: 21vh;
+.wrapper {
+  width: 98vw;
+  margin-top: 4vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.button {
-  width: 10vw;
-  height: 10vh;
-  display: flex;
 
+.button {
+  display: flex;
   align-items: center;
-  justify-content: space-around;
+  color: white;
   background: #272727;
-  box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px 0px 0px 4px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 2vw 3vw 2vw 5vw;
+    /* transition: 0.3s ease; */
 }
+
 .button input {
   display: none;
 }
+
+.button svg{
+  position: absolute;
+  opacity: 1;
+  /* transition: 0.2s ease-in-out; */
+  margin-left: -2.6vw;
+}
+
 .button p {
-  position: relative;
-  font-family: Muli;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 37px;
-  color: white;
+  margin-left: 2vh;
+}
 
-  text-align: center;
-  letter-spacing: 0.1px;
+.button.inactive {
+    color: rgb(94, 94, 94);
+    background: #f1f1f1;
 }
-.buttonUnactive {
-  width: 10vw;
-  height: 10vh;
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
-  background: #f1f1f1;
-  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.18);
-  border-radius: 0px 4px 4px 0px;
+.button.inactive svg{
+  opacity: 0;
 }
-.buttonUnactive input {
-  display: none;
-}
-.buttonUnactive p {
-  font-family: Muli;
-  font-size: 25px;
-}
-.checkedIcon {
-  font-size: 30px;
-  color: white;
-}
-.checkedIconUnactive {
-  display: none;
+
+.button:hover {
+  background-color: #272727;
 }

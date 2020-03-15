@@ -1,31 +1,24 @@
-.warningBlock {
-  position: relative;
-  top: 80px;
-  
-  width: 100vw;
-  height: 12vh;
-  margin-bottom: 1vh;
+.information{
+  width: 98vw;
+  font-size: 0.7em;
+  margin: 1.5vw;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
 }
 
-.warnHeader {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  color: #712121;
-  margin-bottom: 15px;
+.header{
+  color: red;
+  font-size: 1.9em;
+  margin: 0.5vw;
 }
-.warningBlock p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  align-items: center;
-  margin-bottom: 2vh;
-  color: #272727;
+
+.body{
+  color: black;
+  font-size: 1.4em;
+  margin: 0.5vw;
+  width: 90%;
+  max-width: 800px;
+  align-self: center;
 }
