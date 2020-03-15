@@ -11,13 +11,13 @@ h3 {
   font-size: 1.1em;
 }
 
-.buttons{
+.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.wrapper button{
+.wrapper button {
   /* padding: 2.7vw 2vw 3vw 2vw; */
   padding: 4vw 0 4vw 0;
   /* 100  - 4 * 10 - 0.8 * 8 -20*/
@@ -32,7 +32,6 @@ h3 {
   border-radius: 4px;
 }
 
-
 .buttonA {
   background: #3f8fc5;
 }
@@ -41,7 +40,7 @@ h3 {
   background: #0d71b4;
 }
 
-.wrapper button:hover{
+.wrapper button:hover {
   background: #08629e;
 }
 
