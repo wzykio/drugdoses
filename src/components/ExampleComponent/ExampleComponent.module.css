@@ -1,5 +1,35 @@
+ /* Selector każdego diva na stronie */
+ /* Nie trzeba im dawać specjalnie klasy */
+ /* Tyczy się TYLKO tego komponentu */
+div{
+    padding: 10px 15px;
+    margin: 10px;
+
+    border: 1px solid rgb(207, 207, 207);
+}
+
+/* To samo z labelami */
+label{
+    padding: 10px 15px;
+    margin: 10px;
+
+    background: brown;
+    color: white;
+
+    border: 1px solid rgb(70, 0, 0);
+}
+
+/* Label najechany myszką */
+label:hover{
+    background: cornflowerblue;
+}
+
+/* Klasy do przypisania piszemy z kropką */
 .element{
     background: tomato;
-    margin: 0 auto;
-    padding: 20vw
+    color: white;
+}
+
+.element2{
+    background: turquoise;
 }
