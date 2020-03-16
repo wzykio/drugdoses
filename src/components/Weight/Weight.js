@@ -3,65 +3,65 @@ import style from "./Weight.module.css";
 import AlertBox from "../AlertBox/AlertBox";
 
 const Weight = ({ get }) => {
+
+  let [visible, setVisibility] = useState(false);
   let [weight, setWeight] = useState(1);
   useEffect(get.bind(null, weight));
 
-  const minusOne = () => {
-    if (weight >= 1) {
-      const numMinusOne = Number(weight);
-      setWeight(numMinusOne - 1);
-    } else {
-      alert("Waga nie może być ujemna!");
-    }
-  };
-  const minusFive = () => {
-    if (weight >= 5) {
-      const numMinusFive = Number(weight);
-      setWeight(numMinusFive - 5);
-    } else {
-      alert("Waga nie może być ujemna!");
-    }
-  };
 
-  const plusOne = () => {
-    const numPlusOne = Number(weight);
-    setWeight(numPlusOne + 1);
-  };
-  const plusFive = () => {
-    const numPlusFive = Number(weight);
-    setWeight(numPlusFive + 5);
-  };
+  useEffect(() => {
+    if (weight < 0) {
+      setWeight(1);
+      setVisibility(true)
+    }
+  }, [weight]);
+
+  const checkWeight = (weight) => {
+    if (weight > 0) {
+      setVisibility(false)
+    }
+  }
+
   const chandleChangeInput = e => {
-    setWeight(e.target.value);
+    e.target.value <= 0 ? setWeight("") : setWeight(e.target.value);
   };
 
   return (
-    <div>
-    <div className={style.weightWrapper}>
-      <h1>Waga dziecka : </h1>
+    <div className={style.wrapper}>
+      <h3>Waga dziecka : </h3>
       <div className={style.buttons}>
-        <button className={style.weightButton} onClick={minusOne}>
-          -1kg
-        </button>
-        <button className={style.weightButton} onClick={minusFive}>
+        <button
+          className={style.buttonB}
+          onClick={() => setWeight(Number(weight) - 5)}
+        >
           -5kg
         </button>
+        <button
+          className={style.buttonA}
+          onClick={() => setWeight(Number(weight) - 1)}
+        >
+          -1kg
+        </button>
         <input
-          className={style.weightInput}
           placeholder="Kg"
           value={weight}
           onChange={chandleChangeInput}
+          type="number"
         ></input>
-        <button className={style.weightButton} onClick={plusOne}>
+        <button
+          className={style.buttonA}
+          onClick={() => { setWeight(Number(weight) + 1); checkWeight(weight) }}
+        >
           +1kg
         </button>
-        <button className={style.weightButton} onClick={plusFive}>
+        <button
+          className={style.buttonB}
+          onClick={() => { setWeight(Number(weight) + 5); checkWeight(weight) }}
+        >
           +5kg
         </button>
-        
       </div>
-    </div>
-    <AlertBox/>
+      {visible ? <AlertBox /> : ''}
     </div>
   );
 };

@@ -1,8 +1,8 @@
 .cardWrapper {
-  width: 100vw;
+  width: 98vw;
   height: 45vh;
   position: relative;
-  margin-top: 115px;
+  top: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,59 +12,75 @@
   flex-direction: row;
 }
 .cardA {
-  width: 25vw;
-  height: 20vh;
+  position: relative;
+  width: 45vw;
+  min-height: 20vh;
   background: #ddcf4f;
   border-radius: 3px;
-  margin: 10px;
+  margin: 0.5em;
   color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  padding: 5px;
+  padding: 0.4em;
 }
 .cardA h3 {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 1em;
+  font-size: 1em;
+}
+.cardA p {
+  padding: 1.2vh 1.2vw;
+  line-height: 1em;
+  font-size: 1em;
 }
 .cardB {
-  width: 25vw;
-  height: 20vh;
+  width: 45vw;
+  min-height: 20vh;
   background: #44a94e;
   border-radius: 3px;
-  margin: 10px;
+  margin: 0.5em;
   color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  padding: 5px;
+  padding: 0.4em;
 }
 .cardB h3 {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 1em;
+  font-size: 1em;
+}
+.cardB p {
+  padding: 1vh 1vw;
+  line-height: 1em;
+  font-size: 1em;
 }
 .cardC {
-  width: 25vw;
-  height: 20vh;
+  width: 45vw;
+  min-height: 20vh;
   background: #33b9e3;
   border-radius: 3px;
-  margin: 10px;
+  margin: 0.5em;
   color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  padding: 5px;
+  padding: 0.4em;
 }
 .cardC h3 {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 1em;
+  font-size: 1em;
+}
+.cardC p {
+  padding: 1.2vh 1.2vw;
+  line-height: 1em;
+  font-size: 1em;
 }
 .cardD {
-  width: 25vw;
-  height: 20vh;
+  width: 45vw;
+  min-height: 20vh;
   background: #f16f6f;
   border-radius: 3px;
-  margin: 10px;
+  margin: 0.5em;
   color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
@@ -72,9 +88,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 0.4em;
 }
 .cardD h3 {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 1em;
+  font-size: 1em;
 }

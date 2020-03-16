@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./Button.module.css";
+import classNames from 'classnames';
 import { FaCheck } from "react-icons/fa";
 const Button = () => {
   const [activeEnyDoses, setActiveEnyDoses] = useState(false);
@@ -14,19 +15,15 @@ const Button = () => {
   };
 
   return (
-    <div className={style.buttonWrapper}>
+    <div className={style.wrapper}>
       <label
-        className={
-          activeResuscytationDoses ? style.button : style.buttonUnactive
-        }
+        // style={{borderRadius: '4px 0 0 4px'}}
+        className={classNames({
+          [style.button] : true,
+          [style.inactive] : !activeResuscytationDoses
+        })}
       >
-        <FaCheck
-          className={
-            activeResuscytationDoses
-              ? style.checkedIcon
-              : style.checkedIconUnactive
-          }
-        />
+        <FaCheck />
         <p>Zatrzymanie krążenia</p>
         <input
           type="radio"
@@ -35,12 +32,14 @@ const Button = () => {
         />
       </label>
 
-      <label className={activeEnyDoses ? style.button : style.buttonUnactive}>
-        <FaCheck
-          className={
-            activeEnyDoses ? style.checkedIcon : style.checkedIconUnactive
-          }
-        />
+      <label
+        // style={{borderRadius: '0 4px 4px 0'}}
+        className={classNames({
+          [style.button] : true,
+          [style.inactive] : activeResuscytationDoses
+        })}
+      >
+        <FaCheck />
         <p>Leki w innych przypadkach</p>
         <input
           type="radio"

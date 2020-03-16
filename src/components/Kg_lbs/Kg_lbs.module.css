@@ -1,0 +1,46 @@
+.wrapper {
+  width: 98vw;
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #272727;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 2vw 3vw 2vw 5vw;
+    /* transition: 0.3s ease; */
+}
+
+.button input {
+  display: none;
+}
+
+.button svg{
+  position: absolute;
+  opacity: 1;
+  /* transition: 0.2s ease-in-out; */
+  margin-left: -2.6vw;
+}
+
+.button p {
+  margin-left: 2vh;
+}
+
+.button.inactive {
+    color: rgb(94, 94, 94);
+    background: #f1f1f1;
+}
+
+.button.inactive svg{
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: #272727;
+}
