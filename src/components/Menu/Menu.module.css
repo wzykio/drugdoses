@@ -12,7 +12,7 @@
 .listItem {
   position: relative;
   height: 24px;
-  left: 73px;
+  left: 26px;
   right: 57px;
   top: calc(50% - 24px / 2);
 
@@ -28,6 +28,6 @@
 
   color: rgba(0, 0, 0, 0.87);
 }
-.faCogIcon {}
-.mdAnnouncementIcon {}
-.goInfoIcon {}
+.icon {
+  margin-right: 20px;
+}

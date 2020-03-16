@@ -8,9 +8,17 @@ const Menu = () => {
   return (
     <div className={style.menuBlock}>
       <ul>
-        <li className={style.listItem}>Ustawienia</li>
-        <li className={style.listItem}>Nota prawna</li>
-        <li className={style.listItem}>O nas</li>
+        <li className={style.listItem}>
+          <FaCog className={style.icon} />
+          Ustawienia
+        </li>
+        <li className={style.listItem}>
+          <MdAnnouncement className={style.icon} />
+          Nota prawna
+        </li>
+        <li className={style.listItem}>
+          <GoInfo className={style.icon} />O nas
+        </li>
       </ul>
     </div>
   );
