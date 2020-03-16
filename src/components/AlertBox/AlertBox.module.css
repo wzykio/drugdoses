@@ -1,0 +1,22 @@
+.alertContainer{
+    position: relative;
+}
+
+.showAlertBox{
+    position: absolute;
+    left: 31vw;
+    padding: 5px;
+    background-color: #FF0000;
+    color: #fff;
+    opacity: 0.75;
+    width: 30%;
+    height: 40px;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-weight: 600;
+    z-index: 2;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
