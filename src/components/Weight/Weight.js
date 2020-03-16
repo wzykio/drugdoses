@@ -61,7 +61,7 @@ const Weight = ({ get }) => {
         
       </div>
     </div>
-    <div><AlertBox/></div>
+    <AlertBox/>
     </div>
   );
 };
