@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import style from "./Weight.module.css";
-import AlertBox from "../AlertBox/AlertBox";
+import AlertBox from "./AlertBox/AlertBox";
 
 const Weight = ({ get }) => {
 
-  let [visible, setVisibility] = useState(false);
+  let [alertVisible, setAlertVisibility] = useState(false);
   let [weight, setWeight] = useState(1);
   useEffect(get.bind(null, weight));
 
@@ -12,13 +12,13 @@ const Weight = ({ get }) => {
   useEffect(() => {
     if (weight < 0) {
       setWeight(1);
-      setVisibility(true)
+      setAlertVisibility(true)
     }
   }, [weight]);
 
   const checkWeight = (weight) => {
     if (weight > 0) {
-      setVisibility(false)
+      setAlertVisibility(false)
     }
   }
 
@@ -61,7 +61,7 @@ const Weight = ({ get }) => {
           +5kg
         </button>
       </div>
-      {visible ? <AlertBox /> : ''}
+      {alertVisible ? <AlertBox /> : ''}
     </div>
   );
 };
