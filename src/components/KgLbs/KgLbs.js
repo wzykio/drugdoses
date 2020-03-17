@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import style from "./Kg_lbs.module.css";
+import style from "./KgLbs.module.css";
 import classNames from 'classnames';
 import { FaCheck } from "react-icons/fa";
-const Kg_lbs = () => {
+const KgLbs = () => {
   const [activelbs, setActivelbs] = useState(false);
   const [activeKg, setKg] = useState(true);
   const selectlbs = () => {
@@ -41,4 +41,4 @@ const Kg_lbs = () => {
     </div>
   );
 };
-export default Kg_lbs;
+export default KgLbs;
