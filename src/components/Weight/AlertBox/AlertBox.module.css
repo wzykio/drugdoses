@@ -4,14 +4,14 @@
 
 .showAlertBox{
     position: absolute;
+    margin-top: -2vw;
     left: 45vw;
     transform: translateX(-50%);
-    padding: 2px;
+    padding: 2vw 3vw;
     background-color: #FF0000;
     color: #fff;
+    z-index: 2;
     opacity: 0.75;
-    width: 60%;
-    height: 20px;
     border-radius: 4px;
     font-weight: 600;
 }

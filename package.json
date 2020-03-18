@@ -2,18 +2,6 @@
     "name": "drugdoses",
     "version": "0.1.0",
     "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "classnames": "^2.2.6",
-        "react": "^16.13.0",
-        "react-alert": "^7.0.0",
-        "react-alert-template-basic": "^1.0.0",
-        "react-dom": "^16.13.0",
-        "react-icons": "^3.9.0",
-        "react-scripts": "3.4.0"
-    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -34,5 +22,13 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "react-icons": "^3.9.0",
+        "react-scripts": "^3.4.0"
+    },
+    "devDependencies": {}
 }
