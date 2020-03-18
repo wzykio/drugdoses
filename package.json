@@ -8,6 +8,8 @@
         "@testing-library/user-event": "^7.1.2",
         "classnames": "^2.2.6",
         "react": "^16.13.0",
+        "react-alert": "^7.0.0",
+        "react-alert-template-basic": "^1.0.0",
         "react-dom": "^16.13.0",
         "react-icons": "^3.9.0",
         "react-scripts": "3.4.0"

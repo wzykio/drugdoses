@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from "react";
 import style from "./Weight.module.css";
+import AlertBox from "./AlertBox/AlertBox";
 
 const Weight = ({ get }) => {
+
+  let [alertVisible, setAlertVisibility] = useState(false);
   let [weight, setWeight] = useState(1);
   useEffect(get.bind(null, weight));
+
 
   useEffect(() => {
     if (weight < 0) {
       setWeight(1);
-      alert("Waga nie może być ujemna!");
+      setAlertVisibility(true)
     }
   }, [weight]);
+
+  const checkWeight = (weight) => {
+    if (weight > 0) {
+      setAlertVisibility(false)
+    }
+  }
 
   const chandleChangeInput = e => {
     e.target.value <= 0 ? setWeight("") : setWeight(e.target.value);
@@ -40,17 +50,18 @@ const Weight = ({ get }) => {
         ></input>
         <button
           className={style.buttonA}
-          onClick={() => setWeight(Number(weight) + 1)}
+          onClick={() => { setWeight(Number(weight) + 1); checkWeight(weight) }}
         >
           +1kg
         </button>
         <button
           className={style.buttonB}
-          onClick={() => setWeight(Number(weight) + 5)}
+          onClick={() => { setWeight(Number(weight) + 5); checkWeight(weight) }}
         >
           +5kg
         </button>
       </div>
+      {alertVisible ? <AlertBox /> : ''}
     </div>
   );
 };
