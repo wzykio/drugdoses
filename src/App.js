@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import Weight from "./components/Weight/Weight";
 import Card from "./components/Cards/Card";
-import Kglbs from "./components/Kg_lbs/Kg_lbs";
+import KgLbs from "./components/KgLbs/KgLbs";
 import Menu from "./components/Menu/Menu";
 
 function App() {
@@ -19,9 +19,8 @@ function App() {
       <Menu />
       <Button />
       <Weight get={addWeight} />
-      <Kglbs />
+      <KgLbs />
       <Card weight={finalweight} />
-      
     </div>
   );
 }
