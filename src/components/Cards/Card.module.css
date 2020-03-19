@@ -94,3 +94,6 @@
   line-height: 1em;
   font-size: 1em;
 }
+.unvisible{
+  display: none;
+}

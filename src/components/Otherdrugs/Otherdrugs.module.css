@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
- display: none;
+
 }
 
 .otherdrugsItemAdrenalina {
@@ -206,4 +206,7 @@
 }
 .alert{
     color: red;
+}
+.unvisible{
+    display: none;
 }

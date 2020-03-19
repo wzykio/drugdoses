@@ -13,16 +13,19 @@ function App() {
   const addWeight = finalweight => {
     setFinalweight(finalweight);
   };
-
+  const [showCategory , setShowCategory] = useState(true)
+  const getCategory = showCategory => {
+    setShowCategory(showCategory);
+  };
   return (
     <div className="App">
       <Header />
       <Menu />
-      <Button />
+      <Button getCat={getCategory} />
       <Weight get={addWeight} />
       <KgLbs />
-      <Card weight={finalweight} />
-      <Otherdrugs weight={finalweight} />
+      <Card weight={finalweight} view={showCategory}/>
+      <Otherdrugs weight={finalweight} view={showCategory}/>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Otherdrugs.module.css";
 
-const Otherdrugs = ({ weight }) => {
+const Otherdrugs = ({ weight,view }) => {
   return (
-    <div className={style.otherdrugsWrapper}>
+    <div className={view ? style.unvisible : style.otherdrugsWrapper }>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
