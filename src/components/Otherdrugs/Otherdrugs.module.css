@@ -1,0 +1,206 @@
+.otherdrugsWrapper {
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  display: none;
+}
+
+.otherdrugsItemAdrenalina {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #ddcf4f;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemAdrenalina h2 {
+  color: rgb(53, 53, 53);
+}
+.otherdrugsItemAdrenalina p {
+  margin: 0.3em;
+  font-size: 1.5em;
+  color: white;
+}
+.otherdrugsItemAdenozyna {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #dd4f4f;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+
+.otherdrugsItemAdenozyna p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemAdenozyna h2 {
+  color: rgb(53, 53, 53);
+}
+
+.otherdrugsItemDexaven {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #dd8f4f;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemDexaven p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemDexaven h2 {
+  color: rgb(53, 53, 53);
+}
+.otherdrugsItemDiazepam {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #54dd4f;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemDiazepam p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemDiazepam h2 {
+  color: rgb(53, 53, 53);
+}
+
+.otherdrugsItemFentanyl {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #4f69dd;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemFentanyl p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemFentanyl h2 {
+  color: rgb(53, 53, 53);
+}
+
+.otherdrugsItemFlumazenil {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #dd4fae;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemFlumazenil p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemFlumazenil h2 {
+  color: rgb(53, 53, 53);
+}
+.otherdrugsItemHydrocortison {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #8f7933;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+
+.otherdrugsItemHydrocortison p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemHydrocortison h2 {
+  color: rgb(53, 53, 53);
+}
+
+.otherdrugsItemMetoclopramid {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #0dad6b;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemMetoclopramid p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemMetoclopramid h2 {
+  color: rgb(53, 53, 53);
+}
+.otherdrugsItemMorfina {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #ffa125;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemMorfina p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemMorfina h2 {
+  color: rgb(53, 53, 53);
+}
+.otherdrugsItemParacetamol {
+  width: 80vw;
+  min-height: 25vh;
+  background-color: #ff0000;
+  color: white;
+  margin: 0.5em;
+  border-radius: 4px;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+}
+.otherdrugsItemParacetamol p {
+  margin: 0.3em;
+  font-size: 1.5em;
+}
+.otherdrugsItemParacetamol h2 {
+  color: rgb(53, 53, 53);
+}
