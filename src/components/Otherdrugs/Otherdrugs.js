@@ -1,63 +1,69 @@
 import React from "react";
 import style from "./Otherdrugs.module.css";
 
-const Otherdrugs = () => {
+const Otherdrugs = ({ weight }) => {
   return (
     <div className={style.otherdrugsWrapper}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
-        <p>Napad astmy: 10 µg/kg iv</p>
-        <p>Droga podania : iv io</p>
+        <p>Napad astmy: Dawka: {weight / 100} mg </p>
+        <p>1 amp. do 10 ml 0.9% NaCl. Podać {weight / 10} ml s.c. </p>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
         <h2>Adenozyna</h2>
-        <p>I dawka 100 µg/kg</p>
-        <p> II dawka i kolejne 200 µg/kg </p>
-        <p>Droga podania : iv</p>
+        <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
+        <p>
+          I dawka {weight / 10} mg iv ({weight / 10} ml)
+        </p>
+        <p>
+          II dawka i kolejne {(weight / 10) * 2} mg iv ({(weight / 10) * 2} ml)
+        </p>
       </div>
 
       <div className={style.otherdrugsItemDexaven}>
-        <h2>Dexaven</h2>
-        <p>Dawka: Wstrząs nafilaktyczny: 2mg</p>
+        <h2>Deksametazon</h2>
+        <p>Anafilaksja: 4 mg - 8mg iv</p>
+        <p>Astma: 4 mg - 8mg iv</p>
+        <p>Zapalenie krtani: {0.15 * weight} mg iv</p>
         <p>Droga podania : iv io</p>
       </div>
       <div className={style.otherdrugsItemDiazepam}>
         <h2>Diazepamum</h2>
-        <p>Dawka: 150-300 µg/kg</p>
-        <p>Droga podania : iv io</p>
+        <p>Dawka: {0.1 * weight} mg iv./io. </p>
+        <p className={style.alert}>
+          Uwaga ! Przeciwwskazany u noworodków i wcześniaków
+        </p>
       </div>
-      <div className={style.otherdrugsItemFentanyl}>
-        <h2>Fentanyl</h2>
-        <p>Dawka: 1-3 µg/kg</p>
-        <p>Droga podania : iv io</p>
-      </div>
+
       <div className={style.otherdrugsItemFlumazenil}>
         <h2>Flumazenil</h2>
-        <p>Dawka: 10 µg/kg Można powtarzać co 60s max 200 µg</p>
+        <p>Dawka: {10 * weight} iv./io µg Można powtarzać co 60s max 200 µg</p>
         <p>Droga podania : iv io</p>
       </div>
       <div className={style.otherdrugsItemHydrocortison}>
         <h2>Hydrocortison</h2>
-        <p>Dawka: 4-8 mg/kg</p>
-        <p>Droga podania : iv io</p>
+        <p>Dawka: {weight * 5} mg</p>
+        <p>100 mg leku rozpuścić i rozcieńczy do 20 mll 0.9 Nacl</p>
+        <p>Podać: {weight} ml iv./io.</p>
       </div>
 
-      <div className={style.otherdrugsItemMetoclopramid}>
-        <h2>Metoclopramid</h2>
-        <p>Dawka: 0,15 mg/kg</p>
-        <p>Droga podania : iv io</p>
+      <div className={style.otherdrugsItemMagnez}>
+        <h2>Magnez 20%</h2>
+
+        <p>Dawka: {weight * 40} mg</p>
+        <p>Podać do wlewu {weight * 0.2} ml i.v/i.o.</p>
       </div>
       <div className={style.otherdrugsItemMorfina}>
         <h2>Morfina</h2>
-        <p>Dawka:100 µg/kg</p>
-        <p>Droga podania : iv io</p>
+        <p>Dawka: {weight / 10} mg</p>
+        <p>10 mg rozcieńczyć do 10 ml 0.9 % NaCl</p>
+        <p>Podać {weight / 10} ml i.v/i.o.</p>
       </div>
       <div className={style.otherdrugsItemParacetamol}>
-        <h2>Paracetamol</h2>
-        <p>Dawka:100 µg/kg</p>
-        <p>Droga podania : iv io</p>
+        <h2>Paracetamol w czopkach</h2>
+        <p>Dawka: {weight * 10} mg pr.</p>
       </div>
     </div>
   );

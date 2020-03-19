@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  display: none;
+ display: none;
 }
 
 .otherdrugsItemAdrenalina {
@@ -147,7 +147,7 @@
   color: rgb(53, 53, 53);
 }
 
-.otherdrugsItemMetoclopramid {
+.otherdrugsItemMagnez {
   width: 80vw;
   min-height: 25vh;
   background-color: #0dad6b;
@@ -159,11 +159,11 @@
   align-items: center;
   flex-direction: column;
 }
-.otherdrugsItemMetoclopramid p {
+.otherdrugsItemMagnez p {
   margin: 0.3em;
   font-size: 1.5em;
 }
-.otherdrugsItemMetoclopramid h2 {
+.otherdrugsItemMagnez h2 {
   color: rgb(53, 53, 53);
 }
 .otherdrugsItemMorfina {
@@ -188,7 +188,7 @@
 .otherdrugsItemParacetamol {
   width: 80vw;
   min-height: 25vh;
-  background-color: #ff0000;
+  background-color: #9b9b9b;
   color: white;
   margin: 0.5em;
   border-radius: 4px;
@@ -203,4 +203,7 @@
 }
 .otherdrugsItemParacetamol h2 {
   color: rgb(53, 53, 53);
+}
+.alert{
+    color: red;
 }

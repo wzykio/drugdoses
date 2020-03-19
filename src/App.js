@@ -22,7 +22,7 @@ function App() {
       <Weight get={addWeight} />
       <KgLbs />
       <Card weight={finalweight} />
-      <Otherdrugs />
+      <Otherdrugs weight={finalweight} />
     </div>
   );
 }
