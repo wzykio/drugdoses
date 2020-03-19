@@ -11,19 +11,19 @@ const Weight = ({ get }) => {
 
   useEffect(() => {
     if (weight < 0) {
-      setWeight(1);
+      setWeight(0);
       setAlertVisibility(true)
     }
   }, [weight]);
 
   const checkWeight = (weight) => {
-    if (weight > 0) {
+    if (weight >= 0) {
       setAlertVisibility(false)
     }
   }
 
   const chandleChangeInput = e => {
-    e.target.value <= 0 ? setWeight("") : setWeight(e.target.value);
+    e.target.value < 0 ? setWeight(0) : setWeight(e.target.value);
   };
 
   return (
