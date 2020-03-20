@@ -1,40 +1,36 @@
 import React from "react";
 import style from "./Otherdrugs.module.css";
 
-const Otherdrugs = ({ weight,view }) => {
+const Otherdrugs = ({ weight, view }) => {
   return (
-    <div className={view ? style.unvisible : style.otherdrugsWrapper }>
+    <div className={view ? style.unvisible : style.otherdrugsWrapper}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
-        <p>Napad astmy: Dawka: {weight / 100} mg </p>
-        <p>1 amp. do 10 ml 0.9% NaCl. Podać {weight / 10} ml s.c. </p>
+        <p>Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać {weight / 10} ml s.c. </p>
+        <p></p>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
         <h2>Adenozyna</h2>
         <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
-        <p>
-          I dawka {weight / 10} mg iv ({weight / 10} ml)
-        </p>
-        <p>
-          II dawka i kolejne {(weight / 10) * 2} mg iv ({(weight / 10) * 2} ml)
-        </p>
+        <p>I dawka: {weight / 10} mg iv - {weight / 10} ml </p>
+        <p></p>
+        <p>II dawka i kolejne : {(weight / 10) * 2} mg iv - {weight / 10 * 2} ml</p>
       </div>
 
       <div className={style.otherdrugsItemDexaven}>
         <h2>Deksametazon</h2>
         <p>Anafilaksja: 4 mg - 8mg iv</p>
         <p>Astma: 4 mg - 8mg iv</p>
-        <p>Zapalenie krtani: {0.15 * weight} mg iv</p>
-        <p>Droga podania : iv io</p>
+        <p>Zapalenie krtani: {(0.15 * weight).toFixed(2)} mg iv</p>
       </div>
       <div className={style.otherdrugsItemDiazepam}>
-        <h2>Diazepamum</h2>
-        <p>Dawka: {0.1 * weight} mg iv./io. </p>
-        <p className={style.alert}>
-          Uwaga ! Przeciwwskazany u noworodków i wcześniaków
-        </p>
+        <h2>Diazepam</h2>
+        <p>Dawka: {(0.1 * weight).toFixed(2)} mg iv./io. </p>
+        <div className={style.alert}>
+       Uwaga ! Przeciwwskazany u noworodków i wcześniaków
+        </div>
       </div>
 
       <div className={style.otherdrugsItemFlumazenil}>
@@ -45,7 +41,7 @@ const Otherdrugs = ({ weight,view }) => {
       <div className={style.otherdrugsItemHydrocortison}>
         <h2>Hydrocortison</h2>
         <p>Dawka: {weight * 5} mg</p>
-        <p>100 mg leku rozpuścić i rozcieńczy do 20 mll 0.9 Nacl</p>
+        <p>100 mg leku rozpuścić i rozcieńczyć do 20 ml 0.9% Nacl</p>
         <p>Podać: {weight} ml iv./io.</p>
       </div>
 
@@ -53,7 +49,7 @@ const Otherdrugs = ({ weight,view }) => {
         <h2>Magnez 20%</h2>
 
         <p>Dawka: {weight * 40} mg</p>
-        <p>Podać do wlewu {weight * 0.2} ml i.v/i.o.</p>
+        <p>Podać do wlewu {(weight * 2) / 10} ml i.v/i.o.</p>
       </div>
       <div className={style.otherdrugsItemMorfina}>
         <h2>Morfina</h2>
