@@ -27,7 +27,8 @@ const Otherdrugs = ({ weight, view }) => {
       </div>
       <div className={style.otherdrugsItemDiazepam}>
         <h2>Diazepam</h2>
-        <p>Dawka: {(0.1 * weight).toFixed(2)} mg iv./io. </p>
+        <p>Dawka: {(0.25*weight).toFixed(2)} mg iv./io. </p>
+  <p>Podać bez rozcieńczenia {(0.05*weight).toFixed(2)} ml</p>
         <div className={style.alert}>
        Uwaga ! Przeciwwskazany u noworodków i wcześniaków
         </div>
