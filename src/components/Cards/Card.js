@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Card.module.css";
 
-const Card = ({ weight }) => {
+const Card = ({ weight,view }) => {
   return (
-    <div className={style.cardWrapper}>
+    <div className={view ? style.cardWrapper: style.unvisible} >
       <div className={style.sec}>
         <div className={style.cardA}>
           <h3>Adrenalina - dawka {weight * 10} mikrogram</h3>
