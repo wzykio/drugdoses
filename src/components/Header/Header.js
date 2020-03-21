@@ -5,16 +5,22 @@ import Menu from "C:/code/drugDoses/drugprices/src/components/Menu/Menu";
 
 const Header = () => {
   let [openMenu, setOpenMenu] = useState(false);
+
   return (
-    <div className={style.header}>
-      <div className={style.navicon}>
-        <GiHamburgerMenu onClick={setOpenMenu} />
-      </div>
+    <div>
+      <div className={style.header}>
+        <div className={style.navicon}>
+          <GiHamburgerMenu
+            onClick={() => {
+              setOpenMenu(!openMenu);
+            }}
+          />
+        </div>
 
-      <div className={style.title}>
-        <p>Dawki leków u dzieci</p>
+        <div className={style.title}>
+          <p>Dawki leków u dzieci</p>
+        </div>
       </div>
-
       {openMenu ? <Menu /> : ""}
     </div>
   );

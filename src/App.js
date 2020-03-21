@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <Header />
- 
       <Button />
       <Weight get={addWeight} />
       <KgLbs />
