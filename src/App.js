@@ -7,6 +7,7 @@ import Card from "./components/Cards/Card";
 import KgLbs from "./components/KgLbs/KgLbs";
 import Menu from "./components/Menu/Menu";
 import Otherdrugs from './components/Otherdrugs/Otherdrugs'
+import Information from './components/Information/Information'
 
 function App() {
   const [finalweight, setFinalweight] = useState(null);
@@ -19,6 +20,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Information />
       <Header />
       <Menu />
       <Button getCat={getCategory} />
