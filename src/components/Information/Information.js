@@ -9,6 +9,7 @@ const Information = () => {
         Każdy pacjent to indywidualna sytuacja. Farmakoterapie i jej dawki
         powinny być weryfikowane indywidualnie pod względem każdego pacjenta.
       </p>
+      <button>Rozumiem</button>
     </div>
   );
 };

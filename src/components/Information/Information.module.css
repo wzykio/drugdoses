@@ -1,24 +1,47 @@
 .information{
+  position: absolute;
   width: 98vw;
-  font-size: 0.7em;
-  margin: 1.5vw;
+  font-size: 0.6em;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-content: center;
+  border-radius: 4px;
+  z-index: 2;
+  background-color: #F0F8FF;
+  border: 1px solid #B0C4DE;
+
 }
 
 .header{
-  color: red;
-  font-size: 1.9em;
-  margin: 0.5vw;
+  color: #191970;
+  font-size: 2em;
 }
 
 .body{
-  color: black;
+  color: #4B0082;
   font-size: 1.4em;
-  margin: 0.5vw;
+  /* margin: 0.5vw; */
   width: 90%;
   max-width: 800px;
   align-self: center;
+}
+
+button{
+  margin: 0.2em auto;
+  font-weight: 600;
+  background-color: #F0F8FF;
+  color: #0D71B4;
+  padding: 0.2em;
+  transition-duration: 0.3s;
+  border-radius: 0.5em;
+  border: 0.15em solid;
+  
+}
+
+button:active {
+  background-color: #0D71B4;;
+  color: #F0F8FF;
+
+}
+body{
+  background-color: aliceblue;
 }
