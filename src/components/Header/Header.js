@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Menu from "C:/code/drugDoses/drugprices/src/components/Menu/Menu";
+import Menu from '../Menu/Menu'
 
 const Header = () => {
   let [openMenu, setOpenMenu] = useState(false);

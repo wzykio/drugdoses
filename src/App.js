@@ -20,11 +20,9 @@ function App() {
   };
   return (
     <div className="App">
-      <Information />
+     <Information />
       <Header />
-      <Menu />
       <Button getCat={getCategory} />
-      <Button />
       <Weight get={addWeight} />
       <KgLbs />
       <Card weight={finalweight} view={showCategory}/>

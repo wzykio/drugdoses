@@ -2,11 +2,11 @@ import React, { useState,useEffect } from "react";
 import style from "./Button.module.css";
 import classNames from 'classnames';
 import { FaCheck } from "react-icons/fa";
-const Button = ({getCat}) => {
+const Button = ({ getCat }) => {
   const [activeEnyDoses, setActiveEnyDoses] = useState(false);
   const [activeResuscytationDoses, setresuscytationDoses] = useState(true);
   const [active,setActive]=useState(true)
-  useEffect(getCat.bind(true, active));
+  useEffect(getCat.bind(true,active));
   const selectEnyDoses = () => {
     setActiveEnyDoses(true);
     setresuscytationDoses(false);
