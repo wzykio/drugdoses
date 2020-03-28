@@ -1,12 +1,13 @@
 import React from "react";
 import style from "./Card.module.css";
 
-const Card = ({ weight,view }) => {
+const Card = ({ weight, view, uni }) => {
+  uni ? (weight = weight) : (weight = (weight * 45) / 100);
   return (
-    <div className={view ? style.cardWrapper: style.unvisible} >
+    <div className={view ? style.cardWrapper : style.unvisible}>
       <div className={style.sec}>
         <div className={style.cardA}>
-          <h3>Adrenalina - dawka {weight * 10} mikrogram</h3>
+          <h3>Adrenalina - dawka {weight * 10} µg</h3>
           <p>1 amp adrenaliny rozcieńczyć do 10 ml 0.9% NaCl</p>
           <h3>Podaj {weight / 10} ml</h3>
         </div>
@@ -18,9 +19,7 @@ const Card = ({ weight,view }) => {
       </div>
       <div className={style.sec}>
         <div className={style.cardC}>
-          <h3>
-            Atropina - dawka {weight >= 5 ? (weight * 2) / 100 : 0.1} miligram
-          </h3>
+          <h3>Atropina - dawka {weight >= 5 ? (weight * 2) / 100 : 0.1} mg</h3>
           <p>2 amp atropiny rozcieńczyć do 10 ml 0.9% NaCl</p>
           <h3>Podaj {weight >= 5 ? weight / 10 : 0.5} ml</h3>
         </div>

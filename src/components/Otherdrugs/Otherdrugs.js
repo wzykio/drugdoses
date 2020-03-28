@@ -1,22 +1,31 @@
 import React from "react";
 import style from "./Otherdrugs.module.css";
 
-const Otherdrugs = ({ weight, view }) => {
+const Otherdrugs = ({ weight, view, uni }) => {
+  uni ? (weight = weight) : (weight = (weight * 45) / 100);
   return (
     <div className={view ? style.unvisible : style.otherdrugsWrapper}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
-        <p>Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać {weight / 10} ml s.c. </p>
+        <p>
+          Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać{" "}
+          {weight / 10} ml s.c.{" "}
+        </p>
         <p></p>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
         <h2>Adenozyna</h2>
         <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
-        <p>I dawka: {weight / 10} mg iv - {weight / 10} ml </p>
+        <p>
+          I dawka: {weight / 10} mg iv - {weight / 10} ml{" "}
+        </p>
         <p></p>
-        <p>II dawka i kolejne : {(weight / 10) * 2} mg iv - {weight / 10 * 2} ml</p>
+        <p>
+          II dawka i kolejne : {(weight / 10) * 2} mg iv - {(weight / 10) * 2}{" "}
+          ml
+        </p>
       </div>
 
       <div className={style.otherdrugsItemDexaven}>
@@ -27,10 +36,10 @@ const Otherdrugs = ({ weight, view }) => {
       </div>
       <div className={style.otherdrugsItemDiazepam}>
         <h2>Diazepam</h2>
-        <p>Dawka: {(0.25*weight).toFixed(2)} mg iv./io. </p>
-  <p>Podać bez rozcieńczenia {(0.05*weight).toFixed(2)} ml</p>
+        <p>Dawka: {(0.25 * weight).toFixed(2)} mg iv./io. </p>
+        <p>Podać bez rozcieńczenia {(0.05 * weight).toFixed(2)} ml</p>
         <div className={style.alert}>
-       Uwaga ! Przeciwwskazany u noworodków i wcześniaków
+          Uwaga ! Przeciwwskazany u noworodków i wcześniaków
         </div>
       </div>
 
