@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Information.module.css";
 
 const Information = () => {
+
+  const [warningVisability, setWarningVisability] = useState(true)
+
   return (
-    <div className={style.information}>
-      <h1 className={style.header}>UWAGA! Używaj tylko jako POMOC !!!</h1>
+    <div className={warningVisability ? style.information : style.hidden}>
+      <h1 className={style.header}>UWAGA!</h1>
+      <h2 className={style.header2}> Używaj tylko jako POMOC !!!</h2>
       <p className={style.body}>
-        Każdy pacjent to indywidualna sytuacja. Farmakoterapie i jej dawki
+        Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki
         powinny być weryfikowane indywidualnie pod względem każdego pacjenta.
       </p>
-      <button>Rozumiem</button>
+      <button onClick={()=>setWarningVisability(false)}>Rozumiem <br></br> Biorę odpowiedzialność za dobór dawek</button>
     </div>
   );
 };
