@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Card.module.css";
 
 const Card = ({ weight, view, uni }) => {
-  uni ? (weight=weight) : (weight = (weight * 45) / 100);
+  uni ? (weight=weight): (weight = (weight * 45) / 100);
   return (
     <div className={view ? style.cardWrapper : style.unvisible}>
       <div className={style.sec}>
