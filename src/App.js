@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import Weight from "./components/Weight/Weight";
 import Card from "./components/Cards/Card";
-import KgLbs from "./components/KgLbs/KgLbs";
+
 import Menu from "./components/Menu/Menu";
 import Otherdrugs from "./components/Otherdrugs/Otherdrugs";
 import Information from "./components/Information/Information";
@@ -18,19 +18,15 @@ function App() {
   const getCategory = showCategory => {
     setShowCategory(showCategory);
   };
-  const [showUnits, setShowUnits] = useState(true);
-  const getUnits = showUnits => {
-    setShowUnits(showUnits);
-  };
+ 
   return (
     <div className="App">
       <Information />
       <Header />
       <Button getCat={getCategory} />
       <Weight get={addWeight} />
-      <KgLbs getUni={getUnits} />
-      <Card weight={finalweight} view={showCategory} uni={showUnits} />
-      <Otherdrugs weight={finalweight} view={showCategory} uni={showUnits} />
+      <Card weight={finalweight} view={showCategory} />
+      <Otherdrugs weight={finalweight} view={showCategory} />
     </div>
   );
 }

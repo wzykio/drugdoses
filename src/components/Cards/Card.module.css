@@ -13,7 +13,7 @@
 .cardA {
   position: relative;
   width: 45vw;
-  min-height: 25vh;
+  min-height: 30vh;
   background: #ddcf4f;
   border-radius: 3px;
   margin: 0.5em;
@@ -40,7 +40,7 @@
 }
 .cardB {
   width: 45vw;
-  min-height: 25vh;
+  min-height: 30vh;
   background: #44a94e;
   border-radius: 3px;
   margin: 0.5em;
@@ -66,7 +66,7 @@
 }
 .cardC {
   width: 45vw;
-  min-height: 25vh;
+  min-height: 30vh;
   background: #33b9e3;
   border-radius: 3px;
   margin: 0.5em;
@@ -91,7 +91,7 @@
 }
 .cardD {
   width: 45vw;
-  min-height: 25vh;
+  min-height: 30vh;
   background: #f16f6f;
   border-radius: 3px;
   margin: 0.5em;
