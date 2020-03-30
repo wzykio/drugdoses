@@ -12,7 +12,6 @@ const Otherdrugs = ({ weight, view, uni }) => {
           Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać{' '}
           {weight / 10} ml s.c.{' '}
         </p>
-        <p></p>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
