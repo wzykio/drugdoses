@@ -11,26 +11,25 @@
 .otherdrugsItemAdrenalina {
   width: 85vw;
   min-height: 25vh;
-  background-color: #ddcf4f;
+  background-color: #efe26f;
   margin: 0.5em;
   border-radius: 4px;
   display: flex;
-  padding: 0.9em;
- 
-  
+  padding: 1.6em 2em 1.7em;
   flex-direction: column;
+  box-shadow: 1px 1px 0px #ccc054;
+  text-align: left;
 }
 .otherdrugsItemAdrenalina h2 {
-  color: rgb(53, 53, 53);
-  text-align: center;
-  margin: 0.4em;
+  color: #2d2d2d;
+  font-size: 2.3em;
+  font-weight: 400;
+  margin-bottom: 0.3em;
 }
 .otherdrugsItemAdrenalina p {
-  margin: 0.5em;
-  text-align: left;
-  font-size: 1.2em;
-  color: white;
- 
+  font-size: larger;
+  color: #42413a;
+  line-height: 1.5em;
 }
 .otherdrugsItemAdenozyna {
   width: 85vw;
