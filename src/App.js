@@ -4,8 +4,6 @@ import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import Weight from "./components/Weight/Weight";
 import Card from "./components/Cards/Card";
-import KgLbs from "./components/KgLbs/KgLbs";
-import Menu from "./components/Menu/Menu";
 import Otherdrugs from "./components/Otherdrugs/Otherdrugs";
 import Information from "./components/Information/Information";
 
