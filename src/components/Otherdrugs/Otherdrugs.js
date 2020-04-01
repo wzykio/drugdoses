@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './Otherdrugs.module.css';
 
-const Otherdrugs = ({ weight, view, uni }) => {
-  uni ? (weight = weight) : (weight = (weight * 45) / 100);
+const Otherdrugs = ({ weight, view}) => {
+ 
   return (
     <div className={view ? style.unvisible : style.otherdrugsWrapper}>
       <div className={style.otherdrugsItemAdrenalina}>

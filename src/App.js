@@ -18,19 +18,15 @@ function App() {
   const getCategory = showCategory => {
     setShowCategory(showCategory);
   };
-  const [showUnits, setShowUnits] = useState(true);
-  const getUnits = showUnits => {
-    setShowUnits(showUnits);
-  };
+  
   return (
     <div className="App">
       <Information />
       <Header />
       <Button getCat={getCategory} />
       <Weight get={addWeight} />
-      <KgLbs getUni={getUnits} />
-      <Card weight={finalweight} view={showCategory} uni={showUnits} />
-      <Otherdrugs weight={finalweight} view={showCategory} uni={showUnits} />
+      <Card weight={finalweight} view={showCategory}/>
+      <Otherdrugs weight={finalweight} view={showCategory}/>
     </div>
   );
 }
