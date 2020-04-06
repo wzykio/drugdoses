@@ -3,7 +3,7 @@ import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from '../Menu/Menu'
 
-const Header = ({openOption}) => {
+const Header = ({openMenuOption}) => {
   let [openMenu, setOpenMenu] = useState(false);
 
   const menuVisibility = (visibility) => {
@@ -16,7 +16,7 @@ const Header = ({openOption}) => {
         <div className={style.navicon}>
           <GiHamburgerMenu
             onClick={() => {
-              openOption(false);
+              openMenuOption(false);
               setOpenMenu(!openMenu);
             }}
           />
@@ -26,7 +26,7 @@ const Header = ({openOption}) => {
           <p>Dawki leków u dzieci</p>
         </div>
       </div>
-      {openMenu ? <Menu menuVisibility={menuVisibility} option={openOption}/> : ""}
+      {openMenu ? <Menu menuVisibility={menuVisibility} openMenuOption={openMenuOption}/> : ""}
     </div>
   );
 };

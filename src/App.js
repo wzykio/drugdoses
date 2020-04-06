@@ -26,9 +26,9 @@ function App() {
   return (
     <div className='App'>
       <Information />
-      <Header openOption={handleMenuOption} />
+      <Header openMenuOption={handleMenuOption} />
       {showMenuOption ? (
-        <MenuOption handleClose={handleMenuOption} option={showMenuOption} />
+        <MenuOption handleClose={handleMenuOption} openedOption={showMenuOption} />
       ) : null}
       <Button getCat={getCategory} />
       <Weight get={addWeight} />

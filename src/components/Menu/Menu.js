@@ -4,11 +4,11 @@ import { FaCog } from "react-icons/fa"; //ustawienia
 import { MdAnnouncement } from "react-icons/md"; //nota prawna
 import { GoInfo } from "react-icons/go"; //o nas
 
-const Menu = ({option, menuVisibility}) => {
+const Menu = ({openMenuOption, menuVisibility}) => {
 
   const handleClick = (menuElement) => {
     console.log('Handle Click');
-    option(menuElement);
+    openMenuOption(menuElement);
     menuVisibility(false);
   };
 

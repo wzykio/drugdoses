@@ -29,10 +29,10 @@ const About = () => (
   </div>
 );
 
-const ModalContent = ({ option }) => {
+const ModalContent = ({ openedOption }) => {
   let content;
 
-  switch (option) {
+  switch (openedOption) {
     case elements.settings:
       content = Settings();
       break;
@@ -59,11 +59,11 @@ const CloseButton = ({handleClose}) => {
   );
 };
 
-const MenuOption = ({ option, handleClose }) => {
+const MenuOption = ({ openedOption, handleClose }) => {
   return (
     <div className={style.modalWrapper}>
       <CloseButton handleClose={handleClose} />
-      <ModalContent option={option} />
+      <ModalContent openedOption={openedOption} />
     </div>
   );
 };
