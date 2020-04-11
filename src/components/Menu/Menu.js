@@ -4,10 +4,9 @@ import { FaCog } from "react-icons/fa"; //ustawienia
 import { MdAnnouncement } from "react-icons/md"; //nota prawna
 import { GoInfo } from "react-icons/go"; //o nas
 
-const Menu = ({openMenuOption, menuVisibility}) => {
-
-  const handleClick = (menuElement) => {
-    console.log('Handle Click');
+const Menu = ({ openMenuOption, menuVisibility }) => {
+  const handleClick = menuElement => {
+    console.log("Handle Click");
     openMenuOption(menuElement);
     menuVisibility(false);
   };
@@ -15,16 +14,20 @@ const Menu = ({openMenuOption, menuVisibility}) => {
   return (
     <div className={style.menuBlock}>
       <ul>
-        <li className={style.listItem} onClick={() => handleClick('settings')}>
+        <li className={style.listItem} onClick={() => handleClick("settings")}>
           <FaCog className={style.icon} />
           Ustawienia
         </li>
-        <li className={style.listItem} onClick={() => handleClick('legal')}>
+        <li className={style.listItem} onClick={() => handleClick("legal")}>
           <MdAnnouncement className={style.icon} />
           Nota prawna
         </li>
-        <li className={style.listItem} onClick={() => handleClick('about')}>
+        <li className={style.listItem} onClick={() => handleClick("about")}>
           <GoInfo className={style.icon} />O nas
+        </li>
+        <li className={style.listItem} onClick={() => handleClick("legend")}>
+          <GoInfo className={style.icon} />
+          Legenda
         </li>
       </ul>
     </div>

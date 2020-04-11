@@ -1,11 +1,12 @@
-import React from 'react';
-import { MdClose } from 'react-icons/md';
-import style from './MenuOption.module.css';
+import React from "react";
+import { MdClose } from "react-icons/md";
+import style from "./MenuOption.module.css";
 
 const elements = {
-  settings: 'settings',
-  legal: 'legal',
-  about: 'about',
+  settings: "settings",
+  legal: "legal",
+  about: "about",
+  legend: "legend"
 };
 
 const Settings = () => (
@@ -29,6 +30,13 @@ const About = () => (
   </div>
 );
 
+const Legend = () => (
+  <div className={style.content}>
+    <h2 className={style.heading}>Legend</h2>
+    <p className={style.body}>Legend content</p>
+  </div>
+);
+
 const ModalContent = ({ openedOption }) => {
   let content;
 
@@ -42,13 +50,16 @@ const ModalContent = ({ openedOption }) => {
     case elements.about:
       content = About();
       break;
+    case elements.legend:
+      content = Legend();
+      break;
     default:
       content = null;
   }
   return content;
 };
 
-const CloseButton = ({handleClose}) => {
+const CloseButton = ({ handleClose }) => {
   const handleClick = () => {
     handleClose(false);
   };
