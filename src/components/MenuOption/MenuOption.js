@@ -1,18 +1,20 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 import style from "./MenuOption.module.css";
+import KgLbs from "C:/code/drugDoses/drugprices/src/components/KgLbs/KgLbs.js";
 
 const elements = {
   settings: "settings",
   legal: "legal",
   about: "about",
-  legend: "legend"
+  legend: "legend",
 };
 
 const Settings = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Settings</h2>
     <p className={style.body}>Settings content</p>
+  <KgLbs />
   </div>
 );
 
