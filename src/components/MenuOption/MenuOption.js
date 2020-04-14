@@ -1,7 +1,7 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 import style from "./MenuOption.module.css";
-import KgLbs from "C:/code/drugDoses/drugprices/src/components/KgLbs/KgLbs.js";
+import KgLbs from "../KgLbs/KgLbs.js";
 
 const elements = {
   settings: "settings",
