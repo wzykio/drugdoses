@@ -13,8 +13,10 @@ const elements = {
 const Settings = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Settings</h2>
-    <p className={style.body}>Settings content</p>
-  <KgLbs />
+    <p className={style.body}>
+    <KgLbs />
+    </p>
+  
   </div>
 );
 
