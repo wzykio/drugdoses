@@ -1,10 +1,9 @@
 .wrapper {
   border: none;
-  max-width: 22vw;
-  margin: 2em auto 2em;
-  outline: 2px solid blue;
-  padding: 1rem;
   font-size: 1.3em;
+  margin: 2em auto 2em;
+  max-width: 22vw;
+  padding: 1rem;
 }
 
 .heading {
@@ -12,10 +11,12 @@
 }
 
 .wrapper {
-  --text-color: #a3a3a3;
+  /* To be swapped for color values in further 
+  part of code after final app color choice */
   --accent-color: #383737;
   --accent-shadow-dark: rgba(6, 148, 193, 0.17);
-  --accent-shadow-light: rgba(6, 148, 193, 0.07)
+  --accent-shadow-light: rgba(6, 148, 193, 0.07);
+  --text-color: #a3a3a3;
 }
 
 .radio {
@@ -26,19 +27,18 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
-  position: relative;
   font-size: 1.15em;
+  justify-content: flex-start;
   line-height: 1;
+  position: relative;
 }
 
 .radio__input {
-  position: absolute;
-  left: -5000px;
-  top: 0;
-  /* opacity: 0; */
-  padding: 0;
   box-shadow: none;
+  left: -5000px;
+  padding: 0;
+  position: absolute;
+  top: 0;
 }
 
 .radio__input:checked ~ .radio__button {
@@ -53,8 +53,8 @@
 
 .radio__input:checked ~ .radio__label {
   color: var(--accent-color);
-  transition: color .3s;
   font-weight: bold;
+  transition: color .3s;
 }
 
 .radio__button:hover {
@@ -72,28 +72,27 @@
 
 
 .radio__button {
-  height: .9em;
-  width: .9em;
-  border-radius: 50%;
-  border: 2px solid var(--text-color);
-  background-color: white;
-  margin-right: 1em;
-  transition: border .3s;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  transition: box-shadow .3s;
+  background-color: white;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  margin-right: 1em;
+  height: .9em;
+  justify-content: center;
+  transition: border .3s, box-shadow .3s;
+  width: .9em;
 }
 
 .radio__button::after {
-  content: '';
-  border-radius: 50%;
   background-color: var(--accent-color);
-  width: 0.5em;
-  height: 0.5em;
+  border-radius: 50%;
+  content: '';
   display: flex;
+  height: 0.5em;
   opacity: 0;
   transition: opacity .3s;
+  width: 0.5em;
 }
 
 .radio__label {
