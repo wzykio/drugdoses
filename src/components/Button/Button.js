@@ -16,6 +16,7 @@ const Button = ({ getCat }) => {
     setresuscytationDoses(true);
     setActiveEnyDoses(false);
     setActive(true);
+  
   };
 
   return (
