@@ -14,7 +14,7 @@ const lang = {
      
      
        }
-const LangContext = React.createContext(userLang === "pl-PL" ? lang.pl : lang.en);
+const LangContext = React.createContext(userLang === "pl" ? lang.pl : lang.en);
 export default LangContext;
 
 
