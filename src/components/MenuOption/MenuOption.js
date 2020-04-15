@@ -2,6 +2,7 @@ import React from "react";
 import { MdClose } from "react-icons/md";
 import style from "./MenuOption.module.css";
 import KgLbs from "../KgLbs/KgLbs.js";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const elements = {
   settings: "settings",
@@ -16,6 +17,9 @@ const Settings = () => (
     <p className={style.body}>
     <KgLbs />
     </p>
+    <section className={style.section}>
+      <LanguageSwitcher />
+    </section>
   
   </div>
 );
