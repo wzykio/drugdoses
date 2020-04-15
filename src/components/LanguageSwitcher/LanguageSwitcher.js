@@ -6,7 +6,6 @@ const LanguageSwitcher = () => {
 
   const setLanguage = (language) => {
     setActiveLanguage(language);
-    console.log('Active language is: '+language);
   }
 
   return (
