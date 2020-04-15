@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Menu from '../Menu/Menu'
+import Menu from "../Menu/Menu";
+import LangContext from "../globalstore";
 
-const Header = ({openMenuOption}) => {
+const Header = ({ openMenuOption }) => {
   let [openMenu, setOpenMenu] = useState(false);
 
   const menuVisibility = (visibility) => {
     setOpenMenu(visibility);
-  }
+  };
+
+  const lang = useContext(LangContext);
 
   return (
     <div>
@@ -23,10 +26,14 @@ const Header = ({openMenuOption}) => {
         </div>
 
         <div className={style.title}>
-          <p>Dawki leków u dzieci</p>
+          <p>{lang.header.top}</p>
         </div>
       </div>
-      {openMenu ? <Menu menuVisibility={menuVisibility} openMenuOption={openMenuOption}/> : ""}
+      {openMenu ? (
+        <Menu menuVisibility={menuVisibility} openMenuOption={openMenuOption} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
