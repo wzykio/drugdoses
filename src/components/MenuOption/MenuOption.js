@@ -14,34 +14,33 @@ const elements = {
 const Settings = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Settings</h2>
-    <p className={style.body}>
-    <KgLbs />
-    </p>
-    <section className={style.section}>
-      <LanguageSwitcher />
-    </section>
-  
+    <div className={style.body}>
+      <KgLbs />
+      <section className={style.section}>
+        <LanguageSwitcher />
+      </section>
+    </div>
   </div>
 );
 
 const Legal = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Legal</h2>
-    <p className={style.body}>Legal content </p>
+    <div className={style.body}>Legal content </div>
   </div>
 );
 
 const About = () => (
   <div className={style.content}>
     <h2 className={style.heading}>About</h2>
-    <p className={style.body}>About content</p>
+    <div className={style.body}>About content</div>
   </div>
 );
 
 const Legend = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Legend</h2>
-    <p className={style.body}>Legend content</p>
+    <div className={style.body}>Legend content</div>
   </div>
 );
 
