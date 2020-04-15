@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Headercopy from './components/Header/Headercopy';
 import MenuOption from './components/MenuOption/MenuOption';
 import Button from './components/Button/Button';
 import Weight from './components/Weight/Weight';
