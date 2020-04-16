@@ -8,6 +8,7 @@ import Card from './components/Cards/Card';
 import Otherdrugs from './components/Otherdrugs/Otherdrugs';
 import Information from './components/Information/Information';
 
+
 function App() {
   const [finalweight, setFinalweight] = useState(null);
   const addWeight = (finalweight) => {
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className='App'>
       <Information />
-      <Header openMenuOption={handleMenuOption} />
+    <Header openMenuOption={handleMenuOption} />
       {showMenuOption ? (
         <MenuOption handleClose={handleMenuOption} openedOption={showMenuOption} />
       ) : null}
