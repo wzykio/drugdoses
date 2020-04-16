@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "../Menu/Menu";
-import LangContext from "../globalstore";
+import LangContext from '../../states/LangContext'
 
 const Header = ({ openMenuOption }) => {
   let [openMenu, setOpenMenu] = useState(false);
