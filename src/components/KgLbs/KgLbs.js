@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import style from "./KgLbs.module.css";
 import classNames from "classnames";
 import { FaCheck } from "react-icons/fa";
-const KgLbs = ({ getUni }) => {
+
+const KgLbs = (/*{ getUni }*/) => {
   const [activelbs, setActivelbs] = useState(false);
   const [activeKg, setKg] = useState(true);
   const [active, setActive] = useState(true);
-  useEffect(getUni.bind(true, active));
+ // useEffect(getUni.bind(true, active));
   const selectlbs = () => {
     setActivelbs(true);
     setKg(false);
