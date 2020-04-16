@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import style from "./Card.module.css";
+import UnitsContext from '../../states/UnitsContext'
 
 const Card = ({ weight, view }) => {
+
+  const units = useContext(UnitsContext);
+  weight *= units;
  
   return (
     <div className={view ? style.cardWrapper : style.unvisible}>
