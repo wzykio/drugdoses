@@ -1,5 +1,6 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
+import { Provider, KeepAlive } from "react-keep-alive";
 import style from "./MenuOption.module.css";
 import KgLbs from "../KgLbs/KgLbs.js";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
@@ -15,7 +16,11 @@ const Settings = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Settings</h2>
     <div className={style.body}>
-      <KgLbs />
+      <Provider>
+        <KeepAlive name="KgLbs">
+          <KgLbs />
+        </KeepAlive>
+      </Provider>
       <section className={style.section}>
         <LanguageSwitcher />
       </section>
