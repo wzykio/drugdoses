@@ -1,12 +1,11 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import style from "./Card.module.css";
-import UnitsContext from '../../states/UnitsContext'
+import UnitsContext from "../../states/UnitsContext";
 
 const Card = ({ weight, view }) => {
-
-  const units = useContext(UnitsContext);
+  const { units, setUnits } = useContext(UnitsContext);
   weight *= units;
- 
+
   return (
     <div className={view ? style.cardWrapper : style.unvisible}>
       <div className={style.sec}>
@@ -18,7 +17,7 @@ const Card = ({ weight, view }) => {
         <div className={style.cardB}>
           <h3>Amiodaron - dawka {weight * 5} mg</h3>
           <p>100 mg - 2 ml amiodaronu rozcieńczyć do 20 ml 5% glukozy</p>
-          <h3>Podaj {(weight*1).toFixed(2)} ml</h3>
+          <h3>Podaj {(weight * 1).toFixed(2)} ml</h3>
         </div>
       </div>
       <div className={style.sec}>

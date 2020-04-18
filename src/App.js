@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './App.css';
-import Header from './components/Header/Header';
-import MenuOption from './components/MenuOption/MenuOption';
-import Button from './components/Button/Button';
-import Weight from './components/Weight/Weight';
-import Card from './components/Cards/Card';
-import Otherdrugs from './components/Otherdrugs/Otherdrugs';
-import Information from './components/Information/Information';
-
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import MenuOption from "./components/MenuOption/MenuOption";
+import Button from "./components/Button/Button";
+import Weight from "./components/Weight/Weight";
+import Card from "./components/Cards/Card";
+import Otherdrugs from "./components/Otherdrugs/Otherdrugs";
+import Information from "./components/Information/Information";
+import UnitsContext from "../src/states/UnitsContext";
 
 function App() {
   const [finalweight, setFinalweight] = useState(null);
@@ -24,17 +24,24 @@ function App() {
     setShowMenuOption(showMenuOption);
   };
 
+  const [units, setUnits] = useState("1");
+
   return (
-    <div className='App'>
-      <Information />
-    <Header openMenuOption={handleMenuOption} />
-      {showMenuOption ? (
-        <MenuOption handleClose={handleMenuOption} openedOption={showMenuOption} />
-      ) : null}
-      <Button getCat={getCategory} />
-      <Weight get={addWeight} />
-      <Card weight={finalweight} view={showCategory} />
-      <Otherdrugs weight={finalweight} view={showCategory} />
+    <div className="App">
+      <UnitsContext.Provider value={{ units, setUnits }}>
+        <Information />
+        <Header openMenuOption={handleMenuOption} />
+        {showMenuOption ? (
+          <MenuOption
+            handleClose={handleMenuOption}
+            openedOption={showMenuOption}
+          />
+        ) : null}
+        <Button getCat={getCategory} />
+        <Weight get={addWeight} />
+        <Card weight={finalweight} view={showCategory} />
+        <Otherdrugs weight={finalweight} view={showCategory} />
+      </UnitsContext.Provider>
     </div>
   );
 }
