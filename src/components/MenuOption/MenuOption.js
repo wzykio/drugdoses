@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
 import { MdClose } from "react-icons/md";
 import style from "./MenuOption.module.css";
 import KgLbs from "../KgLbs/KgLbs.js";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import {StoreContext} from '../../states/Store'
 
 const elements = {
   settings: "settings",
@@ -44,10 +45,12 @@ const Legend = () => (
   </div>
 );
 
-const ModalContent = ({ openedOption }) => {
+const ModalContent = () => {
+  const [state,dispatch]=useContext(StoreContext)
+  const menuOption = state.menuOption
   let content;
 
-  switch (openedOption) {
+  switch (menuOption) {
     case elements.settings:
       content = Settings();
       break;
@@ -66,22 +69,22 @@ const ModalContent = ({ openedOption }) => {
   return content;
 };
 
-const CloseButton = ({ handleClose }) => {
-  const handleClick = () => {
-    handleClose(false);
-  };
+const CloseButton = () => {
+  const [state,dispatch]=useContext(StoreContext)
   return (
-    <button className={style.closeButton} onClick={handleClick}>
+    <button className={style.closeButton} onClick={()=> dispatch({ type:"CLOSE_MENU_OPTION" })}>
       <MdClose className={style.icon} />
     </button>
   );
 };
 
-const MenuOption = ({ openedOption, handleClose }) => {
+const MenuOption = () => {
+  const [state,dispatch]=useContext(StoreContext)
+  const showMenuOption=state.showMenuOption
   return (
-    <div className={style.modalWrapper}>
-      <CloseButton handleClose={handleClose} />
-      <ModalContent openedOption={openedOption} />
+    <div className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}>
+      <CloseButton />
+      <ModalContent  />
     </div>
   );
 };

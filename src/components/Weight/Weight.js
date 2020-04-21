@@ -1,29 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import style from "./Weight.module.css";
 import AlertBox from "./AlertBox/AlertBox";
+import { StoreContext } from "../../states/Store";
 
-const Weight = ({ get }) => {
-
+const Weight = () => {
+  const [state, dispatch] = useContext(StoreContext);
   let [alertVisible, setAlertVisibility] = useState(false);
-  let [weight, setWeight] = useState(1);
-  useEffect(get.bind(null, weight));
-
 
   useEffect(() => {
-    if (weight < 0) {
-      setWeight(0);
-      setAlertVisibility(true)
+    if (state.weight < 0) {
+      dispatch({ type: "ZERO" });
+      setAlertVisibility(true);
     }
-  }, [weight]);
+  }, [dispatch,state.weight]);
 
-  const checkWeight = (weight) => {
-    if (weight >= 0) {
-      setAlertVisibility(false)
+  const checkWeight = () => {
+    if (state.weight >= 0) {
+      setAlertVisibility(false);
     }
-  }
+  };
 
-  const chandleChangeInput = e => {
-    e.target.value < 0 ? setWeight(0) : setWeight(e.target.value);
+  const chandleChangeInput = (e) => {
+    e.target.value <= 0
+      ? dispatch({ type: "ZERO" })
+      : dispatch({ type: "ADD_HANDLE", 
+      payload:Number(e.target.value)});
   };
 
   return (
@@ -32,36 +33,48 @@ const Weight = ({ get }) => {
       <div className={style.buttons}>
         <button
           className={style.buttonB}
-          onClick={() => setWeight(Number(weight) - 5)}
+          onClick={() => {
+            dispatch({ type: "MINUS_FIVE" });
+            checkWeight(state.weight);
+          }}
         >
           -5kg
         </button>
         <button
           className={style.buttonA}
-          onClick={() => setWeight(Number(weight) - 1)}
+          onClick={() => {
+            dispatch({ type: "MINUS_ONE" });
+            checkWeight(state.weight);
+          }}
         >
           -1kg
         </button>
         <input
           placeholder="Kg"
-          value={weight}
+          value={state.weight}
           onChange={chandleChangeInput}
           type="number"
         ></input>
         <button
           className={style.buttonA}
-          onClick={() => { setWeight(Number(weight) + 1); checkWeight(weight) }}
+          onClick={() => {
+            dispatch({ type: "ADD_ONE" });
+            checkWeight(state.weight);
+          }}
         >
           +1kg
         </button>
         <button
           className={style.buttonB}
-          onClick={() => { setWeight(Number(weight) + 5); checkWeight(weight) }}
+          onClick={() => {
+            dispatch({ type: "ADD_FIVE" });
+            checkWeight(state.weight);
+          }}
         >
           +5kg
         </button>
       </div>
-      {alertVisible ? <AlertBox /> : ''}
+      {alertVisible ? <AlertBox /> : ""}
     </div>
   );
 };

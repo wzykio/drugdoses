@@ -1,10 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 import style from "./Card.module.css";
+import {StoreContext} from '../../states/Store'
+const Card = () => {
+ const [state,dispatch]=useContext(StoreContext)
+ const weight = state.weight;
+ const viewCard = state.showCard
 
-const Card = ({ weight, view }) => {
- 
   return (
-    <div className={view ? style.cardWrapper : style.unvisible}>
+    <div className={viewCard ? style.cardWrapper : style.unvisible}>
       <div className={style.sec}>
         <div className={style.cardA}>
           <h3>Adrenalina - dawka {weight * 10} µg</h3>

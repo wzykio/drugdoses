@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import style from './Otherdrugs.module.css';
-
-const Otherdrugs = ({ weight, view}) => {
- 
+import {StoreContext} from '../../states/Store'
+const Otherdrugs = () => {
+  const [state,dispatch]=useContext(StoreContext)
+  let weight = state.weight;
+  let viewEny = state.showEny
   return (
-    <div className={view ? style.unvisible : style.otherdrugsWrapper}>
+    <div className={viewEny ? style.otherdrugsWrapper  : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
