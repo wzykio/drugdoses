@@ -47,3 +47,33 @@
 .closeButton:hover .icon {
   color: white;
 }
+
+.about__section {
+  margin-bottom: 2em;
+}
+
+.about__section:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__subheading {
+  font-size: 1.4em;
+  margin-bottom: 1.3em;
+  text-transform: uppercase;
+}
+
+.about__content {
+  text-align: left;
+}
+
+.about__creators {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .about__creators {
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+}
