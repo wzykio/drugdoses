@@ -1,0 +1,17 @@
+.LegendWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section {
+  margin: 0.5em;
+  background-color: rgb(243, 243, 243);
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.sectiontitle {
+  margin-bottom: 10px;
+}
+.sectionelement {
+  margin: 10px;
+}
