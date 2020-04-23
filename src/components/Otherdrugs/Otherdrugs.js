@@ -1,18 +1,20 @@
-import React,{useContext} from 'react';
-import style from './Otherdrugs.module.css';
-import {StoreContext} from '../../states/Store'
+import React, { useContext } from "react";
+import style from "./Otherdrugs.module.css";
+import { StoreContext } from "../../states/Store";
+
 const Otherdrugs = () => {
-  const [state,dispatch]=useContext(StoreContext)
-  let weight = state.weight;
-  let viewEny = state.showEny
+  const [state, dispatch] = useContext(StoreContext);
+  const units = state.units;
+  let weight = state.weight * units;
+  let viewEny = state.showEny;
   return (
-    <div className={viewEny ? style.otherdrugsWrapper  : style.unvisible}>
+    <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
         <p>
-          Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać{' '}
-          {weight / 10} ml s.c.{' '}
+          Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać{" "}
+          {weight / 10} ml s.c.{" "}
         </p>
       </div>
 
@@ -20,10 +22,10 @@ const Otherdrugs = () => {
         <h2>Adenozyna</h2>
         <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
         <p>
-          I dawka: {weight / 10} mg iv - {weight / 10} ml{' '}
+          I dawka: {weight / 10} mg iv - {weight / 10} ml{" "}
         </p>
         <p>
-          II dawka i kolejne : {(weight / 10) * 2} mg iv - {(weight / 10) * 2}{' '}
+          II dawka i kolejne : {(weight / 10) * 2} mg iv - {(weight / 10) * 2}{" "}
           ml
         </p>
       </div>

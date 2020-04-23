@@ -1,22 +1,23 @@
-import React, { useState} from "react";
+import React, { useState, useContext } from "react";
 import style from "./KgLbs.module.css";
 import classNames from "classnames";
 import { FaCheck } from "react-icons/fa";
+import { StoreContext } from "../../states/Store";
 
-const KgLbs = (/*{ getUni }*/) => {
+const KgLbs = () => {
+  const [state, dispath] = useContext(StoreContext);
   const [activelbs, setActivelbs] = useState(false);
   const [activeKg, setKg] = useState(true);
- 
-  // useEffect(getUni.bind(true, active));
+
   const selectlbs = () => {
     setActivelbs(true);
     setKg(false);
-   
+    dispath({ type: "CHANGE_UNITS_LBS" });
   };
   const selectKg = () => {
     setKg(true);
     setActivelbs(false);
-   
+    dispath({ type: "CHANGE_UNITS_KG" });
   };
   return (
     <div className={style.wrapper}>

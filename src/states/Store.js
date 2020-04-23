@@ -3,19 +3,20 @@ import React, { createContext, useReducer } from "react";
 export const StoreContext = createContext({});
 
 const initialState = {
-  weight: null,
-  inputweight:null,
+  weight: 1,
+  inputweight: null,
   showEny: false,
   showCard: true,
   showMenuOption: false,
   openMenu: false,
   menuOption: "",
+  units: 1,
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "ADD_ONE":
-      return { ...state, weight: state.weight+1};
+      return { ...state, weight: state.weight + 1 };
     case "MINUS_ONE":
       return { ...state, weight: state.weight - 1 };
     case "ADD_FIVE":
@@ -25,7 +26,7 @@ function reducer(state, action) {
     case "ZERO":
       return { ...state, weight: null };
     case "ADD_HANDLE":
-      return {...state, weight:action.payload };
+      return { ...state, weight: action.payload };
     case "CHANGE_ACTIVE_ENY":
       return { ...state, showEny: true, showCard: false };
     case "CHANGE_ACTIVE_RES":
@@ -44,6 +45,10 @@ function reducer(state, action) {
       return { ...state, menuOption: "about" };
     case "OPEN_LEGEND":
       return { ...state, menuOption: "legend" };
+    case "CHANGE_UNITS_KG":
+      return { ...state, units: 1 };
+    case "CHANGE_UNITS_LBS":
+      return { ...state, units: 0.45 };
 
     default:
       throw new Error("error");

@@ -1,10 +1,12 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import style from "./Card.module.css";
-import {StoreContext} from '../../states/Store'
+import { StoreContext } from "../../states/Store";
+
 const Card = () => {
- const [state,dispatch]=useContext(StoreContext)
- const weight = state.weight;
- const viewCard = state.showCard
+  const [state, dispatch] = useContext(StoreContext);
+  const units = state.units;
+  const weight = state.weight * units;
+  const viewCard = state.showCard;
 
   return (
     <div className={viewCard ? style.cardWrapper : style.unvisible}>
@@ -17,7 +19,7 @@ const Card = () => {
         <div className={style.cardB}>
           <h3>Amiodaron - dawka {weight * 5} mg</h3>
           <p>100 mg - 2 ml amiodaronu rozcieńczyć do 20 ml 5% glukozy</p>
-          <h3>Podaj {(weight*1).toFixed(2)} ml</h3>
+          <h3>Podaj {(weight * 1).toFixed(2)} ml</h3>
         </div>
       </div>
       <div className={style.sec}>
