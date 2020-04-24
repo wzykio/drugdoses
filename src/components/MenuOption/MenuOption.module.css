@@ -12,6 +12,9 @@
   padding: 2rem;
   z-index: 1;
 }
+.unvisibleWrapper{
+  display: none;
+}
 
 .heading {
   font-size: 2rem;

@@ -1,15 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "../Menu/Menu";
 import LangContext from '../../states/LangContext'
+import {StoreContext} from '../../states/Store'
 
-const Header = ({ openMenuOption }) => {
-  let [openMenu, setOpenMenu] = useState(false);
-
-  const menuVisibility = (visibility) => {
-    setOpenMenu(visibility);
-  };
+const Header = () => {
+  const [state,dispatch]=useContext(StoreContext)
+ 
+  
+  const openMenu = state.openMenu
+  
 
   const lang = useContext(LangContext);
 
@@ -19,8 +20,7 @@ const Header = ({ openMenuOption }) => {
         <div className={style.navicon}>
           <GiHamburgerMenu
             onClick={() => {
-              openMenuOption(false);
-              setOpenMenu(!openMenu);
+              dispatch({ type: "OPEN_MENU" })
             }}
           />
         </div>
@@ -30,7 +30,7 @@ const Header = ({ openMenuOption }) => {
         </div>
       </div>
       {openMenu ? (
-        <Menu menuVisibility={menuVisibility} openMenuOption={openMenuOption} />
+        <Menu />
       ) : (
         ""
       )}
