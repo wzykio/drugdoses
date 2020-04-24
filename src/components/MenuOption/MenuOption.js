@@ -6,6 +6,7 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import {StoreContext} from '../../states/Store'
 import creators from '../../data/creatorsData';
 import Creator from '../Creator/Creator';
+import LegendContent from '../Legend/Legendcontent'
 
 const elements = {
   settings: 'settings',
@@ -66,8 +67,10 @@ const About = () => (
 
 const Legend = () => (
   <div className={style.content}>
-    <h2 className={style.heading}>Legend</h2>
-    <div className={style.body}>Legend content</div>
+    <h2 className={style.heading}>Legenda</h2>
+    <div className={style.body}>
+      <LegendContent/>
+    </div>
   </div>
 );
 
