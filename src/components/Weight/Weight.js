@@ -5,6 +5,9 @@ import { StoreContext } from "../../states/Store";
 
 const Weight = () => {
   const [state, dispatch] = useContext(StoreContext);
+  const units = state.units;
+  let u = "";
+  units === 1 ? (u = "kg") : (u = "lbs");
   let [alertVisible, setAlertVisibility] = useState(false);
 
   useEffect(() => {
@@ -12,7 +15,7 @@ const Weight = () => {
       dispatch({ type: "ZERO" });
       setAlertVisibility(true);
     }
-  }, [dispatch,state.weight]);
+  }, [dispatch, state.weight]);
 
   const checkWeight = () => {
     if (state.weight >= 0) {
@@ -23,8 +26,7 @@ const Weight = () => {
   const chandleChangeInput = (e) => {
     e.target.value <= 0
       ? dispatch({ type: "ZERO" })
-      : dispatch({ type: "ADD_HANDLE", 
-      payload:Number(e.target.value)});
+      : dispatch({ type: "ADD_HANDLE", payload: Number(e.target.value) });
   };
 
   return (
@@ -38,7 +40,7 @@ const Weight = () => {
             checkWeight(state.weight);
           }}
         >
-          -5kg
+          -5{u}
         </button>
         <button
           className={style.buttonA}
@@ -47,7 +49,7 @@ const Weight = () => {
             checkWeight(state.weight);
           }}
         >
-          -1kg
+          -1{u}
         </button>
         <input
           placeholder="Kg"
@@ -62,7 +64,7 @@ const Weight = () => {
             checkWeight(state.weight);
           }}
         >
-          +1kg
+          +1{u}
         </button>
         <button
           className={style.buttonB}
@@ -71,7 +73,7 @@ const Weight = () => {
             checkWeight(state.weight);
           }}
         >
-          +5kg
+          +5{u}
         </button>
       </div>
       {alertVisible ? <AlertBox /> : ""}
