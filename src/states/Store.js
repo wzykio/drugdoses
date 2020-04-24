@@ -4,7 +4,7 @@ export const StoreContext = createContext({});
 
 const initialState = {
   weight: null,
-  inputweight:null,
+  inputweight: null,
   showEny: false,
   showCard: true,
   showMenuOption: false,
@@ -15,7 +15,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "ADD_ONE":
-      return { ...state, weight: state.weight+1};
+      return { ...state, weight: state.weight + 1 };
     case "MINUS_ONE":
       return { ...state, weight: state.weight - 1 };
     case "ADD_FIVE":
@@ -23,9 +23,9 @@ function reducer(state, action) {
     case "MINUS_FIVE":
       return { ...state, weight: state.weight - 5 };
     case "ZERO":
-      return { ...state, weight: null };
+      return { ...state, weight: 0 };
     case "ADD_HANDLE":
-      return {...state, weight:action.payload };
+      return { ...state, weight: action.payload };
     case "CHANGE_ACTIVE_ENY":
       return { ...state, showEny: true, showCard: false };
     case "CHANGE_ACTIVE_RES":
