@@ -7,14 +7,17 @@ const Otherdrugs = () => {
   const units = state.units;
   let weight = state.weight * units;
   let viewEny = state.showEny;
+
+  const round = (number) => Math.round(number * 100) / 100;
+
   return (
     <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
         <h2>Adrenalina</h2>
         <p>Wstrząs anafilaktyczny: 500 µg im</p>
         <p>
-          Napad astmy: {weight / 100} mg - 1 amp. do 10 ml 0.9% NaCl. Podać{" "}
-          {weight / 10} ml s.c.{" "}
+          Napad astmy: {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
+          Podać {round(weight / 10)} ml s.c.{" "}
         </p>
       </div>
 
@@ -22,7 +25,7 @@ const Otherdrugs = () => {
         <h2>Adenozyna</h2>
         <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
         <p>
-          I dawka: {weight / 10} mg iv - {weight / 10} ml{" "}
+          I dawka: {round(weight / 10)} mg iv - {round(weight / 10)} ml{" "}
         </p>
         <p>
           II dawka i kolejne : {(weight / 10) * 2} mg iv - {(weight / 10) * 2}{" "}
@@ -67,9 +70,9 @@ const Otherdrugs = () => {
 
       <div className={style.otherdrugsItemMorfina}>
         <h2>Morfina</h2>
-        <p>Dawka: {weight / 10} mg</p>
+        <p>Dawka: {round(weight / 10)} mg</p>
         <p>10 mg rozcieńczyć do 10 ml 0.9 % NaCl</p>
-        <p>Podać {weight / 10} ml i.v/i.o.</p>
+        <p>Podać {round(weight / 10)} ml i.v/i.o.</p>
       </div>
 
       <div className={style.otherdrugsItemParacetamol}>
