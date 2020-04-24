@@ -3,13 +3,14 @@ import React, { createContext, useReducer } from "react";
 export const StoreContext = createContext({});
 
 const initialState = {
-  weight: null,
+  weight: 1,
   inputweight: null,
   showEny: false,
   showCard: true,
   showMenuOption: false,
   openMenu: false,
   menuOption: "",
+  units: 1,
 };
 
 function reducer(state, action) {
@@ -44,6 +45,10 @@ function reducer(state, action) {
       return { ...state, menuOption: "about" };
     case "OPEN_LEGEND":
       return { ...state, menuOption: "legend" };
+    case "CHANGE_UNITS_KG":
+      return { ...state, units: 1 };
+    case "CHANGE_UNITS_LBS":
+      return { ...state, units: 0.45 };
 
     default:
       throw new Error("error");
