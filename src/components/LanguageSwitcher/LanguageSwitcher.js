@@ -1,10 +1,12 @@
+
 import React, { useState,useContext } from 'react';
 import style from './LanguageSwitcher.module.css';
 import {StoreContext} from '../../states/Store'
 
 const LanguageSwitcher = () => {
-  const [activeLanguage, setActiveLanguage] = useState('pl');
-  const [state, dispatch] = useContext(StoreContext);
+  const [{langu}, dispatch] = useContext(StoreContext);
+  const [activeLanguage, setActiveLanguage] = useState(langu);
+
 function changeLang(e){
   dispatch({ type: "CHANGE_LANGUAGE", payload:(e.target.value)})
   setActiveLanguage(e.target.value)
