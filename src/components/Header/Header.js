@@ -2,17 +2,12 @@ import React, { useContext } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "../Menu/Menu";
-import LangContext from '../../states/LangContext'
-import {StoreContext} from '../../states/Store'
+import { StoreContext } from "../../states/Store";
+import {lang} from '../../states/localization/index'
 
 const Header = () => {
-  const [state,dispatch]=useContext(StoreContext)
- 
-  
-  const openMenu = state.openMenu
-  
+  const [{ openMenu,langu}, dispatch] = useContext(StoreContext);
 
-  const lang = useContext(LangContext);
 
   return (
     <div>
@@ -20,20 +15,15 @@ const Header = () => {
         <div className={style.navicon}>
           <GiHamburgerMenu
             onClick={() => {
-              dispatch({ type: "OPEN_MENU" })
+              dispatch({ type: "OPEN_MENU" });
             }}
           />
         </div>
-
         <div className={style.title}>
-          <p>{lang.header.top}</p>
+          <p>{lang[langu].header.top}</p>
         </div>
       </div>
-      {openMenu ? (
-        <Menu />
-      ) : (
-        ""
-      )}
+      {openMenu ? <Menu /> : ""}
     </div>
   );
 };

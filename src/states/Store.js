@@ -1,5 +1,4 @@
 import React, { createContext, useReducer } from "react";
-
 export const StoreContext = createContext({});
 
 const initialState = {
@@ -11,6 +10,7 @@ const initialState = {
   openMenu: false,
   menuOption: "",
   units: 1,
+  langu: navigator.language
 };
 
 function reducer(state, action) {
@@ -49,6 +49,8 @@ function reducer(state, action) {
       return { ...state, units: 1 };
     case "CHANGE_UNITS_LBS":
       return { ...state, units: 0.45 };
+      case "CHANGE_LANGUAGE":
+        return { ...state, langu:action.payload };
 
     default:
       throw new Error("error");

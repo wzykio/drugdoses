@@ -1,6 +1,6 @@
 import React from 'react'
-let userLang = navigator.language || navigator.userLanguage; 
-const lang = {
+
+export const lang = {
         pl:{
              header:{
                  top: "Dawki leków u dzieci"
@@ -14,8 +14,8 @@ const lang = {
      
 
        }
-const LangContext = React.createContext(userLang === "pl" ? lang.pl : lang.en);
-export default LangContext;
+
+
 
 
      
