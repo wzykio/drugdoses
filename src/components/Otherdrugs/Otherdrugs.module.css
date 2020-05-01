@@ -69,6 +69,12 @@
   box-shadow: 1px 1px 0 #ab6125;
   text-align: left;
 }
+
+.otherspan {
+  background-color: #b88c68;
+  width: 25%;
+  
+}
 .otherdrugsItemDexaven p {
   font-size: larger;
   color: #2a2922;
