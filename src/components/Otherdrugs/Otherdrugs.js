@@ -33,11 +33,38 @@ const Otherdrugs = () => {
         </p>
       </div>
 
-      <div className={style.otherdrugsItemDexaven}>
-       <span className={style.dexaven1}><h2>Deksametazon</h2></span>
-        <span className={style.anafilaksja1}>Anafilaksja:<br/>4 mg - 8mg iv</span>
-        <span className={style.astma1}>Astma:<br/>4 mg - 8mg iv</span>
-        <span className={style.zapaleniekrtani1}>Zapalenie krtani:<br/>{(0.15 * weight).toFixed(2)} mg iv</span>
+      <div className={style.otherdrugsItemDeksametazon1}>
+        <span className={style.deksametazon1}>
+          <h2>Deksametazon</h2>
+        </span>
+        <span className={style.anafilaksja1}>
+          Anafilaksja:
+          <br />4 mg - 8mg iv
+        </span>
+        <span className={style.astma1}>
+          Astma:
+          <br />4 mg - 8mg iv
+        </span>
+        <span className={style.zapaleniekrtani1}>
+          Zapalenie krtani:
+          <br />
+          {(0.15 * weight).toFixed(2)} mg iv
+        </span>
+      </div>
+
+      <div className={style.otherdrugsItemDeksametazon2}>
+        <span className={style.deksametazon2}>
+          <h2>Deksametazon</h2>
+        </span>
+        <span className={style.anafilaksja2}>
+          <p>Anafilaksja: 4 mg - 8mg iv</p>
+        </span>
+        <span className={style.astma2}>
+          <p>Astma: 4 mg - 8mg iv</p>
+        </span>
+        <span className={style.zapaleniekrtani2}>
+          <p>Zapalenie krtani: {(0.15 * weight).toFixed(2)} mg iv</p>
+        </span>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>
