@@ -34,10 +34,10 @@ const Otherdrugs = () => {
       </div>
 
       <div className={style.otherdrugsItemDexaven}>
-        <h2>Deksametazon</h2>
-        <div className={style.otherspan}><p>Anafilaksja: 4 mg - 8mg iv</p></div>
-        <div className={style.otherspan}><p>Astma: 4 mg - 8mg iv</p></div>
-        <div className={style.otherspan}><p>Zapalenie krtani: {(0.15 * weight).toFixed(2)} mg iv</p></div>
+       <span className={style.dexaven1}><h2>Deksametazon</h2></span>
+        <span className={style.anafilaksja1}>Anafilaksja:<br/>4 mg - 8mg iv</span>
+        <span className={style.astma1}>Astma:<br/>4 mg - 8mg iv</span>
+        <span className={style.zapaleniekrtani1}>Zapalenie krtani:<br/>{(0.15 * weight).toFixed(2)} mg iv</span>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>

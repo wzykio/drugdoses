@@ -63,18 +63,60 @@
   background-color: #dd8f4f;
   margin: 0.5em;
   border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
+  display: grid;
+  padding: 1.6em 1em 1.7em;
+  /* flex-direction: column;*/
   box-shadow: 1px 1px 0 #ab6125;
   text-align: left;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas:
+    "top top top"
+    "left middle right";
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.dexaven1 {
+  color: #161616;
+  /* font-size: 2.3em;
+  font-weight: 400;*/
+  grid-area: top;
+  height: 100%;
+}
+.anafilaksja1 {
+  background-color: #dda171;
+  width: 100%;
+  height: 100%;
+  grid-area: left;
+  color: #2a2922;
+  line-height: 1.4em;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+}
+.astma1 {
+  background-color: #dda171;
+  width: 100%;
+  grid-area: middle;
+  color: #2a2922;
+  line-height: 1.4em;
+  padding-top: 5px;
+  padding-left: 5px;
+  border-radius: 4px;
+}
+.zapaleniekrtani1 {
+  background-color: #dda171;
+  width: 100%;
+  grid-area: right;
+  color: #2a2922;
+  line-height: 1.4em;
+  padding-top: 5px;
+  padding-left: 5px;
+  border-radius: 4px;
 }
 
-.otherspan {
-  background-color: #b88c68;
-  width: 25%;
-  
-}
 .otherdrugsItemDexaven p {
   font-size: larger;
   color: #2a2922;
@@ -259,9 +301,9 @@
   font-weight: 400;
   margin-bottom: 0.3em;
 }
-.alert{
-    color: red;
+.alert {
+  color: red;
 }
-.unvisible{
-    display: none;
+.unvisible {
+  display: none;
 }
