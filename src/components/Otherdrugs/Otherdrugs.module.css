@@ -25,6 +25,7 @@
     "left right";
   justify-content: center;
   column-gap: 10px;
+  row-gap: 5px;
 }
 .adrenalina {
   color: #161616;
