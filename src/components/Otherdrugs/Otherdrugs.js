@@ -13,10 +13,21 @@ const Otherdrugs = () => {
   return (
     <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
-        <span className={style.adrenalina}><h2>Adrenalina</h2></span>
-        <span className={style.wstrzas}>Wstrząs anafilaktyczny: 500 µg im</span>
+        <span className={style.adrenalina}>
+          <h2>Adrenalina</h2>
+        </span>
+        <span className={style.wstrzas}>
+          Wstrząs anafilaktyczny:
+          <br />
+          <br />
+          500 µg im
+        </span>
         <span className={style.napadastmy}>
-          Napad astmy: {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
+          Napad astmy:
+          <br />
+          <br />
+          {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
+          <br />
           Podać {round(weight / 10)} ml s.c.{" "}
         </span>
       </div>
@@ -39,15 +50,15 @@ const Otherdrugs = () => {
         </span>
         <span className={style.anafilaksja}>
           Anafilaksja:
-          <br />4 mg - 8mg iv
+          <br /> <br />4 mg - 8mg iv
         </span>
         <span className={style.astma}>
           Astma:
-          <br />4 mg - 8mg iv
+          <br /> <br />4 mg - 8mg iv
         </span>
         <span className={style.zapaleniekrtani}>
           Zapalenie krtani:
-          <br />
+          <br /> <br />
           {(0.15 * weight).toFixed(2)} mg iv
         </span>
       </div>

@@ -15,17 +15,16 @@
   border-radius: 4px;
   display: grid;
   padding: 1.6em 2em 1.7em;
- /* flex-direction: column;*/
+  /* flex-direction: column;*/
   box-shadow: 1px 1px 0 #ccc054;
   text-align: left;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 60%;
+  grid-template-rows: 25% 75%;
   grid-template-areas:
     "top top"
     "left right";
   justify-content: center;
   column-gap: 10px;
-  row-gap: 15px;
 }
 .adrenalina {
   color: #161616;
