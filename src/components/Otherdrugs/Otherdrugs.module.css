@@ -13,11 +13,48 @@
   background-color: #efe26f;
   margin: 0.5em;
   border-radius: 4px;
-  display: flex;
+  display: grid;
   padding: 1.6em 2em 1.7em;
-  flex-direction: column;
+ /* flex-direction: column;*/
   box-shadow: 1px 1px 0 #ccc054;
   text-align: left;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 60%;
+  grid-template-areas:
+    "top top"
+    "left right";
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.adrenalina {
+  color: #161616;
+  /* font-size: 2.3em;
+  font-weight: 400;*/
+  grid-area: top;
+  height: 100%;
+}
+.wstrzas {
+  background-color: #f1e9a0;
+  width: 100%;
+  height: 100%;
+  grid-area: left;
+  color: #2a2922;
+  line-height: 1.4em;
+  border-radius: 4px;
+  display: border-box;
+  padding: 10px;
+}
+.napadastmy {
+  background-color: #f1e9a0;
+  width: 100%;
+  height: 100%;
+  grid-area: right;
+  color: #2a2922;
+  line-height: 1.4em;
+  border-radius: 4px;
+  display: border-box;
+  padding: 10px;
 }
 .otherdrugsItemAdrenalina h2 {
   color: #161616;
@@ -57,7 +94,7 @@
   margin-bottom: 0.3em;
 }
 
-.otherdrugsItemDeksametazon1 {
+.otherdrugsItemDeksametazon {
   width: 85vw;
   min-height: 25vh;
   background-color: #dd8f4f;
@@ -77,131 +114,56 @@
   column-gap: 10px;
   row-gap: 15px;
 }
-.deksametazon1 {
+.deksametazon {
   color: #161616;
   /* font-size: 2.3em;
   font-weight: 400;*/
   grid-area: top;
   height: 100%;
 }
-.anafilaksja1 {
+.anafilaksja {
   background-color: #dda171;
   width: 100%;
   height: 100%;
   grid-area: left;
   color: #2a2922;
   line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
   border-radius: 4px;
+  display: border-box;
+  padding: 5px;
 }
-.astma1 {
+.astma {
   background-color: #dda171;
   width: 100%;
   grid-area: middle;
   color: #2a2922;
   line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
   border-radius: 4px;
+  display: border-box;
+  padding: 5px;
 }
-.zapaleniekrtani1 {
+.zapaleniekrtani {
   background-color: #dda171;
   width: 100%;
   grid-area: right;
   color: #2a2922;
   line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
   border-radius: 4px;
+  display: border-box;
+  padding: 5px;
 }
-
-.otherdrugsItemDeksametazon1 p {
+.otherdrugsItemDeksametazon p {
   font-size: larger;
   color: #2a2922;
   line-height: 1.4em;
   margin-bottom: 0.75em;
 }
-.otherdrugsItemDeksametazon1 h2 {
+.otherdrugsItemDeksametazon h2 {
   color: #161616;
   font-size: 2.3em;
   font-weight: 400;
   margin-bottom: 0.3em;
 }
-
-.otherdrugsItemDeksametazon2 {
-  width: 85vw;
-  min-height: 25vh;
-  background-color: #dd8f4f;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: grid;
-  padding: 1.6em 1em 1.7em;
-  /* flex-direction: column;*/
-  box-shadow: 1px 1px 0 #ab6125;
-  text-align: left;
-  grid-template-rows: 20% 20% 20% 20%;
-  grid-template-areas:
-    "top"
-    "middletop"
-    "middlebottom"
-    "bottom";
-  row-gap: 15px;
-}
-.deksametazon2 {
-  color: #161616;
-  /* font-size: 2.3em;
-  font-weight: 400;*/
-  grid-area: top;
-  height: 100%;
-}
-.anafilaksja2 {
-  background-color: #dda171;
-  width: 100%;
-  height: 100%;
-  grid-area: middletop;
-  color: #2a2922;
-  line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 4px;
-}
-.astma2 {
-  background-color: #dda171;
-  width: 100%;
-  grid-area: middlebottom;
-  color: #2a2922;
-  line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
-  border-radius: 4px;
-}
-.zapaleniekrtani2 {
-  background-color: #dda171;
-  width: 100%;
-  grid-area: bottom;
-  color: #2a2922;
-  line-height: 1.4em;
-  padding-top: 5px;
-  padding-left: 5px;
-  border-radius: 4px;
-}
-
-.otherdrugsItemDeksametazon2 p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemDeksametazon2 h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
-
 .otherdrugsItemDiazepam {
   width: 85vw;
   min-height: 25vh;

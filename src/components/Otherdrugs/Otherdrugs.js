@@ -13,12 +13,12 @@ const Otherdrugs = () => {
   return (
     <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
-        <h2>Adrenalina</h2>
-        <p>Wstrząs anafilaktyczny: 500 µg im</p>
-        <p>
+        <span className={style.adrenalina}><h2>Adrenalina</h2></span>
+        <span className={style.wstrzas}>Wstrząs anafilaktyczny: 500 µg im</span>
+        <span className={style.napadastmy}>
           Napad astmy: {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
           Podać {round(weight / 10)} ml s.c.{" "}
-        </p>
+        </span>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
@@ -33,37 +33,22 @@ const Otherdrugs = () => {
         </p>
       </div>
 
-      <div className={style.otherdrugsItemDeksametazon1}>
-        <span className={style.deksametazon1}>
+      <div className={style.otherdrugsItemDeksametazon}>
+        <span className={style.deksametazon}>
           <h2>Deksametazon</h2>
         </span>
-        <span className={style.anafilaksja1}>
+        <span className={style.anafilaksja}>
           Anafilaksja:
           <br />4 mg - 8mg iv
         </span>
-        <span className={style.astma1}>
+        <span className={style.astma}>
           Astma:
           <br />4 mg - 8mg iv
         </span>
-        <span className={style.zapaleniekrtani1}>
+        <span className={style.zapaleniekrtani}>
           Zapalenie krtani:
           <br />
           {(0.15 * weight).toFixed(2)} mg iv
-        </span>
-      </div>
-
-      <div className={style.otherdrugsItemDeksametazon2}>
-        <span className={style.deksametazon2}>
-          <h2>Deksametazon</h2>
-        </span>
-        <span className={style.anafilaksja2}>
-          <p>Anafilaksja: 4 mg - 8mg iv</p>
-        </span>
-        <span className={style.astma2}>
-          <p>Astma: 4 mg - 8mg iv</p>
-        </span>
-        <span className={style.zapaleniekrtani2}>
-          <p>Zapalenie krtani: {(0.15 * weight).toFixed(2)} mg iv</p>
         </span>
       </div>
 
