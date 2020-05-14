@@ -1,0 +1,29 @@
+.article {
+  margin-bottom: 2em;
+}
+
+.article:last-of-type {
+  margin-bottom: 0;
+}
+
+.subheading {
+  font-size: 1.4em;
+  margin-bottom: 1.3em;
+  text-transform: uppercase;
+}
+
+.content {
+  text-align: left;
+}
+
+.creators {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .creators {
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+}

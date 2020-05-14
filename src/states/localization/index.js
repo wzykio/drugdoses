@@ -20,8 +20,17 @@ export const lang = {
       legend: 'Legenda'
     },
     menuOptions: {
+      about: {
+        heading: 'O nas',
+        subheadingCompany: 'Nasza firma',
+        subheadingTeam: 'Nasz zespół',
+        contentCompany: `Be superior. Kitten is playing with dead mouse. Fall asleep upside-down mark territory, yet instead of drinking water from the cat bowl, make sure to steal water from the toilet. Cry louder at reflection. Enslave the hooman. Hide head under blanket so no one can see give me some of your food give me some of your food give me some of your food meh, i don't want it pretend you want to go out but then don't chase red laser dot, for bury the poop bury it deep. Soft kitty warm kitty little ball of furr. Meow in empty rooms experiences short bursts of poo-phoria after going to the loo.`
+      },
       legal: {
         heading: 'Nota prawna'
+      },
+      legend: {
+        heading: 'Legenda'
       },
       settings: {
         heading: 'Ustawienia',
@@ -55,8 +64,16 @@ export const lang = {
       legend: 'Legend'
     },
     menuOptions: {
+      about: {
+        heading: 'About',
+        subheadingCompany: 'About Company',
+        subheadingTeam: 'Our team'
+      },
       legal: {
         heading: 'Legal note'
+      },
+      legend: {
+        heading: 'Legend'
       },
       settings: {
         heading: 'Settings',

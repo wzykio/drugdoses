@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { MdClose } from 'react-icons/md';
 import style from './MenuOption.module.css';
-import KgLbs from '../KgLbs/KgLbs.js';
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { StoreContext } from '../../states/Store';
 import { lang } from '../../states/localization/index';
-import creators from '../../data/creatorsData';
-import Creator from '../Creator/Creator';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import KgLbs from '../KgLbs/KgLbs.js';
 import LegendContent from '../Legend/Legendcontent';
+import AboutContent from '../AboutContent/AboutContent';
 
 const elements = {
   settings: 'settings',
@@ -35,39 +34,18 @@ const Legal = (langu) => (
   </div>
 );
 
-const About = () => (
+const About = (langu) => (
   <div className={style.content}>
-    <h2 className={style.heading}>About</h2>
+    <h2 className={style.heading}>{lang[langu].menuOptions.about.heading}</h2>
     <div className={style.body}>
-      <article className={style.about__section}>
-        <h3 className={style.about__subheading}>About company</h3>
-        <p className={style.about__content}>
-          Be superior. Kitten is playing with dead mouse. Fall asleep
-          upside-down mark territory, yet instead of drinking water from the cat
-          bowl, make sure to steal water from the toilet. Cry louder at
-          reflection. Enslave the hooman. Hide head under blanket so no one can
-          see give me some of your food give me some of your food give me some
-          of your food meh, i don't want it pretend you want to go out but then
-          don't chase red laser dot, for bury the poop bury it deep. Soft kitty
-          warm kitty little ball of furr. Meow in empty rooms experiences short
-          bursts of poo-phoria after going to the loo.
-        </p>
-      </article>
-      <article className={style.about__section}>
-        <h3 className={style.about__subheading}>Our team</h3>
-        <div className={style.about__creators}>
-          {creators.map((creator) => (
-            <Creator creator={creator} />
-          ))}
-        </div>
-      </article>
+      <AboutContent />
     </div>
   </div>
 );
 
-const Legend = () => (
+const Legend = (langu) => (
   <div className={style.content}>
-    <h2 className={style.heading}>Legenda</h2>
+    <h2 className={style.heading}>{lang[langu].menuOptions.legal.heading}</h2>
     <div className={style.body}>
       <LegendContent />
     </div>
@@ -87,10 +65,10 @@ const ModalContent = () => {
       content = Legal(langu);
       break;
     case elements.about:
-      content = About();
+      content = About(langu);
       break;
     case elements.legend:
-      content = Legend();
+      content = Legend(langu);
       break;
     default:
       content = null;
