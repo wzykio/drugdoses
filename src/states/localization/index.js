@@ -13,7 +13,7 @@ export const lang = {
   },
   en: {
     header: {
-      top: 'Drug doses...',
+      top: 'Drug doses for children',
     },
     information: {
       heading: 'Warning!',
