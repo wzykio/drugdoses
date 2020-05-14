@@ -19,6 +19,17 @@ export const lang = {
       about: 'O nas',
       legend: 'Legenda'
     },
+    menuOptions: {
+      legal: {
+        heading: 'Nota prawna'
+      },
+      settings: {
+        heading: 'Ustawienia',
+        languageChose: 'Wybór języka',
+        langPolish: 'Polski',
+        langEnglish: 'Angielski'
+      }
+    },
     weight: {
       heading: 'Waga dziecka'
     }
@@ -42,6 +53,17 @@ export const lang = {
       legalNote: 'Legal Note',
       about: 'About',
       legend: 'Legend'
+    },
+    menuOptions: {
+      legal: {
+        heading: 'Legal note'
+      },
+      settings: {
+        heading: 'Settings',
+        languageChose: 'Choose language',
+        langPolish: 'Polish',
+        langEnglish: 'English'
+      }
     },
     weight: {
       heading: `Child's weight`

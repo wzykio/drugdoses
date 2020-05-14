@@ -1,12 +1,13 @@
-import React,{useContext} from "react";
-import { MdClose } from "react-icons/md";
-import style from "./MenuOption.module.css";
-import KgLbs from "../KgLbs/KgLbs.js";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import {StoreContext} from '../../states/Store'
+import React, { useContext } from 'react';
+import { MdClose } from 'react-icons/md';
+import style from './MenuOption.module.css';
+import KgLbs from '../KgLbs/KgLbs.js';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { StoreContext } from '../../states/Store';
+import { lang } from '../../states/localization/index';
 import creators from '../../data/creatorsData';
 import Creator from '../Creator/Creator';
-import LegendContent from '../Legend/Legendcontent'
+import LegendContent from '../Legend/Legendcontent';
 
 const elements = {
   settings: 'settings',
@@ -15,9 +16,9 @@ const elements = {
   legend: 'legend',
 };
 
-const Settings = () => (
+const Settings = (langu) => (
   <div className={style.content}>
-    <h2 className={style.heading}>Settings</h2>
+    <h2 className={style.heading}>{lang[langu].menuOptions.settings.heading}</h2>
     <div className={style.body}>
       <KgLbs />
       <section className={style.section}>
@@ -27,9 +28,9 @@ const Settings = () => (
   </div>
 );
 
-const Legal = () => (
+const Legal = (langu) => (
   <div className={style.content}>
-    <h2 className={style.heading}>Legal</h2>
+    <h2 className={style.heading}>{lang[langu].menuOptions.legal.heading}</h2>
     <div className={style.body}>Legal content </div>
   </div>
 );
@@ -55,10 +56,9 @@ const About = () => (
       <article className={style.about__section}>
         <h3 className={style.about__subheading}>Our team</h3>
         <div className={style.about__creators}>
-        {creators.map((creator) => (
-          <Creator
-            creator={creator}/>
-        )) }
+          {creators.map((creator) => (
+            <Creator creator={creator} />
+          ))}
         </div>
       </article>
     </div>
@@ -69,22 +69,22 @@ const Legend = () => (
   <div className={style.content}>
     <h2 className={style.heading}>Legenda</h2>
     <div className={style.body}>
-      <LegendContent/>
+      <LegendContent />
     </div>
   </div>
 );
 
 const ModalContent = () => {
-  const [state,dispatch]=useContext(StoreContext)
-  const menuOption = state.menuOption
+  const [state, dispatch] = useContext(StoreContext);
+  const { menuOption, langu } = state;
   let content;
 
   switch (menuOption) {
     case elements.settings:
-      content = Settings();
+      content = Settings(langu);
       break;
     case elements.legal:
-      content = Legal();
+      content = Legal(langu);
       break;
     case elements.about:
       content = About();
@@ -99,21 +99,26 @@ const ModalContent = () => {
 };
 
 const CloseButton = () => {
-  const [state,dispatch]=useContext(StoreContext)
+  const [state, dispatch] = useContext(StoreContext);
   return (
-    <button className={style.closeButton} onClick={()=> dispatch({ type:"CLOSE_MENU_OPTION" })}>
+    <button
+      className={style.closeButton}
+      onClick={() => dispatch({ type: 'CLOSE_MENU_OPTION' })}
+    >
       <MdClose className={style.icon} />
     </button>
   );
 };
 
 const MenuOption = () => {
-  const [state,dispatch]=useContext(StoreContext)
-  const showMenuOption=state.showMenuOption
+  const [state, dispatch] = useContext(StoreContext);
+  const showMenuOption = state.showMenuOption;
   return (
-    <div className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}>
+    <div
+      className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}
+    >
       <CloseButton />
-      <ModalContent  />
+      <ModalContent />
     </div>
   );
 };

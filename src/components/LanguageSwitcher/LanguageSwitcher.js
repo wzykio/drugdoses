@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import style from './LanguageSwitcher.module.css';
 import { StoreContext } from '../../states/Store';
+import { lang } from "../../states/localization/index";
 
 const LanguageSwitcher = () => {
   const [{ langu }, dispatch] = useContext(StoreContext);
@@ -13,11 +14,11 @@ const LanguageSwitcher = () => {
 
   let availableLanguages = [
     {
-      name: 'Polski',
+      name: lang[langu].menuOptions.settings.langPolish,
       shortcut: 'pl',
     },
     {
-      name: 'Angielski',
+      name: lang[langu].menuOptions.settings.langEnglish,
       shortcut: 'en',
     },
   ];
@@ -25,7 +26,7 @@ const LanguageSwitcher = () => {
   return (
     <>
       <fieldset className={style.wrapper}>
-        <h3 className={style.heading}>Wybór języka</h3>
+        <h3 className={style.heading}>{lang[langu].menuOptions.settings.languageChose}</h3>
         {availableLanguages.map((lang) => {
           const { name } = lang;
           const { shortcut } = lang;
