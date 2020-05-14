@@ -2,10 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 import style from "./Weight.module.css";
 import AlertBox from "./AlertBox/AlertBox";
 import { StoreContext } from "../../states/Store";
+import { lang } from "../../states/localization/index";
 
 const Weight = () => {
   const [state, dispatch] = useContext(StoreContext);
-  const units = state.units;
+  const { units, langu } = state;
   let u = "";
   units === 1 ? (u = "kg") : (u = "lbs");
   let [alertVisible, setAlertVisibility] = useState(false);
@@ -31,7 +32,7 @@ const Weight = () => {
 
   return (
     <div className={style.wrapper}>
-      <h3>Waga dziecka : </h3>
+      <h3>{lang[langu].weight.heading} </h3>
       <div className={style.buttons}>
         <button
           className={style.buttonB}
