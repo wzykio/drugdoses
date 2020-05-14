@@ -34,7 +34,37 @@ export const lang = {
         heading: 'Nota prawna'
       },
       legend: {
-        heading: 'Legenda'
+        heading: 'Legenda',
+        access: {
+          heading: 'Droga podania leków',
+          iv: 'iv - droga dożylna',
+          im: 'im - droga domięśniowa',
+          sc: 'sc - podskórnie',
+          io: 'io - droga doszpikowa',
+          pr: 'pr - droga doodbytnicza'
+        },
+        drugs: {
+          heading: 'Konfekcjonowanie leków',
+          adrenaline: 'Adrenalina: ampułka 1 mg/1 ml',
+          amiodarone: 'Amiodaron: ampułka 150 mg/3 ml',
+          atropine: 'Atropina: ampułka 6 mg/2 ml',
+          adenosine: 'Adenozyna: ampułka 1 mg/1 ml',
+          diazepam: 'Diazepam: ampułka 10 mg/2 ml',
+          flumazenil: 'Flumazenil: ampułka 0.5 mg/5 ml',
+          hydrocortisone: 'Hydrokortyzon: fiolka 100 mg',
+          magnesium: 'Magnez: ampułka 2 g/10 ml',
+          morphine: 'Morfina: ampułka 10 mg/1 ml',
+          paracetamol: 'Paracetamol czopki: 50 mg, 80 mg, 125 mg, 250 mg'
+        },
+        units: {
+          heading: 'Jednostki miary',
+          ml: 'ml - Mililitr',
+          ug: 'µg - Mikrogram',
+          mg: 'mg - Miligram',
+          g: 'g - Gram',
+          kg: 'kg - Kilogram',
+          j: 'J - Dżul'
+        }
       },
       settings: {
         heading: 'Ustawienia',
@@ -82,7 +112,37 @@ export const lang = {
         heading: 'Legal note'
       },
       legend: {
-        heading: 'Legend'
+        heading: 'Legend',
+        access: {
+          heading: 'Route of administration',
+          iv: 'iv - intravenously',
+          im: 'im - intramuscularly',
+          sc: 'sc - subcutaneously',
+          io: 'io - inraosseous',
+          pr: 'pr - per rectum'
+        },
+        drugs: {
+          heading: 'Drug packaging',
+          adrenaline: 'Adrenaline: ampule 1 mg/1 ml',
+          amiodarone: 'Amiodarone: ampule 150 mg/3 ml',
+          atropine: 'Atropine: ampule 6 mg/2 ml',
+          adenosine: 'Adenosine: ampule 1 mg/1 ml',
+          diazepam: 'Diazepam: ampule 10 mg/2 ml',
+          flumazenil: 'Flumazenil: ampule 0.5 mg/5 ml',
+          hydrocortisone: 'Hydrocortisone: vial 100 mg',
+          magnesium: 'Magnesium: ampule 2 g/10 ml',
+          morphine: 'Morphine: ampule 10 mg/1 ml',
+          paracetamol: 'Paracetamol suppositories: 50 mg, 80 mg, 125 mg, 250 mg'
+        },
+        units: {
+          heading: 'Unit of measurement',
+          ml: 'ml - Milliliter',
+          ug: 'µg - Microgramme',
+          mg: 'mg - Miligram',
+          g: 'g - Gram',
+          kg: 'kg - Kilogram',
+          j: 'J - Joule'
+        }
       },
       settings: {
         heading: 'Settings',

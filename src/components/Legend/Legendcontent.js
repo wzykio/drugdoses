@@ -1,51 +1,55 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import style from "./Legendcontent.module.css";
+import { StoreContext } from '../../states/Store';
+import { lang } from '../../states/localization/index';
 
 const Legendcontent = () => {
+  const [{ langu }] = useContext(StoreContext);
+
   const list = [
-    { name: "Adrenalina: ampułka 1 mg/1 ml" },
-    { name: "Amiodaron: ampułka 150 mg/3 ml" },
-    { name: "Atropina: ampułka 6 mg/2 ml" },
-    { name: "Adenozyna: ampułka 1 mg/1 ml" },
-    { name: "Diazepam: ampułka 10 mg/2 ml" },
-    { name: "Flumazenil: ampułka 0.5 mg/5 ml" },
-    { name: "Hydrokortyzon: fiolka 100 mg" },
-    { name: "Magnez: ampułka 2 g/10 ml" },
-    { name: "Morfina: ampułka 10 mg/1 ml" },
-    { name: " Paracetamol czopki: 50 mg, 80 mg, 125 mg, 250 mg" },
+    { name: lang[langu].menuOptions.legend.drugs.adrenaline },
+    { name: lang[langu].menuOptions.legend.drugs.amiodarone },
+    { name: lang[langu].menuOptions.legend.drugs.atropine },
+    { name: lang[langu].menuOptions.legend.drugs.adenosine },
+    { name: lang[langu].menuOptions.legend.drugs.diazepam },
+    { name: lang[langu].menuOptions.legend.drugs.flumazenil },
+    { name: lang[langu].menuOptions.legend.drugs.hydrocortisone },
+    { name: lang[langu].menuOptions.legend.drugs.magnesium },
+    { name: lang[langu].menuOptions.legend.drugs.morphine },
+    { name: lang[langu].menuOptions.legend.drugs.paracetamol },
   ];
   const access = [
-    { name: "iv - Droga dożylna" },
-    { name: "im - Droga domięśniowa" },
-    { name: "sc - Podskórnie" },
-    { name: "io - droga doszpikowa" },
-    { name: "io - droga doodbytnicza" },
+    { name: lang[langu].menuOptions.legend.access.iv },
+    { name: lang[langu].menuOptions.legend.access.im },
+    { name: lang[langu].menuOptions.legend.access.sc },
+    { name: lang[langu].menuOptions.legend.access.io },
+    { name: lang[langu].menuOptions.legend.access.pr },
   ];
   const units = [
-    { name: "ml - Mililitr" },
-    { name: "µg - Mikrogram" },
-    { name: "mg - Miligram" },
-    { name: "g - Gram" },
-    { name: "kg - Kilogram" },
-    { name: "J - Dżul" },
+    { name: lang[langu].menuOptions.legend.units.ml },
+    { name: lang[langu].menuOptions.legend.units.ug },
+    { name: lang[langu].menuOptions.legend.units.mg },
+    { name: lang[langu].menuOptions.legend.units.g },
+    { name: lang[langu].menuOptions.legend.units.kg },
+    { name: lang[langu].menuOptions.legend.units.j },
   ];
 
   return (
     <div className={style.LegendWrapper}>
       <div className={style.section}>
-        <h3 className={style.sectiontitle}>Droga podania leków</h3>
+        <h3 className={style.sectiontitle}>{lang[langu].menuOptions.legend.access.heading}</h3>
         {access.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>Jednostki miary</h3>
+        <h3>{lang[langu].menuOptions.legend.units.heading}</h3>
         {units.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>Konfekcjonowanie leków</h3>
+        <h3>{lang[langu].menuOptions.legend.drugs.heading}</h3>
         {list.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
