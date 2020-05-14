@@ -1,6 +1,15 @@
 import React, { createContext, useReducer } from "react";
 export const StoreContext = createContext({});
 
+const supportedLanguage = ['pl', 'en'];
+
+const setDefaultLanguage = () => {
+  const browserLanguage = navigator.language.slice(0,2).toLowerCase();
+  const language = supportedLanguage.includes(browserLanguage) ? browserLanguage : 'en';
+  console.log(language);
+  return language;
+}
+
 const initialState = {
   weight: 1,
   inputweight: null,
@@ -10,7 +19,7 @@ const initialState = {
   openMenu: false,
   menuOption: "",
   units: 1,
-  langu: navigator.language
+  langu: setDefaultLanguage()
 };
 
 function reducer(state, action) {
