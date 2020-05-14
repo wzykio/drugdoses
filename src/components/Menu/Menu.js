@@ -4,9 +4,11 @@ import { FaCog, FaDiaspora } from "react-icons/fa"; //ustawienia
 import { MdAnnouncement } from "react-icons/md"; //nota prawna
 import { GoInfo } from "react-icons/go"; //o nas
 import { StoreContext } from "../../states/Store";
+import { lang } from "../../states/localization/index";
 
 const Menu = ({ openMenuOption }) => {
   const [state, dispatch] = useContext(StoreContext);
+  const { langu } = state;
 
   const clickAway = useRef(null);
 
@@ -35,7 +37,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <FaCog className={style.icon} />
-          Ustawienia
+          {lang[langu].menu.settings}
         </li>
         <li
           className={style.listItem}
@@ -46,7 +48,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <MdAnnouncement className={style.icon} />
-          Nota prawna
+          {lang[langu].menu.legalNote}
         </li>
         <li
           className={style.listItem}
@@ -56,7 +58,8 @@ const Menu = ({ openMenuOption }) => {
             dispatch({ type: "OPEN_MENU_OPTION" });
           }}
         >
-          <GoInfo className={style.icon} />O nas
+          <GoInfo className={style.icon} />
+          {lang[langu].menu.about}
         </li>
         <li
           className={style.listItem}
@@ -67,7 +70,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <FaDiaspora className={style.icon} />
-          Legenda
+          {lang[langu].menu.legend}
         </li>
       </ul>
     </div>

@@ -13,6 +13,12 @@ export const lang = {
       consent1: 'Rozumiem',
       consent2: 'Biorę odpowiedzialność za dobór dawek'
     },
+    menu: {
+      settings: 'Ustawienia',
+      legalNote: 'Nota prawna',
+      about: 'O nas',
+      legend: 'Legenda'
+    },
     weight: {
       heading: 'Waga dziecka'
     }
@@ -30,6 +36,12 @@ export const lang = {
       body: 'Treat each case individually. Pharmacology and drugs doses should be verified individually in every case.',
       consent1: 'Got it',
       consent2: 'I take responsibility for a dose selection'
+    },
+    menu: {
+      settings: 'Settings',
+      legalNote: 'Legal Note',
+      about: 'About',
+      legend: 'Legend'
     },
     weight: {
       heading: `Child's weight`
