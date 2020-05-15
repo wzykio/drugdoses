@@ -1,23 +1,22 @@
 import React, { useContext } from "react";
 import style from "./Otherdrugs.module.css";
 import { StoreContext } from "../../states/Store";
+import { lang } from '../../states/localization/index';
 
 const Otherdrugs = () => {
   const [state, dispatch] = useContext(StoreContext);
-  const units = state.units;
+  const { units, showEny: viewEny, langu } = state;
   let weight = state.weight * units;
-  let viewEny = state.showEny;
 
   const round = (number) => Math.round(number * 100) / 100;
 
   return (
     <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
-        <h2>Adrenalina</h2>
-        <p>Wstrząs anafilaktyczny: 500 µg im</p>
+        <h2>{lang[langu].drugsOther.adrenaline.drugName}</h2>
+        <p>{lang[langu].drugsOther.adrenaline.anaphylaxis}</p>
         <p>
-          Napad astmy: {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
-          Podać {round(weight / 10)} ml s.c.{" "}
+        {lang[langu].drugsOther.adrenaline.asthma}: {round(weight / 100)} mg - {lang[langu].drugsOther.adrenaline.asthmaPreparation}. {lang[langu].drugsOther.administer} {round(weight / 10)} ml s.c.{" "}
         </p>
       </div>
 

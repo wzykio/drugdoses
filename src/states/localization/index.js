@@ -19,6 +19,23 @@ export const lang = {
         preparation: '2 amp atropiny rozcieńczyć do 10 ml 0.9% NaCl'
       },
     },
+    drugsOther: {
+      administer: 'Podaj',
+      adrenaline: {
+        drugName: 'Adrenalina',
+        anaphylaxis: 'Wstrząs anafilaktyczny: 500 µg i.m.',
+        asthma: 'Napad astmy',
+        asthmaPreparation: '1 amp. do 10 ml 0.9% NaCl', 
+      },
+      adenosine: {},
+      dexamethasone: {},
+      diazepam: {},
+      flumazenil: {},
+      hydrocortisone: {},
+      magnesium: {},
+      morphine: {},
+      paracetamol: {}
+    },
     header: {
       top: 'Dawki leków u dzieci'
     },
@@ -112,6 +129,23 @@ export const lang = {
         dose: 'Atropine dose',
         preparation: 'Dilute 2 ampules of atropine in 10ml of 0.9% NaCl (normal saline)'
       },
+    },
+    drugsOther: {
+      administer: 'Administer',
+      adrenaline: {
+        drugName: 'Adrenaline',
+        anaphylaxis: 'Anaphylaxis: 500 µg i.m.',
+        asthma: 'Asthma attack',
+        asthmaPreparation: '1 amp. in 10 ml 0.9% NaCl', 
+      },
+      adenosine: {},
+      dexamethasone: {},
+      diazepam: {},
+      flumazenil: {},
+      hydrocortisone: {},
+      magnesium: {},
+      morphine: {},
+      paracetamol: {}
     },
     header: {
       top: 'Drug doses for children'
