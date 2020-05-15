@@ -15,42 +15,51 @@ const elements = {
   legend: 'legend',
 };
 
-const Settings = (langu) => (
-  <div className={style.content}>
-    <h2 className={style.heading}>{lang[langu].menuOptions.settings.heading}</h2>
-    <div className={style.body}>
-      <KgLbs />
-      <section className={style.section}>
-        <LanguageSwitcher />
-      </section>
+const Settings = (langu) => {
+  const { settings } = lang[langu].menuOptions;
+  return (
+    <div className={style.content}>
+      <h2 className={style.heading}>{settings.heading}</h2>
+      <div className={style.body}>
+        <KgLbs />
+        <section className={style.section}>
+          <LanguageSwitcher />
+        </section>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-const Legal = (langu) => (
+const Legal = (langu) => {
+  const { legal } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>{lang[langu].menuOptions.legal.heading}</h2>
+    <h2 className={style.heading}>{legal.heading}</h2>
     <div className={style.body}>Legal content </div>
   </div>
-);
+)};
 
-const About = (langu) => (
+const About = (langu) => {
+  const { about } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>{lang[langu].menuOptions.about.heading}</h2>
+    <h2 className={style.heading}>{about.heading}</h2>
     <div className={style.body}>
       <AboutContent />
     </div>
   </div>
-);
+)};
 
-const Legend = (langu) => (
+const Legend = (langu) => {
+  const { legal } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>{lang[langu].menuOptions.legal.heading}</h2>
+    <h2 className={style.heading}>{legal.heading}</h2>
     <div className={style.body}>
       <LegendContent />
     </div>
   </div>
-);
+)};
 
 const ModalContent = () => {
   const [state, dispatch] = useContext(StoreContext);

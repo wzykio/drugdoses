@@ -6,6 +6,7 @@ import { lang } from "../../states/localization/index";
 const LanguageSwitcher = () => {
   const [{ langu }, dispatch] = useContext(StoreContext);
   const [activeLanguage, setActiveLanguage] = useState(langu);
+  const { settings } = lang[langu].menuOptions;
 
   function changeLang(e) {
     dispatch({ type: 'CHANGE_LANGUAGE', payload: e.target.value });
@@ -14,11 +15,11 @@ const LanguageSwitcher = () => {
 
   let availableLanguages = [
     {
-      name: lang[langu].menuOptions.settings.langPolish,
+      name: settings.langPolish,
       shortcut: 'pl',
     },
     {
-      name: lang[langu].menuOptions.settings.langEnglish,
+      name: settings.langEnglish,
       shortcut: 'en',
     },
   ];
@@ -26,7 +27,7 @@ const LanguageSwitcher = () => {
   return (
     <>
       <fieldset className={style.wrapper}>
-        <h3 className={style.heading}>{lang[langu].menuOptions.settings.languageChose}</h3>
+        <h3 className={style.heading}>{settings.languageChose}</h3>
         {availableLanguages.map((lang) => {
           const { name } = lang;
           const { shortcut } = lang;

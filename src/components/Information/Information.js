@@ -7,15 +7,16 @@ const Information = () => {
 
   const [warningVisability, setWarningVisability] = useState(true)
   const [{ langu }] = useContext(StoreContext);
+  const { information } = lang[langu];
 
   return (
     <div className={warningVisability ? style.information : style.hidden}>
-      <h1 className={style.header}>{lang[langu].information.heading}</h1>
-      <h2 className={style.header2}>{lang[langu].information.subheading}</h2>
+      <h1 className={style.header}>{information.heading}</h1>
+      <h2 className={style.header2}>{information.subheading}</h2>
       <p className={style.body}>
-        {lang[langu].information.body}
+        {information.body}
       </p>
-      <button onClick={()=>setWarningVisability(false)}>{lang[langu].information.consent1}<br></br>{lang[langu].information.consent2}</button>
+      <button onClick={()=>setWarningVisability(false)}>{information.consent1}<br></br>{information.consent2}</button>
     </div>
   );
 };

@@ -6,50 +6,52 @@ import { lang } from '../../states/localization/index';
 const Legendcontent = () => {
   const [{ langu }] = useContext(StoreContext);
 
+  const { legend } = lang[langu].menuOptions;
+
   const list = [
-    { name: lang[langu].menuOptions.legend.drugs.adrenaline },
-    { name: lang[langu].menuOptions.legend.drugs.amiodarone },
-    { name: lang[langu].menuOptions.legend.drugs.atropine },
-    { name: lang[langu].menuOptions.legend.drugs.adenosine },
-    { name: lang[langu].menuOptions.legend.drugs.diazepam },
-    { name: lang[langu].menuOptions.legend.drugs.flumazenil },
-    { name: lang[langu].menuOptions.legend.drugs.hydrocortisone },
-    { name: lang[langu].menuOptions.legend.drugs.magnesium },
-    { name: lang[langu].menuOptions.legend.drugs.morphine },
-    { name: lang[langu].menuOptions.legend.drugs.paracetamol },
+    { name: legend.drugs.adrenaline },
+    { name: legend.drugs.amiodarone },
+    { name: legend.drugs.atropine },
+    { name: legend.drugs.adenosine },
+    { name: legend.drugs.diazepam },
+    { name: legend.drugs.flumazenil },
+    { name: legend.drugs.hydrocortisone },
+    { name: legend.drugs.magnesium },
+    { name: legend.drugs.morphine },
+    { name: legend.drugs.paracetamol },
   ];
   const access = [
-    { name: lang[langu].menuOptions.legend.access.iv },
-    { name: lang[langu].menuOptions.legend.access.im },
-    { name: lang[langu].menuOptions.legend.access.sc },
-    { name: lang[langu].menuOptions.legend.access.io },
-    { name: lang[langu].menuOptions.legend.access.pr },
+    { name: legend.access.iv },
+    { name: legend.access.im },
+    { name: legend.access.sc },
+    { name: legend.access.io },
+    { name: legend.access.pr },
   ];
   const units = [
-    { name: lang[langu].menuOptions.legend.units.ml },
-    { name: lang[langu].menuOptions.legend.units.ug },
-    { name: lang[langu].menuOptions.legend.units.mg },
-    { name: lang[langu].menuOptions.legend.units.g },
-    { name: lang[langu].menuOptions.legend.units.kg },
-    { name: lang[langu].menuOptions.legend.units.j },
+    { name: legend.units.ml },
+    { name: legend.units.ug },
+    { name: legend.units.mg },
+    { name: legend.units.g },
+    { name: legend.units.kg },
+    { name: legend.units.j },
   ];
 
   return (
     <div className={style.LegendWrapper}>
       <div className={style.section}>
-        <h3 className={style.sectiontitle}>{lang[langu].menuOptions.legend.access.heading}</h3>
+        <h3 className={style.sectiontitle}>{legend.access.heading}</h3>
         {access.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>{lang[langu].menuOptions.legend.units.heading}</h3>
+        <h3>{legend.units.heading}</h3>
         {units.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>{lang[langu].menuOptions.legend.drugs.heading}</h3>
+        <h3>{legend.drugs.heading}</h3>
         {list.map((item) => (
           <p className={style.sectionelement}>{item.name}</p>
         ))}
