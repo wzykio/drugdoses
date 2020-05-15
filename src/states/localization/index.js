@@ -3,6 +3,22 @@ export const lang = {
     alert: {
       text: 'Waga nie może być ujemna!'
     },
+    drugsCardiac: {
+      administer: 'Podaj',
+      defibrillation : 'Defibrylacja',
+      adrenaline: {
+        dose: 'Adrenalina - dawka',
+        preparation: '1 amp adrenaliny rozcieńczyć do 10 ml 0.9% NaCl'
+      },
+      amiodarone: {
+        dose: 'Amiodaron - dawka',
+        preparation: '100 mg - 2 ml amiodaronu rozcieńczyć do 20 ml 5% glukozy'
+      },
+      atropine: {
+        dose: 'Atropina - dawka',
+        preparation: '2 amp atropiny rozcieńczyć do 10 ml 0.9% NaCl'
+      },
+    },
     header: {
       top: 'Dawki leków u dzieci'
     },
@@ -80,6 +96,22 @@ export const lang = {
   en: {
     alert: {
       text: 'The weight cannot be less the zero!'
+    },
+    drugsCardiac: {
+      administer: 'Administer',
+      defibrillation : 'Defibrillation',
+      adrenaline: {
+        dose: 'Adrenaline dose',
+        preparation: 'Dilute 1 ampule of adrenaline in 10ml of 0.9% NaCl (normal saline)'
+      },
+      amiodarone: {
+        dose: 'Amiodarone dose',
+        preparation: 'Dilute 100mg of Amiodarone in 20ml of 5% dextrose'
+      },
+      atropine: {
+        dose: 'Atropine dose',
+        preparation: 'Dilute 2 ampules of atropine in 10ml of 0.9% NaCl (normal saline)'
+      },
     },
     header: {
       top: 'Drug doses for children'
