@@ -21,20 +21,50 @@ export const lang = {
     },
     drugsOther: {
       administer: 'Podaj',
+      dose: 'Dawka',
       adrenaline: {
         drugName: 'Adrenalina',
         anaphylaxis: 'Wstrząs anafilaktyczny: 500 µg i.m.',
         asthma: 'Napad astmy',
         asthmaPreparation: '1 amp. do 10 ml 0.9% NaCl', 
       },
-      adenosine: {},
-      dexamethasone: {},
-      diazepam: {},
-      flumazenil: {},
-      hydrocortisone: {},
-      magnesium: {},
-      morphine: {},
-      paracetamol: {}
+      adenosine: {
+        drugName: 'Adenozyna',
+        preparation: '6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl',
+        dose1: 'I dawka',
+        dose2: 'II dawka i kolejne:'
+      },
+      dexamethasone: {
+        drugName: 'Deksametazon',
+        anaphylaxis: 'Anafilaksja: 4 mg - 8mg i.v.',
+        asthma: 'Astma: 4 mg - 8mg i.v.',
+        laryngitis: 'Zapalenie krtani:'
+      },
+      diazepam: {
+        drugName: 'Diazepam',
+        administration: 'Podać bez rozcieńczenia',
+        alert: 'Uwaga ! Przeciwwskazany u noworodków i wcześniaków'
+      },
+      flumazenil: {
+        drugName: 'Flumazenil',
+        doseDetails: 'Można powtarzać co 60s max 200 µg',
+        administration: 'Droga podania: i.v./i.o.'
+      },
+      hydrocortisone: {
+        drugName: 'Hydrocortison',
+        preparation: '100 mg leku rozpuścić i rozcieńczyć do 20 ml 0.9% NaCl',
+      },
+      magnesium: {
+        drugName: 'Magnez 20%',
+        administration: 'Podać do wlewu',
+      },
+      morphine: {
+        drugName: 'Morfina',
+        preparation: '10 mg rozcieńczyć do 10 ml 0.9 % NaCl'
+      },
+      paracetamol: {
+        drugName: 'Paracetamol w czopkach',
+      }
     },
     header: {
       top: 'Dawki leków u dzieci'
@@ -70,11 +100,11 @@ export const lang = {
         heading: 'Legenda',
         access: {
           heading: 'Droga podania leków',
-          iv: 'iv - droga dożylna',
-          im: 'im - droga domięśniowa',
-          sc: 'sc - podskórnie',
-          io: 'io - droga doszpikowa',
-          pr: 'pr - droga doodbytnicza'
+          iv: 'i.v. - droga dożylna',
+          im: 'i.m. - droga domięśniowa',
+          sc: 's.c. - podskórnie',
+          io: 'i.o. - droga doszpikowa',
+          pr: 'p.r. - droga doodbytnicza'
         },
         drugs: {
           heading: 'Konfekcjonowanie leków',
@@ -132,20 +162,51 @@ export const lang = {
     },
     drugsOther: {
       administer: 'Administer',
+      dose: 'Dose:',
       adrenaline: {
         drugName: 'Adrenaline',
         anaphylaxis: 'Anaphylaxis: 500 µg i.m.',
         asthma: 'Asthma attack',
         asthmaPreparation: '1 amp. in 10 ml 0.9% NaCl', 
       },
-      adenosine: {},
-      dexamethasone: {},
-      diazepam: {},
-      flumazenil: {},
-      hydrocortisone: {},
-      magnesium: {},
-      morphine: {},
-      paracetamol: {}
+      adenosine: {
+        drugName: 'Adenosine',
+        preparation: 'Dilute 6mg of Adenosie in 6ml on 0.9% NaCl',
+        dose1: '1st dose:',
+        dose2: '2nd and subsequent doses:'
+      },
+      dexamethasone: {
+        drugName: 'Dexamethasone',
+        anaphylaxis: 'Anaphylaxis: 4 mg - 8mg i.v.',
+        asthma: 'Asthma: 4 mg - 8mg i.v.',
+        laryngitis: 'Laryngitis:'
+      },
+      diazepam: {
+        drugName: 'Diazepam',
+        dose: 'Dose:',
+        administration: 'Administer undiluted',
+        alert: 'Warning! Do not use in newborns and premature babies.'
+      },
+      flumazenil: {
+        drugName: 'Flumazenil',
+        doseDetails: 'Can be repeated every 60 seconds. Do not exceed 200µg.',
+        administration: 'Route of administration: i.v./i.o.'
+      },
+      hydrocortisone: {
+        drugName: 'Hydrocortisone',
+        preparation: 'Dilute 100mg of hydrocortisone in 20ml of 0.9% NaCl',
+      },
+      magnesium: {
+        drugName: 'Magnesium 20%',
+        administration: 'Give as CRI',
+      },
+      morphine: {
+        drugName: 'Morphine',
+        preparation: '10 mg dilute to 10 ml 0.9% NaCl'
+      },
+      paracetamol: {
+        drugName: 'Paracetamol suppositories',
+      }
     },
     header: {
       top: 'Drug doses for children'
@@ -181,11 +242,11 @@ export const lang = {
         heading: 'Legend',
         access: {
           heading: 'Route of administration',
-          iv: 'iv - intravenously',
-          im: 'im - intramuscularly',
-          sc: 'sc - subcutaneously',
-          io: 'io - inraosseous',
-          pr: 'pr - per rectum'
+          iv: 'i.v. - intravenously',
+          im: 'i.m. - intramuscularly',
+          sc: 's.c. - subcutaneously',
+          io: 'i.o. - inraosseous',
+          pr: 'p.r. - per rectum'
         },
         drugs: {
           heading: 'Drug packaging',

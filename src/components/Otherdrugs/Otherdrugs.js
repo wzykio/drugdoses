@@ -21,62 +21,62 @@ const Otherdrugs = () => {
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
-        <h2>Adenozyna</h2>
-        <p>6 mg Adenozyzyny rozcieńcz do 6 ml 0.9 % Nacl</p>
+        <h2>{lang[langu].drugsOther.adenosine.drugName}</h2>
+        <p>{lang[langu].drugsOther.adenosine.preparation}</p>
         <p>
-          I dawka: {round(weight / 10)} mg iv - {round(weight / 10)} ml{" "}
+        {lang[langu].drugsOther.adenosine.dose1} {round(weight / 10)} mg i.v. - {round(weight / 10)} ml{" "}
         </p>
         <p>
-          II dawka i kolejne : {(weight / 10) * 2} mg iv - {(weight / 10) * 2}{" "}
+        {lang[langu].drugsOther.adenosine.dose2} {(weight / 10) * 2} mg i.v. - {(weight / 10) * 2}{" "}
           ml
         </p>
       </div>
 
       <div className={style.otherdrugsItemDexaven}>
-        <h2>Deksametazon</h2>
-        <p>Anafilaksja: 4 mg - 8mg iv</p>
-        <p>Astma: 4 mg - 8mg iv</p>
-        <p>Zapalenie krtani: {(0.15 * weight).toFixed(2)} mg iv</p>
+        <h2>{lang[langu].drugsOther.dexamethasone.drugName}</h2>
+        <p>{lang[langu].drugsOther.dexamethasone.anaphylaxis}</p>
+        <p>{lang[langu].drugsOther.dexamethasone.asthma}</p>
+        <p>{lang[langu].drugsOther.dexamethasone.laryngitis} {(0.15 * weight).toFixed(2)} mg i.v.</p>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>
-        <h2>Diazepam</h2>
-        <p>Dawka: {(0.25 * weight).toFixed(2)} mg iv./io. </p>
-        <p>Podać bez rozcieńczenia {(0.05 * weight).toFixed(2)} ml</p>
+        <h2>{lang[langu].drugsOther.diazepam.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {(0.25 * weight).toFixed(2)} mg i.v./i.o. </p>
+        <p>{lang[langu].drugsOther.diazepam.administration} {(0.05 * weight).toFixed(2)} ml</p>
         <div className={style.alert}>
-          Uwaga ! Przeciwwskazany u noworodków i wcześniaków
+        {lang[langu].drugsOther.diazepam.alert}
         </div>
       </div>
 
       <div className={style.otherdrugsItemFlumazenil}>
-        <h2>Flumazenil</h2>
-        <p>Dawka: {10 * weight} iv./io µg Można powtarzać co 60s max 200 µg</p>
-        <p>Droga podania : iv io</p>
+        <h2>{lang[langu].drugsOther.flumazenil.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {10 * weight} i.v./i.o µg. {lang[langu].drugsOther.flumazenil.doseDetails}</p>
+        <p>{lang[langu].drugsOther.flumazenil.administration}</p>
       </div>
 
       <div className={style.otherdrugsItemHydrocortison}>
-        <h2>Hydrocortison</h2>
-        <p>Dawka: {weight * 5} mg</p>
-        <p>100 mg leku rozpuścić i rozcieńczyć do 20 ml 0.9% Nacl</p>
-        <p>Podać: {weight} ml iv./io.</p>
+        <h2>{lang[langu].drugsOther.hydrocortisone.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {weight * 5} mg</p>
+        <p>{lang[langu].drugsOther.hydrocortisone.preparation}</p>
+        <p>{lang[langu].drugsOther.administer} {weight} ml i.v./i.o.</p>
       </div>
 
       <div className={style.otherdrugsItemMagnez}>
-        <h2>Magnez 20%</h2>
-        <p>Dawka: {weight * 40} mg</p>
-        <p>Podać do wlewu {(weight * 2) / 10} ml i.v/i.o.</p>
+        <h2>{lang[langu].drugsOther.magnesium.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {weight * 40} mg</p>
+        <p>{lang[langu].drugsOther.magnesium.administration} {(weight * 2) / 10} ml i.v/i.o.</p>
       </div>
 
       <div className={style.otherdrugsItemMorfina}>
-        <h2>Morfina</h2>
-        <p>Dawka: {round(weight / 10)} mg</p>
-        <p>10 mg rozcieńczyć do 10 ml 0.9 % NaCl</p>
-        <p>Podać {round(weight / 10)} ml i.v/i.o.</p>
+        <h2>{lang[langu].drugsOther.morphine.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {round(weight / 10)} mg</p>
+        <p>{lang[langu].drugsOther.morphine.preparation}</p>
+        <p>{lang[langu].drugsOther.administer} {round(weight / 10)} ml i.v/i.o.</p>
       </div>
 
       <div className={style.otherdrugsItemParacetamol}>
-        <h2>Paracetamol w czopkach</h2>
-        <p>Dawka: {weight * 10} mg pr.</p>
+        <h2>{lang[langu].drugsOther.paracetamol.drugName}</h2>
+        <p>{lang[langu].drugsOther.dose} {weight * 10} mg p.r.</p>
       </div>
     </div>
   );
