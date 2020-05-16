@@ -10,6 +10,7 @@ const Header = () => {
   const [{ showMenuOption, openMenu, langu }, dispatch] = useContext(
     StoreContext
   );
+  const { header } = lang[langu];
 
   return (
     <div>
@@ -26,7 +27,7 @@ const Header = () => {
           )}
         </div>
         <div className={style.title}>
-          <p>{lang[langu].header.top}</p>
+          <p>{header.top}</p>
         </div>
       </div>
       {openMenu ? <Menu /> : ""}

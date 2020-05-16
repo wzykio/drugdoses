@@ -7,17 +7,18 @@ import Creator from '../Creator/Creator';
 
 const AboutContent = () => {
   const [{ langu }] = useContext(StoreContext);
+  const { about } = lang[langu].menuOptions;
 
   return (
     <>
       <article className={style.article}>
-        <h3 className={style.subheading}>{lang[langu].menuOptions.about.subheadingCompany}</h3>
+        <h3 className={style.subheading}>{about.subheadingCompany}</h3>
         <p className={style.content}>
-          {lang[langu].menuOptions.about.contentCompany}
+          {about.contentCompany}
         </p>
       </article>
       <article className={style.article}>
-        <h3 className={style.subheading}>{lang[langu].menuOptions.about.subheadingTeam}</h3>
+        <h3 className={style.subheading}>{about.subheadingTeam}</h3>
         <div className={style.creators}>
           {creators.map((creator) => (
             <Creator creator={creator} />

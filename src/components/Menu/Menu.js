@@ -9,6 +9,7 @@ import { lang } from "../../states/localization/index";
 const Menu = ({ openMenuOption }) => {
   const [state, dispatch] = useContext(StoreContext);
   const { langu } = state;
+  const { menu } = lang[langu];
 
   const clickAway = useRef(null);
 
@@ -37,7 +38,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <FaCog className={style.icon} />
-          {lang[langu].menu.settings}
+          {menu.settings}
         </li>
         <li
           className={style.listItem}
@@ -48,7 +49,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <MdAnnouncement className={style.icon} />
-          {lang[langu].menu.legalNote}
+          {menu.legalNote}
         </li>
         <li
           className={style.listItem}
@@ -59,7 +60,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <GoInfo className={style.icon} />
-          {lang[langu].menu.about}
+          {menu.about}
         </li>
         <li
           className={style.listItem}
@@ -70,7 +71,7 @@ const Menu = ({ openMenuOption }) => {
           }}
         >
           <FaDiaspora className={style.icon} />
-          {lang[langu].menu.legend}
+          {menu.legend}
         </li>
       </ul>
     </div>

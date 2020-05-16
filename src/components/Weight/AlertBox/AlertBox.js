@@ -5,10 +5,11 @@ import { lang } from '../../../states/localization/index';
 
 const AlertBox = () => {
   const [{ langu }] = useContext(StoreContext);
+  const { text } = lang[langu].alert;
   return (
     <div className={style.alertContainer}>
       <div className={style.showAlertBox}>
-        <p>{lang[langu].alert.text}</p>
+        <p>{text}</p>
       </div>
     </div>
   );

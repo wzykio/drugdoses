@@ -7,6 +7,7 @@ import { lang } from '../../states/localization/index';
 
 const Button = () => {
   const [{ langu }, dispatch] = useContext(StoreContext);
+  const { medicalCaseChooseButton : button } = lang[langu];
 
   const [activeEnyDoses, setActiveEnyDoses] = useState(false);
   const [activeResuscytationDoses, setresuscytationDoses] = useState(true);
@@ -32,7 +33,7 @@ const Button = () => {
         })}
       >
         <FaCheck />
-        <p>{lang[langu].medicalCaseChooseButton.cardiac}</p>
+        <p>{button.cardiac}</p>
         <input
           type='radio'
           checked={activeResuscytationDoses}
@@ -48,7 +49,7 @@ const Button = () => {
         })}
       >
         <FaCheck />
-        <p>{lang[langu].medicalCaseChooseButton.other}</p>
+        <p>{button.other}</p>
         <input
           type='radio'
           checked={activeEnyDoses}
