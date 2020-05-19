@@ -31,8 +31,8 @@ const Otherdrugs = () => {
           - {round(weight / 10)} ml{' '}
         </p>
         <p>
-          {drugsOther.adenosine.dose2} {(weight / 10) * 2} mg i.v. -{' '}
-          {(weight / 10) * 2} ml
+          {drugsOther.adenosine.dose2} {round((weight / 10) * 2)} mg i.v. -{' '}
+          {round((weight / 10) * 2)} ml
         </p>
       </div>
 
@@ -42,19 +42,19 @@ const Otherdrugs = () => {
         <p>{drugsOther.dexamethasone.asthma}</p>
         <p>
           {drugsOther.dexamethasone.laryngitis}{' '}
-          {(0.15 * weight).toFixed(2)} mg i.v.
+          {round(0.15 * weight)} mg i.v.
         </p>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>
         <h2>{drugsOther.diazepam.drugName}</h2>
         <p>
-          {drugsOther.dose} {(0.25 * weight).toFixed(2)} mg
+          {drugsOther.dose} {round(0.25 * weight)} mg
           i.v./i.o.{' '}
         </p>
         <p>
           {drugsOther.diazepam.administration}{' '}
-          {(0.05 * weight).toFixed(2)} ml
+          {round(0.05 * weight)} ml
         </p>
         <div className={style.alert}>
           {drugsOther.diazepam.alert}
@@ -64,7 +64,7 @@ const Otherdrugs = () => {
       <div className={style.otherdrugsItemFlumazenil}>
         <h2>{drugsOther.flumazenil.drugName}</h2>
         <p>
-          {drugsOther.dose} {10 * weight} i.v./i.o µg.{' '}
+          {drugsOther.dose} {round(10 * weight)} i.v./i.o µg.{' '}
           {drugsOther.flumazenil.doseDetails}
         </p>
         <p>{drugsOther.flumazenil.administration}</p>
@@ -73,21 +73,21 @@ const Otherdrugs = () => {
       <div className={style.otherdrugsItemHydrocortison}>
         <h2>{drugsOther.hydrocortisone.drugName}</h2>
         <p>
-          {drugsOther.dose} {weight * 5} mg
+          {drugsOther.dose} {round(weight * 5)} mg
         </p>
         <p>{drugsOther.hydrocortisone.preparation}</p>
         <p>
-          {drugsOther.administer} {weight} ml i.v./i.o.
+          {drugsOther.administer} {round(weight)} ml i.v./i.o.
         </p>
       </div>
 
       <div className={style.otherdrugsItemMagnez}>
         <h2>{drugsOther.magnesium.drugName}</h2>
         <p>
-          {drugsOther.dose} {weight * 40} mg
+          {drugsOther.dose} {round(weight * 40)} mg
         </p>
         <p>
-          {drugsOther.magnesium.administration} {(weight * 2) / 10}{' '}
+          {drugsOther.magnesium.administration} {round((weight * 2) / 10)}{' '}
           ml i.v/i.o.
         </p>
       </div>
@@ -106,7 +106,7 @@ const Otherdrugs = () => {
       <div className={style.otherdrugsItemParacetamol}>
         <h2>{drugsOther.paracetamol.drugName}</h2>
         <p>
-          {drugsOther.dose} {weight * 10} mg p.r.
+          {drugsOther.dose} {round(weight * 10)} mg p.r.
         </p>
       </div>
     </div>
