@@ -1,3 +1,12 @@
+.darkbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background: #000000ad;
+  z-index: 3;
+}
 .modalWrapper {
   background-color: white;
   border-radius: 5px;
@@ -9,9 +18,13 @@
   right: 0;
   left: 0;
   margin: auto;
+  margin-top: 44px;
   width: 85vw;
   padding: 2rem;
   z-index: 3;
+}
+.visibleWrapper {
+  display: block;
 }
 .unvisibleWrapper{
   display: none;

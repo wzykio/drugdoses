@@ -101,11 +101,13 @@ const MenuOption = () => {
   const [state, dispatch] = useContext(StoreContext);
   const showMenuOption = state.showMenuOption;
   return (
-    <div
-      className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}
-    >
+    <div className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}>
+      <div className={style.darkbackground}>
+      <div className={style.modalWrapper}>
       <CloseButton />
       <ModalContent />
+      </div>
+      </div>
     </div>
   );
 };
