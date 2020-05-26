@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import style from "./KgLbs.module.css";
 import classNames from "classnames";
 import { FaCheck } from "react-icons/fa";
-import { StoreContext } from "../../states/Store";
+import { StoreContext, supportedSettings } from "../../states/Store";
+import { setItemStorage } from '../../helpers/handleStorage';
 
 const KgLbs = () => {
   const [state, dispath] = useContext(StoreContext);
@@ -12,11 +13,13 @@ const KgLbs = () => {
   const selectlbs = () => {
     setActivelbs(true);
     setKg(false);
+    setItemStorage(supportedSettings.unit.storageKey, 0.45);
     dispath({ type: "CHANGE_UNITS_LBS" });
   };
   const selectKg = () => {
     setKg(true);
     setActivelbs(false);
+    setItemStorage(supportedSettings.unit.storageKey, 1);
     dispath({ type: "CHANGE_UNITS_KG" });
   };
   return (

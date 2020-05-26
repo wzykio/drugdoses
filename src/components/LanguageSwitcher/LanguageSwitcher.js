@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import style from './LanguageSwitcher.module.css';
-import { StoreContext } from '../../states/Store';
+import { StoreContext, supportedSettings } from '../../states/Store';
 import { lang } from "../../states/localization/index";
+import { setItemStorage } from '../../helpers/handleStorage';
 
 const LanguageSwitcher = () => {
   const [{ langu }, dispatch] = useContext(StoreContext);
@@ -9,6 +10,8 @@ const LanguageSwitcher = () => {
   const { settings } = lang[langu].menuOptions;
 
   function changeLang(e) {
+
+    setItemStorage(supportedSettings.language.storageKey, e.target.value);
     dispatch({ type: 'CHANGE_LANGUAGE', payload: e.target.value });
     setActiveLanguage(e.target.value);
   }
