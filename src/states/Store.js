@@ -1,13 +1,27 @@
 import React, { createContext, useReducer } from "react";
 export const StoreContext = createContext({});
 
-const supportedLanguage = ['pl', 'en'];
+const supportedSettings = {
+  units: {
+    values: [1, 0.45],
+    defaultValue: 1,
+  },
+  languages: {
+    values: ['pl', 'en'],
+    get defaultValue() {
+      const browserLanguage = navigator.language.slice(0,2).toLowerCase();
+      const language = this.values.includes(browserLanguage) ? browserLanguage : 'en';
+      return language;
+    }
+  },
+}
 
-const setDefaultLanguage = () => {
-  const browserLanguage = navigator.language.slice(0,2).toLowerCase();
-  const language = supportedLanguage.includes(browserLanguage) ? browserLanguage : 'en';
-  console.log(language);
-  return language;
+const setInitialSettingValues = (setting) => {
+  const { values, defaultValue } = supportedSettings[setting];
+  if (localStorage.getItem(setting) !==null) {
+    return values.includes(localStorage.getItem(setting)) ? setting : defaultValue
+  }
+  return defaultValue
 }
 
 const initialState = {
@@ -18,8 +32,8 @@ const initialState = {
   showMenuOption: false,
   openMenu: false,
   menuOption: "",
-  units: 1,
-  langu: setDefaultLanguage()
+  units: setInitialSettingValues('units'),
+  langu: setInitialSettingValues('languages')
 };
 
 function reducer(state, action) {
