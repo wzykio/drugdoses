@@ -33,33 +33,36 @@ const Settings = (langu) => {
 const Legal = (langu) => {
   const { legal } = lang[langu].menuOptions;
   return (
-  <div className={style.content}>
-    <h2 className={style.heading}>{legal.heading}</h2>
-    <div className={style.body}>Legal content </div>
-  </div>
-)};
+    <div className={style.content}>
+      <h2 className={style.heading}>{legal.heading}</h2>
+      <div className={style.body}>Legal content </div>
+    </div>
+  );
+};
 
 const About = (langu) => {
   const { about } = lang[langu].menuOptions;
   return (
-  <div className={style.content}>
-    <h2 className={style.heading}>{about.heading}</h2>
-    <div className={style.body}>
-      <AboutContent />
+    <div className={style.content}>
+      <h2 className={style.heading}>{about.heading}</h2>
+      <div className={style.body}>
+        <AboutContent />
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 const Legend = (langu) => {
   const { legal } = lang[langu].menuOptions;
   return (
-  <div className={style.content}>
-    <h2 className={style.heading}>{legal.heading}</h2>
-    <div className={style.body}>
-      <LegendContent />
+    <div className={style.content}>
+      <h2 className={style.heading}>{legal.heading}</h2>
+      <div className={style.body}>
+        <LegendContent />
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 const ModalContent = () => {
   const [state, dispatch] = useContext(StoreContext);
@@ -101,12 +104,13 @@ const MenuOption = () => {
   const [state, dispatch] = useContext(StoreContext);
   const showMenuOption = state.showMenuOption;
   return (
-    <div className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}>
-      <div className={style.darkbackground}>
+    <div
+      className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}
+    >
+      <div className={style.darkbackground} />
       <div className={style.modalWrapper}>
-      <CloseButton />
-      <ModalContent />
-      </div>
+        <CloseButton />
+        <ModalContent />
       </div>
     </div>
   );
