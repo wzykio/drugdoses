@@ -9,35 +9,27 @@ const Otherdrugs = () => {
   const { drugsOther } = lang[langu];
   let weight = state.weight * units;
 
-  // const round = (number) => Math.round(number * 100) / 100;
-
   return (
     <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
       <div className={style.otherdrugsItemAdrenalina}>
         <span className={style.adrenalina}>
-          <h2>Adrenalina</h2>
+          <h2>{drugsOther.adrenaline.drugName}</h2>
         </span>
         <span className={style.wstrzas}>
-          Wstrząs anafilaktyczny:
+          {drugsOther.adrenaline.anaphylaxis}:
           <br />
           <br />
           500 µg im
         </span>
         <span className={style.napadastmy}>
-          Napad astmy:
+          {drugsOther.adrenaline.asthma}:
           <br />
           <br />
-          {round(weight / 100)} mg - 1 amp. do 10 ml 0.9% NaCl.
-          <br />
-          Podać {round(weight / 10)} ml s.c.{" "}
-        </span>
-        <h2>{drugsOther.adrenaline.drugName}</h2>
-        <p>{drugsOther.adrenaline.anaphylaxis}</p>
-        <p>
-          {drugsOther.adrenaline.asthma}: {(weight / 100).toFixed(2)} mg -{' '}
+          {(weight / 100).toFixed(2)} mg -{' '}
           {drugsOther.adrenaline.asthmaPreparation}.{' '}
+          <br />
           {drugsOther.administer} {(weight / 10).toFixed(2)} ml s.c.{' '}
-        </p>
+        </span>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
@@ -55,31 +47,21 @@ const Otherdrugs = () => {
 
       <div className={style.otherdrugsItemDeksametazon}>
         <span className={style.deksametazon}>
-          <h2>Deksametazon</h2>
+        <h2>{drugsOther.dexamethasone.drugName}</h2>
         </span>
         <span className={style.anafilaksja}>
-          Anafilaksja:
-          <br /> <br />4 mg - 8mg iv
+          {drugsOther.dexamethasone.anaphylaxis}:
+          <br /> <br />4 mg - 8mg i.v.
         </span>
         <span className={style.astma}>
-          Astma:
-          <br /> <br />4 mg - 8mg iv
+          {drugsOther.dexamethasone.asthma}:
+          <br /> <br />4 mg - 8mg i.v.
         </span>
         <span className={style.zapaleniekrtani}>
-          Zapalenie krtani:
+          {drugsOther.dexamethasone.laryngitis}:
           <br /> <br />
-          {(0.15 * weight).toFixed(2)} mg iv
+          {(0.15 * weight).toFixed(2)} mg i.v.
         </span>
-      </div>
-      
-      <div className={style.otherdrugsItemDexaven}>
-        <h2>{drugsOther.dexamethasone.drugName}</h2>
-        <p>{drugsOther.dexamethasone.anaphylaxis}</p>
-        <p>{drugsOther.dexamethasone.asthma}</p>
-        <p>
-          {drugsOther.dexamethasone.laryngitis}{' '}
-          {(0.15 * weight).toFixed(1)} mg i.v.
-        </p>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>
