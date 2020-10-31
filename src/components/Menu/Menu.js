@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import style from "./Menu.module.css";
 import { FaCog, FaDiaspora } from "react-icons/fa"; //ustawienia
 import { MdAnnouncement } from "react-icons/md"; //nota prawna

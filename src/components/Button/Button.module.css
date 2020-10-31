@@ -1,7 +1,7 @@
 .wrapper {
   width: 98vw;
   display: flex;
-  align-items: center;
+  align-items: normal;
   justify-content: center;
   background: #202340;
   
