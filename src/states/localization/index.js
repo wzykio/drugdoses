@@ -90,12 +90,13 @@ export const lang = {
     menuOptions: {
       about: {
         heading: 'O nas',
-        subheadingCompany: 'Nasza firma',
         subheadingTeam: 'Nasz zespół',
-        contentCompany: `Be superior. Kitten is playing with dead mouse. Fall asleep upside-down mark territory, yet instead of drinking water from the cat bowl, make sure to steal water from the toilet. Cry louder at reflection. Enslave the hooman. Hide head under blanket so no one can see give me some of your food give me some of your food give me some of your food meh, i don't want it pretend you want to go out but then don't chase red laser dot, for bury the poop bury it deep. Soft kitty warm kitty little ball of furr. Meow in empty rooms experiences short bursts of poo-phoria after going to the loo.`,
+        contentCompany: `Jesteśmy grupą deweloperów która chce stworzyć oprogramowanie które przysłuży się większemu dobru.`,
+        website: 'https://wzyk.io'
       },
       legal: {
         heading: 'Nota prawna',
+        content: `Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.`
       },
       legend: {
         heading: 'Legenda',
@@ -234,13 +235,14 @@ export const lang = {
     },
     menuOptions: {
       about: {
-        heading: 'About',
-        subheadingCompany: 'About Company',
+        heading: 'About us',
         subheadingTeam: 'Our team',
-        contentCompany: `Be superior. Kitten is playing with dead mouse. Fall asleep upside-down mark territory, yet instead of drinking water from the cat bowl, make sure to steal water from the toilet. Cry louder at reflection. Enslave the hooman. Hide head under blanket so no one can see give me some of your food give me some of your food give me some of your food meh, i don't want it pretend you want to go out but then don't chase red laser dot, for bury the poop bury it deep. Soft kitty warm kitty little ball of furr. Meow in empty rooms experiences short bursts of poo-phoria after going to the loo.`,
+        contentCompany: `We are a group of developers who want to create software that will benefit the greater good`,
+        website: 'https://wzyk.io'
       },
       legal: {
         heading: 'Legal note',
+        content: `Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.`
       },
       legend: {
         heading: 'Legend',

@@ -4,23 +4,25 @@ import { StoreContext } from "../../states/Store";
 import { lang } from '../../states/localization/index';
 
 const Card = () => {
-  const [state, dispatch] = useContext(StoreContext);
+  const [state, ] = useContext(StoreContext);
   const { units, showCard: viewCard, langu } = state;
   const { drugsCardiac } = lang[langu];
   const weight = state.weight * units;
 
+
   return (
     <div className={viewCard ? style.cardWrapper : style.unvisible}>
+      <div className={style.alert}> Uwaga! Poniższe dawki TYLKO w przypadkach nagłego zatrzymania krążenia!</div>
       <div className={style.sec}>
         <div className={style.cardA}>
           <h3>{drugsCardiac.adrenaline.dose} {(weight * 10).toFixed(2)} µg</h3>
           <p>{drugsCardiac.adrenaline.preparation}</p>
-          <h3>{drugsCardiac.administer} {(weight / 10).toFixed(2)} ml</h3>
+          <h3>{drugsCardiac.administer} {(weight / 10).toFixed(1)} ml</h3>
         </div>
         <div className={style.cardB}>
           <h3>{drugsCardiac.amiodarone.dose} {(weight * 5).toFixed(2)} mg</h3>
           <p>{drugsCardiac.amiodarone.preparation}</p>
-          <h3>{drugsCardiac.administer} {(weight * 1).toFixed(2)} ml</h3>
+          <h3>{drugsCardiac.administer} {(weight * 1).toFixed(1)} ml</h3>
         </div>
       </div>
       <div className={style.sec}>

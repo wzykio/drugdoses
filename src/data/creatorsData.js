@@ -1,40 +1,31 @@
-import Avatar from './avatar.jpg';
+//import Avatar from './avatar.jpg';
 
 const creatorsData = [
   {
-    name: 'Dummy Dane',
-    avatar: Avatar,
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/',
-    description: 'Siamese birman. Balinese . Mouser grimalkin yet grimalkin norwegian forest. Munchkin bombay. Maine coon ragdoll maine coon and cornish rex kitten. Tiger tom tabby bombay cheetah for cheetah. Siberian. Siberian singapura yet havana brown yet scottish fold and cornish rex and puma british shorthair. Siberian tiger for ocelot. Lion havana brown and british shorthair or kitty cornish rex so bombay.'
+    name: 'Bartek',
+    github: 'https://github.com/bszczypior',
+    description: 'Project Manager'
   },
   {
-    name: 'Dummy Robin',
-    avatar: Avatar,
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/',
-    description: 'Siamese birman. Balinese . Mouser grimalkin yet grimalkin norwegian forest. Munchkin bombay. Maine coon ragdoll maine coon and cornish rex kitten. Tiger tom tabby bombay cheetah for cheetah. Siberian. Siberian singapura yet havana brown yet scottish fold and cornish rex and puma british shorthair. Siberian tiger for ocelot. Lion havana brown and british shorthair or kitty cornish rex so bombay.'
+    name: 'Marysia',
+    github: 'https://github.com/maria-mac',
+    description: 'React Programmer'
   },
   {
-    name: 'Dummy Denis',
-    avatar: Avatar,
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/',
-    description: 'Siamese birman. Balinese . Mouser grimalkin yet grimalkin norwegian forest. Munchkin bombay. Maine coon ragdoll maine coon and cornish rex kitten. Tiger tom tabby bombay cheetah for cheetah. Siberian. Siberian singapura yet havana brown yet scottish fold and cornish rex and puma british shorthair. Siberian tiger for ocelot. Lion havana brown and british shorthair or kitty cornish rex so bombay.'
+    name: 'Małgosia',
+    github: 'https://github.com/ireshka',
+    description: 'React Programmer'
   },
   {
-    name: 'Dummy Kate',
-    avatar: Avatar,
-    linkedin: 'https://www.linkedin.com/',
+    name: 'Marcin',
     github: 'https://github.com/',
-    description: 'Siamese birman. Balinese . Mouser grimalkin yet grimalkin norwegian forest. Munchkin bombay. Maine coon ragdoll maine coon and cornish rex kitten. Tiger tom tabby bombay cheetah for cheetah. Siberian. Siberian singapura yet havana brown yet scottish fold and cornish rex and puma british shorthair. Siberian tiger for ocelot. Lion havana brown and british shorthair or kitty cornish rex so bombay.'
+    description: 'React Programmer'
   },
   {
-    name: 'Dummy Margie',
-    avatar: Avatar,
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/',
-    description: 'Siamese birman. Balinese . Mouser grimalkin yet grimalkin norwegian forest. Munchkin bombay. Maine coon ragdoll maine coon and cornish rex kitten. Tiger tom tabby bombay cheetah for cheetah. Siberian. Siberian singapura yet havana brown yet scottish fold and cornish rex and puma british shorthair. Siberian tiger for ocelot. Lion havana brown and british shorthair or kitty cornish rex so bombay.'
+    name: 'Kamil',
+    linkedin: 'https://www.linkedin.com/in/kamil-wezyk/',
+    github: 'https://github.com/Gogolian',
+    description: 'Project Lead. Technical knowledge supplier'
   },
 ];
 
