@@ -62,7 +62,7 @@ const Legend = (langu) => {
 )};
 
 const ModalContent = () => {
-  const [state, dispatch] = useContext(StoreContext);
+  const [state, ] = useContext(StoreContext);
   const { menuOption, langu } = state;
   let content;
 
@@ -86,7 +86,7 @@ const ModalContent = () => {
 };
 
 const CloseButton = () => {
-  const [state, dispatch] = useContext(StoreContext);
+  const [, dispatch] = useContext(StoreContext);
   return (
     <button
       className={style.closeButton}
@@ -98,14 +98,16 @@ const CloseButton = () => {
 };
 
 const MenuOption = () => {
-  const [state, dispatch] = useContext(StoreContext);
+  const [state, ] = useContext(StoreContext);
   const showMenuOption = state.showMenuOption;
   return (
-    <div
-      className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}
-    >
+    <div className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}>
+      <div className={style.darkbackground}>
+      <div className={style.modalWrapper}>
       <CloseButton />
       <ModalContent />
+      </div>
+      </div>
     </div>
   );
 };
