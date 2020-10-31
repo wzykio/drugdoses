@@ -24,7 +24,7 @@ export const lang = {
       dose: 'Dawka',
       adrenaline: {
         drugName: 'Adrenalina',
-        anaphylaxis: 'Wstrząs anafilaktyczny: 500 µg i.m.',
+        anaphylaxis: 'Wstrząs anafilaktyczny',
         asthma: 'Napad astmy',
         asthmaPreparation: '1 amp. do 10 ml 0.9% NaCl',
       },
@@ -36,8 +36,8 @@ export const lang = {
       },
       dexamethasone: {
         drugName: 'Deksametazon',
-        anaphylaxis: 'Anafilaksja: 4 mg - 8mg i.v.',
-        asthma: 'Astma: 4 mg - 8mg i.v.',
+        anaphylaxis: 'Anafilaksja',
+        asthma: 'Astma',
         laryngitis: 'Zapalenie krtani:',
       },
       diazepam: {
@@ -71,11 +71,13 @@ export const lang = {
     },
     information: {
       heading: 'Uwaga!',
-      subheading: 'Używaj tylko jako POMOC!!!',
-      body:
-        'Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki      powinny być weryfikowane indywidualnie pod względem każdego pacjenta.',
+      subheading: `Używaj tylko jako POMOC!!!`,
+      subheading2: `Aplikacja w wersji BETA!`,
+      disclaimer:
+        'Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.',
+      disclaimer2: 'Pomimo wszelkich starań, nie możemy zagwarantować 100% precyzji doboru dawek. Aplikacja przeznaczona dla ratowników medycznych którzy są w stanie zweryfikować poprawność dawek podaną przez Aplikację. Pamiętaj że podając leki to TY bierzesz odpowiedzialność za zdrowie i życie pacjenta.',
       consent1: 'Rozumiem',
-      consent2: 'Biorę odpowiedzialność za dobór dawek',
+      consent2: 'Biorę CAŁKOWITĄ odpowiedzialność za dobór dawek',
     },
     medicalCaseChooseButton: {
       cardiac: 'Zatrzymanie krążenia',
@@ -218,10 +220,12 @@ export const lang = {
     information: {
       heading: 'Warning!',
       subheading: 'Use only as a help!!!',
-      body:
+      subheading2: `THIS APP IS IN BETA VERSION!`,
+      disclaimer:
         'Treat each case individually. Pharmacology and drugs doses should be verified individually in every case.',
+      disclaimer2: 'Despite our best efforts, we cannot guarantee 100% accuracy of dose selection. The application is intended for paramedics who are able to verify the correctness of the doses provided by the Application. Remember that when giving medications, YOU take responsibility for the health and life of the patient.',
       consent1: 'Got it',
-      consent2: 'I take responsibility for a dose selection',
+      consent2: 'I take TOTAL responsibility for dose selection',
     },
     medicalCaseChooseButton: {
       cardiac: 'Cardiac arrest',

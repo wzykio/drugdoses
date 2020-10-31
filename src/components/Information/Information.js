@@ -12,9 +12,13 @@ const Information = () => {
   return (
     <div className={warningVisability ? style.information : style.hidden}>
       <h1 className={style.header}>{information.heading}</h1>
+      <h2 className={style.header2}>{information.subheading2}</h2>
       <h2 className={style.header2}>{information.subheading}</h2>
-      <p className={style.body}>
-        {information.body}
+      <p className={style.disclaimer}>
+        {information.disclaimer}
+      </p>
+      <p className={style.disclaimer2}>
+        {information.disclaimer2}
       </p>
       <button className={style.accept} onClick={()=>setWarningVisability(false)}>{information.consent1}<br></br>{information.consent2}</button>
     </div>
