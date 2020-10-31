@@ -53,10 +53,10 @@ const About = (langu) => {
 };
 
 const Legend = (langu) => {
-  const { legal } = lang[langu].menuOptions;
+  const { legend } = lang[langu].menuOptions;
   return (
     <div className={style.content}>
-      <h2 className={style.heading}>{legal.heading}</h2>
+      <h2 className={style.heading}>{legend.heading}</h2>
       <div className={style.body}>
         <LegendContent />
       </div>
@@ -101,13 +101,13 @@ const CloseButton = () => {
 };
 
 const MenuOption = () => {
-  const [state, ] = useContext(StoreContext);
+  const [state, dispatch] = useContext(StoreContext);
   const showMenuOption = state.showMenuOption;
   return (
     <div
-      className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}
+      className={showMenuOption ? style.visibleWrapper : style.invisibleWrapper}
     >
-      <div className={style.darkbackground} />
+      <div className={style.darkbackground} onClick={() => dispatch({ type: 'CLOSE_MENU_OPTION' })}/>
       <div className={style.modalWrapper}>
         <CloseButton />
         <ModalContent />

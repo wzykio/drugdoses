@@ -78,7 +78,7 @@ export const lang = {
         'Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.',
       disclaimer2: 'Pomimo wszelkich starań, nie możemy zagwarantować 100% precyzji doboru dawek. Aplikacja przeznaczona dla ratowników medycznych którzy są w stanie zweryfikować poprawność dawek podaną przez Aplikację. Pamiętaj że podając leki to TY bierzesz odpowiedzialność za zdrowie i życie pacjenta.',
       consent1: 'Rozumiem',
-      consent2: 'Biorę CAŁKOWITĄ odpowiedzialność za dobór dawek',
+      consent2: 'Biorę CAŁKOWITĄ odpowiedzialność za dobór dawek oraz życie i zdrowie pacjenta',
     },
     medicalCaseChooseButton: {
       cardiac: 'Nagłe zatrzymanie krążenia',
@@ -227,7 +227,7 @@ export const lang = {
         'Treat each case individually. Pharmacology and drugs doses should be verified individually in every case.',
       disclaimer2: 'Despite our best efforts, we cannot guarantee 100% accuracy of dose selection. The application is intended for paramedics who are able to verify the correctness of the doses provided by the Application. Remember that when giving medications, YOU take responsibility for the health and life of the patient.',
       consent1: 'I understand',
-      consent2: 'I take TOTAL responsibility for dose selection',
+      consent2: 'I take TOTAL responsibility for dose selection and the patient\'s life and health',
     },
     medicalCaseChooseButton: {
       cardiac: 'Sudden cardiac arrest',

@@ -12,18 +12,23 @@ const Information = () => {
   return (
     <div className={warningVisability ? style.information : style.hidden}>
       <h1 className={style.header}>{information.heading}</h1>
-      <h2 className={style.header2}>{information.subheading2}</h2>
       <h2 className={style.header2}>{information.subheading}</h2>
       <p className={style.disclaimer}>
         {information.disclaimer}
       </p>
+      <h2 className={style.header2}>{information.subheading2}</h2>
       <p className={style.disclaimer2}>
         {information.disclaimer2}
       </p>
-      <button className={style.accept} onClick={()=>{
-        setWarningVisability(false)
-        window.scrollTo({ top: 0 })
-      }}>{information.consent1}<br></br>{information.consent2}</button>
+      <button className={style.accept}
+        onClick={()=>{
+          setWarningVisability(false)
+          window.scrollTo({ top: 0 })
+        }}
+        onMouseOver={ () => {
+
+        }}
+      >{information.consent1}<br></br>{information.consent2}</button>
     </div>
   );
 };

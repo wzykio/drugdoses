@@ -11,7 +11,7 @@ const Card = () => {
 
 
   return (
-    <div className={viewCard ? style.cardWrapper : style.unvisible}>
+    <div className={viewCard ? style.cardWrapper : style.invisible}>
       <div className={style.alert}> {drugsCardiac.warningCardiac}</div>
       <div className={style.sec}>
         <div className={style.cardA}>

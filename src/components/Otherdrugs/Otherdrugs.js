@@ -10,7 +10,7 @@ const Otherdrugs = () => {
   let weight = state.weight * units;
 
   return (
-    <div className={viewEny ? style.otherdrugsWrapper : style.unvisible}>
+    <div className={viewEny ? style.otherdrugsWrapper : style.invisible}>
       <div className={style.otherdrugsItemAdrenalina}>
         <span className={style.adrenalina}>
           <h2>{drugsOther.adrenaline.drugName}</h2>
