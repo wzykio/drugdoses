@@ -4,7 +4,7 @@ import { StoreContext } from '../../states/Store';
 import { lang } from '../../states/localization/index';
 
 const Otherdrugs = () => {
-  const [state, dispatch] = useContext(StoreContext);
+  const [state, ] = useContext(StoreContext);
   const { units, showEny: viewEny, langu } = state;
   const { drugsOther } = lang[langu];
   let weight = state.weight * units;
