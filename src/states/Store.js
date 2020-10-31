@@ -67,7 +67,7 @@ function reducer(state, action) {
       return { ...state, showEny: true, showCard: false };
     case 'CHANGE_ACTIVE_RES':
       return { ...state, showCard: true, showEny: false };
-    case 'OPEN_MENU':
+    case 'TOGGLE_MENU':
       return { ...state, openMenu: !state.openMenu };
     case 'OPEN_MENU_OPTION':
       return { ...state, showMenuOption: true };

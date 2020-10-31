@@ -1,27 +1,30 @@
-.menuBlock {
+.menuClosed {
   position: relative;
-  height: 235px;
+  width: 100vw;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.1s linear, max-height 0.25s linear;
+}
+
+.menuOpened {
+  position: relative;
   width: 100vw;
   background: #ffffff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  z-index: 3;
-  padding-top: 15px;
-  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-height: 276px;
+  transition: all 0.4s cubic-bezier(.86,0,.07,1), max-height 0.25s linear;
 }
 
 .menuBlock ul {
   margin: 0 auto;
-  width: 225px;
+  width: 100vw;
 }
 
 .listItem {
   position: relative;
-  height: 50px;
-  left: 26px;
-  right: 57px;
-  top: calc(50% - 24px / 2);
-
+  width: 100vw;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -32,15 +35,22 @@
   display: flex;
   align-items: center;
 
-  color: rgba(0, 0, 0, 0.87);
+  color:rgb(58, 62, 71);
 
   cursor: pointer;
-}
-
-.listItem:hover {
-  color: #08629e;
+  padding: 20px;
 }
 
 .icon {
   margin-right: 20px;
+  color:rgb(104, 120, 155);
+}
+
+.listItem:hover{
+  color: #08629e;
+  background-color: #f7fcff;
+}
+
+.listItem:hover .icon {
+  color: #4b85ac;
 }

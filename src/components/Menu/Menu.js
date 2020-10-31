@@ -8,32 +8,32 @@ import { lang } from "../../states/localization/index";
 
 const Menu = ({ openMenuOption }) => {
   const [state, dispatch] = useContext(StoreContext);
-  const { langu } = state;
+  const { langu, openMenu } = state;
   const { menu } = lang[langu];
 
   const clickAway = useRef(null);
 
-  useEffect(() => {
-    function handleClickAway(e) {
-      if (clickAway.current && !clickAway.current.contains(e.target)) {
-        dispatch({ type: "OPEN_MENU" });
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickAway(e) {
+  //     if (clickAway.current && !clickAway.current.contains(e.target)) {
+  //       dispatch({ type: "OPEN_MENU" });
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickAway);
-    return () => {
-      document.removeEventListener("mousedown", handleClickAway);
-    };
-  }, [dispatch]);
+  //   document.addEventListener("mousedown", handleClickAway);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickAway);
+  //   };
+  // }, [dispatch]);
 
   return (
-    <div ref={clickAway} className={style.menuBlock}>
+    <div ref={clickAway} className={ openMenu ? style.menuOpened : style.menuClosed}>
       <ul>
         <li
           className={style.listItem}
           onClick={() => {
             dispatch({ type: "OPEN_SETTINGS" });
-            dispatch({ type: "OPEN_MENU" });
+            dispatch({ type: "TOGGLE_MENU" });
             dispatch({ type: "OPEN_MENU_OPTION" });
           }}
         >
@@ -44,7 +44,7 @@ const Menu = ({ openMenuOption }) => {
           className={style.listItem}
           onClick={() => {
             dispatch({ type: "OPEN_LEGAL" });
-            dispatch({ type: "OPEN_MENU" });
+            dispatch({ type: "TOGGLE_MENU" });
             dispatch({ type: "OPEN_MENU_OPTION" });
           }}
         >
@@ -55,7 +55,7 @@ const Menu = ({ openMenuOption }) => {
           className={style.listItem}
           onClick={() => {
             dispatch({ type: "OPEN_ABOUT" });
-            dispatch({ type: "OPEN_MENU" });
+            dispatch({ type: "TOGGLE_MENU" });
             dispatch({ type: "OPEN_MENU_OPTION" });
           }}
         >
@@ -66,7 +66,7 @@ const Menu = ({ openMenuOption }) => {
           className={style.listItem}
           onClick={() => {
             dispatch({ type: "OPEN_LEGEND" });
-            dispatch({ type: "OPEN_MENU" });
+            dispatch({ type: "TOGGLE_MENU" });
             dispatch({ type: "OPEN_MENU_OPTION" });
           }}
         >
