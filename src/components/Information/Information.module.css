@@ -1,14 +1,13 @@
 .information {
   position: absolute;
-  margin: 3%;
+  margin: 0;
   font-size: 0.6em;
   display: flex;
   flex-flow: column;
-  border-radius: 4px;
   z-index: 2;
   background-color: #f0f8ff;
-  border: 1px solid #b0c4de;
   padding: 16vmin 5vmin;
+  height: 100vh;
 }
 
 .hidden {
@@ -36,19 +35,23 @@
   padding: 5vmin 0;
 }
 
-button {
+.accept {
   font-size: 2.2em;
   font-weight: 400;
   line-height: 1.3;
-  background-color: #0694c1;
+  background-color: #bf4dc9;
   color: #fff;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   border-radius: 0.5em;
-  border: 0.15em solid;
+  border: 0.1em solid #883838;
   padding: 0.5em 3.5em;
+  cursor: pointer
 }
 
-button:active {
-  background-color: #04607c;
+.accept:hover {
+  background-color: #f11717;
   color: #f0f8ff;
+  letter-spacing: 0.7pt;
+  font-size: 2.4em;
+  padding: 1.2em 2em 1.4em;
 }
