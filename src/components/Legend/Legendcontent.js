@@ -1,53 +1,59 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import style from "./Legendcontent.module.css";
+import { StoreContext } from '../../states/Store';
+import { lang } from '../../states/localization/index';
 
 const Legendcontent = () => {
+  const [{ langu }] = useContext(StoreContext);
+
+  const { legend } = lang[langu].menuOptions;
+
   const list = [
-    { name: "Adrenalina: ampułka 1 mg/1 ml" },
-    { name: "Amiodaron: ampułka 150 mg/3 ml" },
-    { name: "Atropina: ampułka 6 mg/2 ml" },
-    { name: "Adenozyna: ampułka 1 mg/1 ml" },
-    { name: "Diazepam: ampułka 10 mg/2 ml" },
-    { name: "Flumazenil: ampułka 0.5 mg/5 ml" },
-    { name: "Hydrokortyzon: fiolka 100 mg" },
-    { name: "Magnez: ampułka 2 g/10 ml" },
-    { name: "Morfina: ampułka 10 mg/1 ml" },
-    { name: " Paracetamol czopki: 50 mg, 80 mg, 125 mg, 250 mg" },
+    { name: legend.drugs.adrenaline },
+    { name: legend.drugs.amiodarone },
+    { name: legend.drugs.atropine },
+    { name: legend.drugs.adenosine },
+    { name: legend.drugs.diazepam },
+    { name: legend.drugs.flumazenil },
+    { name: legend.drugs.hydrocortisone },
+    { name: legend.drugs.magnesium },
+    { name: legend.drugs.morphine },
+    { name: legend.drugs.paracetamol },
   ];
   const access = [
-    { name: "iv - Droga dożylna" },
-    { name: "im - Droga domięśniowa" },
-    { name: "sc - Podskórnie" },
-    { name: "io - droga doszpikowa" },
-    { name: "io - droga doodbytnicza" },
+    { name: legend.access.iv },
+    { name: legend.access.im },
+    { name: legend.access.sc },
+    { name: legend.access.io },
+    { name: legend.access.pr },
   ];
   const units = [
-    { name: "ml - Mililitr" },
-    { name: "µg - Mikrogram" },
-    { name: "mg - Miligram" },
-    { name: "g - Gram" },
-    { name: "kg - Kilogram" },
-    { name: "J - Dżul" },
+    { name: legend.units.ml },
+    { name: legend.units.ug },
+    { name: legend.units.mg },
+    { name: legend.units.g },
+    { name: legend.units.kg },
+    { name: legend.units.j },
   ];
 
   return (
     <div className={style.LegendWrapper}>
       <div className={style.section}>
-        <h3 className={style.sectiontitle}>Droga podania leków</h3>
+        <h3 className={style.sectiontitle}>{legend.access.heading}</h3>
         {access.map((item) => (
-          <p className={style.sectionelement}>{item.name}</p>
+          <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>Jednostki miary</h3>
+        <h3>{legend.units.heading}</h3>
         {units.map((item) => (
-          <p className={style.sectionelement}>{item.name}</p>
+          <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>Konfekcjonowanie leków</h3>
+        <h3>{legend.drugs.heading}</h3>
         {list.map((item) => (
-          <p className={style.sectionelement}>{item.name}</p>
+          <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
     </div>

@@ -17,7 +17,6 @@
   background: #ddcf4f;
   border-radius: 3px;
   margin: 0.5em;
-  color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -44,7 +43,6 @@
   background: #44a94e;
   border-radius: 3px;
   margin: 0.5em;
-  color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -70,7 +68,6 @@
   background: #33b9e3;
   border-radius: 3px;
   margin: 0.5em;
-  color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -95,7 +92,6 @@
   background: #f16f6f;
   border-radius: 3px;
   margin: 0.5em;
-  color: rgb(255, 255, 255);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -107,7 +103,18 @@
 .cardD h3 {
   line-height: 1.3em;
   font-size: 1.3em;
+  color: black
 }
 .unvisible{
   display: none;
+}
+
+
+.alert{
+  padding: 1.5vh 2.5vw;
+  border: 3px solid red;
+  border-radius: 5px;
+  margin: 2vh 1vw;
+  color: red;
+  font-weight: bold;
 }

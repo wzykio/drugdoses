@@ -1,26 +1,33 @@
 import React, { useContext } from "react";
 import style from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import Menu from "../Menu/Menu";
 import { StoreContext } from "../../states/Store";
-import {lang} from '../../states/localization/index'
+import { lang } from "../../states/localization/index";
 
 const Header = () => {
-  const [{ openMenu,langu}, dispatch] = useContext(StoreContext);
-
+  const [{ showMenuOption, openMenu, langu }, dispatch] = useContext(
+    StoreContext
+  );
+  const { header } = lang[langu];
 
   return (
     <div>
       <div className={style.header}>
         <div className={style.navicon}>
-          <GiHamburgerMenu
-            onClick={() => {
-              dispatch({ type: "OPEN_MENU" });
-            }}
-          />
+          {openMenu ? (
+            <IoMdClose />
+          ) : (
+            <GiHamburgerMenu
+              onClick={() => {
+                !showMenuOption && dispatch({ type: "OPEN_MENU" });
+              }}
+            />
+          )}
         </div>
         <div className={style.title}>
-          <p>{lang[langu].header.top}</p>
+          <p>{header.top}</p>
         </div>
       </div>
       {openMenu ? <Menu /> : ""}

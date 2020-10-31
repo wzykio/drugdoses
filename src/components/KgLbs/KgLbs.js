@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 import { StoreContext } from "../../states/Store";
 
 const KgLbs = () => {
-  const [state, dispath] = useContext(StoreContext);
+  const [, dispath] = useContext(StoreContext);
   const [activelbs, setActivelbs] = useState(false);
   const [activeKg, setKg] = useState(true);
 

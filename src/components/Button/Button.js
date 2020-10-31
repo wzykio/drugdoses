@@ -1,26 +1,26 @@
-import React, { useState,useContext } from "react";
-import style from "./Button.module.css";
+import React, { useState, useContext } from 'react';
+import style from './Button.module.css';
 import classNames from 'classnames';
-import { FaCheck } from "react-icons/fa";
-import { StoreContext } from "../../states/Store";
+import { FaCheck } from 'react-icons/fa';
+import { StoreContext } from '../../states/Store';
+import { lang } from '../../states/localization/index';
 
 const Button = () => {
-  const [state,dispatch]=useContext(StoreContext)
- 
+  const [{ langu }, dispatch] = useContext(StoreContext);
+  const { medicalCaseChooseButton : button } = lang[langu];
+
   const [activeEnyDoses, setActiveEnyDoses] = useState(false);
   const [activeResuscytationDoses, setresuscytationDoses] = useState(true);
- 
- 
+
   const selectEnyDoses = () => {
     setActiveEnyDoses(true);
     setresuscytationDoses(false);
-    dispatch({ type: "CHANGE_ACTIVE_ENY" })
+    dispatch({ type: 'CHANGE_ACTIVE_ENY' });
   };
   const selectResuscytationDoses = () => {
     setresuscytationDoses(true);
     setActiveEnyDoses(false);
-    dispatch({ type: "CHANGE_ACTIVE_RES" })
-  
+    dispatch({ type: 'CHANGE_ACTIVE_RES' });
   };
 
   return (
@@ -28,14 +28,14 @@ const Button = () => {
       <label
         // style={{borderRadius: '4px 0 0 4px'}}
         className={classNames({
-          [style.button] : true,
-          [style.inactive] : !activeResuscytationDoses
+          [style.button]: true,
+          [style.inactive]: !activeResuscytationDoses,
         })}
       >
         <FaCheck />
-        <p>Zatrzymanie krążenia</p>
+        <p>{button.cardiac}</p>
         <input
-          type="radio"
+          type='radio'
           checked={activeResuscytationDoses}
           onChange={selectResuscytationDoses}
         />
@@ -44,14 +44,14 @@ const Button = () => {
       <label
         // style={{borderRadius: '0 4px 4px 0'}}
         className={classNames({
-          [style.button] : true,
-          [style.inactive] : activeResuscytationDoses
+          [style.button]: true,
+          [style.inactive]: activeResuscytationDoses,
         })}
       >
         <FaCheck />
-        <p>Leki w innych przypadkach</p>
+        <p>{button.other}</p>
         <input
-          type="radio"
+          type='radio'
           checked={activeEnyDoses}
           onChange={selectEnyDoses}
         />

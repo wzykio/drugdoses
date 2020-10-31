@@ -67,6 +67,9 @@
   color: #2a2922;
   line-height: 1.4em;
   margin-bottom: 0.75em;
+  background-color: #f7ee9f;
+  padding: 7px;
+  border-radius: 4px;
 }
 .otherdrugsItemAdenozyna {
   width: 85vw;
@@ -157,6 +160,9 @@
   color: #2a2922;
   line-height: 1.4em;
   margin-bottom: 0.75em;
+  background-color: #eba770;
+  padding: 7px;
+  border-radius: 4px;
 }
 .otherdrugsItemDeksametazon h2 {
   color: #161616;

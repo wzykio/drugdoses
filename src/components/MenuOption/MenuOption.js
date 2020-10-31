@@ -1,12 +1,12 @@
-import React,{useContext} from "react";
-import { MdClose } from "react-icons/md";
-import style from "./MenuOption.module.css";
-import KgLbs from "../KgLbs/KgLbs.js";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import {StoreContext} from '../../states/Store'
-import creators from '../../data/creatorsData';
-import Creator from '../Creator/Creator';
-import LegendContent from '../Legend/Legendcontent'
+import React, { useContext } from 'react';
+import { MdClose } from 'react-icons/md';
+import style from './MenuOption.module.css';
+import { StoreContext } from '../../states/Store';
+import { lang } from '../../states/localization/index';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import KgLbs from '../KgLbs/KgLbs.js';
+import LegendContent from '../Legend/Legendcontent';
+import AboutContent from '../AboutContent/AboutContent';
 
 const elements = {
   settings: 'settings',
@@ -15,82 +15,69 @@ const elements = {
   legend: 'legend',
 };
 
-const Settings = () => (
-  <div className={style.content}>
-    <h2 className={style.heading}>Settings</h2>
-    <div className={style.body}>
-      <KgLbs />
-      <section className={style.section}>
-        <LanguageSwitcher />
-      </section>
+const Settings = (langu) => {
+  const { settings } = lang[langu].menuOptions;
+  return (
+    <div className={style.content}>
+      <h2 className={style.heading}>{settings.heading}</h2>
+      <div className={style.body}>
+        <KgLbs />
+        <section className={style.section}>
+          <LanguageSwitcher />
+        </section>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-const Legal = () => (
+const Legal = (langu) => {
+  const { legal } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>Legal</h2>
+    <h2 className={style.heading}>{legal.heading}</h2>
     <div className={style.body}>Legal content </div>
   </div>
-);
+)};
 
-const About = () => (
+const About = (langu) => {
+  const { about } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>About</h2>
+    <h2 className={style.heading}>{about.heading}</h2>
     <div className={style.body}>
-      <article className={style.about__section}>
-        <h3 className={style.about__subheading}>About company</h3>
-        <p className={style.about__content}>
-          Be superior. Kitten is playing with dead mouse. Fall asleep
-          upside-down mark territory, yet instead of drinking water from the cat
-          bowl, make sure to steal water from the toilet. Cry louder at
-          reflection. Enslave the hooman. Hide head under blanket so no one can
-          see give me some of your food give me some of your food give me some
-          of your food meh, i don't want it pretend you want to go out but then
-          don't chase red laser dot, for bury the poop bury it deep. Soft kitty
-          warm kitty little ball of furr. Meow in empty rooms experiences short
-          bursts of poo-phoria after going to the loo.
-        </p>
-      </article>
-      <article className={style.about__section}>
-        <h3 className={style.about__subheading}>Our team</h3>
-        <div className={style.about__creators}>
-        {creators.map((creator) => (
-          <Creator
-            creator={creator}/>
-        )) }
-        </div>
-      </article>
+      <AboutContent />
     </div>
   </div>
-);
+)};
 
-const Legend = () => (
+const Legend = (langu) => {
+  const { legal } = lang[langu].menuOptions;
+  return (
   <div className={style.content}>
-    <h2 className={style.heading}>Legenda</h2>
+    <h2 className={style.heading}>{legal.heading}</h2>
     <div className={style.body}>
-      <LegendContent/>
+      <LegendContent />
     </div>
   </div>
-);
+)};
 
 const ModalContent = () => {
-  const [state,dispatch]=useContext(StoreContext)
-  const menuOption = state.menuOption
+  const [state, ] = useContext(StoreContext);
+  const { menuOption, langu } = state;
   let content;
 
   switch (menuOption) {
     case elements.settings:
-      content = Settings();
+      content = Settings(langu);
       break;
     case elements.legal:
-      content = Legal();
+      content = Legal(langu);
       break;
     case elements.about:
-      content = About();
+      content = About(langu);
       break;
     case elements.legend:
-      content = Legend();
+      content = Legend(langu);
       break;
     default:
       content = null;
@@ -99,21 +86,28 @@ const ModalContent = () => {
 };
 
 const CloseButton = () => {
-  const [state,dispatch]=useContext(StoreContext)
+  const [, dispatch] = useContext(StoreContext);
   return (
-    <button className={style.closeButton} onClick={()=> dispatch({ type:"CLOSE_MENU_OPTION" })}>
+    <button
+      className={style.closeButton}
+      onClick={() => dispatch({ type: 'CLOSE_MENU_OPTION' })}
+    >
       <MdClose className={style.icon} />
     </button>
   );
 };
 
 const MenuOption = () => {
-  const [state,dispatch]=useContext(StoreContext)
-  const showMenuOption=state.showMenuOption
+  const [state, ] = useContext(StoreContext);
+  const showMenuOption = state.showMenuOption;
   return (
-    <div className={showMenuOption ? style.modalWrapper : style.unvisibleWrapper}>
+    <div className={showMenuOption ? style.visibleWrapper : style.unvisibleWrapper}>
+      <div className={style.darkbackground}>
+      <div className={style.modalWrapper}>
       <CloseButton />
-      <ModalContent  />
+      <ModalContent />
+      </div>
+      </div>
     </div>
   );
 };

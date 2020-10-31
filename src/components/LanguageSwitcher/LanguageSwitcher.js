@@ -1,26 +1,25 @@
-
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import style from './LanguageSwitcher.module.css';
-import {StoreContext} from '../../states/Store'
+import { StoreContext } from '../../states/Store';
+import { lang } from "../../states/localization/index";
 
 const LanguageSwitcher = () => {
-  const [{langu}, dispatch] = useContext(StoreContext);
+  const [{ langu }, dispatch] = useContext(StoreContext);
   const [activeLanguage, setActiveLanguage] = useState(langu);
+  const { settings } = lang[langu].menuOptions;
 
-function changeLang(e){
-  dispatch({ type: "CHANGE_LANGUAGE", payload:(e.target.value)})
-  setActiveLanguage(e.target.value)
- 
-}
-  
+  function changeLang(e) {
+    dispatch({ type: 'CHANGE_LANGUAGE', payload: e.target.value });
+    setActiveLanguage(e.target.value);
+  }
 
   let availableLanguages = [
     {
-      name: 'Polski',
+      name: settings.langPolish,
       shortcut: 'pl',
     },
     {
-      name: 'Angielski',
+      name: settings.langEnglish,
       shortcut: 'en',
     },
   ];
@@ -28,7 +27,7 @@ function changeLang(e){
   return (
     <>
       <fieldset className={style.wrapper}>
-        <h3 className={style.heading}>Wybór języka</h3>
+        <h3 className={style.heading}>{settings.languageChose}</h3>
         {availableLanguages.map((lang) => {
           const { name } = lang;
           const { shortcut } = lang;
@@ -41,9 +40,7 @@ function changeLang(e){
                   type='radio'
                   name='language'
                   value={shortcut}
-                  onChange={
-                   changeLang
-                  }
+                  onChange={changeLang}
                   checked={activeLanguage === shortcut}
                 />
                 <span className={style.radio__button}></span>

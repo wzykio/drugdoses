@@ -1,3 +1,12 @@
+.darkbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background: #000000ad;
+  z-index: 3;
+}
 .modalWrapper {
   background-color: white;
   border-radius: 5px;
@@ -9,9 +18,13 @@
   right: 0;
   left: 0;
   margin: auto;
+  margin-top: 44px;
   width: 85vw;
   padding: 2rem;
   z-index: 3;
+}
+.visibleWrapper {
+  display: block;
 }
 .unvisibleWrapper{
   display: none;
@@ -50,34 +63,4 @@
 
 .closeButton:hover .icon {
   color: white;
-}
-
-.about__section {
-  margin-bottom: 2em;
-}
-
-.about__section:last-of-type {
-  margin-bottom: 0;
-}
-
-.about__subheading {
-  font-size: 1.4em;
-  margin-bottom: 1.3em;
-  text-transform: uppercase;
-}
-
-.about__content {
-  text-align: left;
-}
-
-.about__creators {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 900px) {
-  .about__creators {
-    gap: 1em;
-    grid-template-columns: 1fr 1fr;
-  }
 }
