@@ -16,7 +16,7 @@ const Information = () => {
       <p className={style.body}>
         {information.body}
       </p>
-      <button onClick={()=>setWarningVisability(false)}>{information.consent1}<br></br>{information.consent2}</button>
+      <button className={style.accept} onClick={()=>setWarningVisability(false)}>{information.consent1}<br></br>{information.consent2}</button>
     </div>
   );
 };
