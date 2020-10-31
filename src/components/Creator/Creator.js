@@ -7,15 +7,15 @@ const Creator = ({ creator }) => {
   return (
     <section className={style.section}>
       <div className={style.wrapper}>
-        <img src={avatar} alt={name} className={style.avatar} />
+        { avatar ? <img src={avatar} alt={name} className={style.avatar} /> : null }
         <div className={style.info}>
           <h4 className={`${style.info__element} ${style.info__name}`}>{name}</h4>
-          <a href={linkedin} className={`${style.info__element} ${style.link}`}>
-            <FaLinkedin className={style.icon}/>Linkedin Profile
-          </a>
-          <a href={github}  className={`${style.info__element} ${style.link}`}>
-            <FaGithub className={style.icon}/>Github Profile
-          </a>
+          { linkedin ? <a href={linkedin} className={`${style.info__element} ${style.link}`}>
+            <FaLinkedin className={style.icon}/>Linkedin
+          </a> : null }
+          { github ? <a href={github}  className={`${style.info__element} ${style.link}`}>
+            <FaGithub className={style.icon}/>Github
+          </a> : null }
         </div>
       </div>
       <p className={style.description}>{description}</p>

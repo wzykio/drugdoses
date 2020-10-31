@@ -17,8 +17,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  margin: auto;
-  margin-top: 44px;
+  margin: 3rem auto 2rem;
   width: 85vw;
   padding: 2rem;
   z-index: 3;
