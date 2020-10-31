@@ -4,6 +4,7 @@ export const lang = {
       text: 'Waga nie może być ujemna!',
     },
     drugsCardiac: {
+      warningCardiac: 'Uwaga! Poniższe dawki TYLKO w przypadkach nagłego zatrzymania krążenia!',
       administer: 'Podaj',
       defibrillation: 'Defibrylacja',
       adrenaline: {
@@ -38,7 +39,7 @@ export const lang = {
         drugName: 'Deksametazon',
         anaphylaxis: 'Anafilaksja',
         asthma: 'Astma',
-        laryngitis: 'Zapalenie krtani:',
+        laryngitis: 'Zapalenie krtani',
       },
       diazepam: {
         drugName: 'Diazepam',
@@ -80,8 +81,8 @@ export const lang = {
       consent2: 'Biorę CAŁKOWITĄ odpowiedzialność za dobór dawek',
     },
     medicalCaseChooseButton: {
-      cardiac: 'Zatrzymanie krążenia',
-      other: 'Leki w innych przypadkach',
+      cardiac: 'Nagłe zatrzymanie krążenia',
+      other: 'W innych przypadkach',
     },
     menu: {
       settings: 'Ustawienia',
@@ -149,6 +150,7 @@ export const lang = {
       text: 'The weight cannot be less the zero!',
     },
     drugsCardiac: {
+      warningCardiac: 'Warning! The doses below are ONLY for sudden cardiac arrest!',
       administer: 'Administer',
       defibrillation: 'Defibrillation',
       adrenaline: {
@@ -185,7 +187,7 @@ export const lang = {
         drugName: 'Dexamethasone',
         anaphylaxis: 'Anaphylaxis: 4 mg - 8mg i.v.',
         asthma: 'Asthma: 4 mg - 8mg i.v.',
-        laryngitis: 'Laryngitis:',
+        laryngitis: 'Laryngitis',
       },
       diazepam: {
         drugName: 'Diazepam',
@@ -224,17 +226,17 @@ export const lang = {
       disclaimer:
         'Treat each case individually. Pharmacology and drugs doses should be verified individually in every case.',
       disclaimer2: 'Despite our best efforts, we cannot guarantee 100% accuracy of dose selection. The application is intended for paramedics who are able to verify the correctness of the doses provided by the Application. Remember that when giving medications, YOU take responsibility for the health and life of the patient.',
-      consent1: 'Got it',
+      consent1: 'I understand',
       consent2: 'I take TOTAL responsibility for dose selection',
     },
     medicalCaseChooseButton: {
-      cardiac: 'Cardiac arrest',
-      other: 'Drugs in other cases',
+      cardiac: 'Sudden cardiac arrest',
+      other: 'Other cases',
     },
     menu: {
       settings: 'Settings',
       legalNote: 'Legal Note',
-      about: 'About',
+      about: 'About us',
       legend: 'Legend',
     },
     menuOptions: {

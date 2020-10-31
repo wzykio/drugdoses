@@ -25,7 +25,13 @@
 }
 
 .info__element {
-  margin-bottom: .75em;
+  margin-bottom: 0;
+}
+
+.description {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 0.5em;
 }
 
 .info__name {
@@ -41,10 +47,9 @@
   color: var(--color-lighter);
 }
 
-.description {
-  text-align: left;
-}
+
 
 .icon {
   margin-right: .5em;
 }
+

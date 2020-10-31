@@ -20,7 +20,10 @@ const Information = () => {
       <p className={style.disclaimer2}>
         {information.disclaimer2}
       </p>
-      <button className={style.accept} onClick={()=>setWarningVisability(false)}>{information.consent1}<br></br>{information.consent2}</button>
+      <button className={style.accept} onClick={()=>{
+        setWarningVisability(false)
+        window.scrollTo({ top: 0 })
+      }}>{information.consent1}<br></br>{information.consent2}</button>
     </div>
   );
 };

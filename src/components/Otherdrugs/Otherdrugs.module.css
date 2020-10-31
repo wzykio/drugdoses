@@ -344,6 +344,10 @@
 }
 .alert {
   color: red;
+  font-weight: bold;
+  background-color: rgb(252, 242, 255);
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 .unvisible {
   display: none;
