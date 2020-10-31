@@ -30,6 +30,7 @@
   position: absolute;
   opacity: 1;
   transition: 0.15s ease;
+  margin-left: -20px;
 }
 
 .button p {
