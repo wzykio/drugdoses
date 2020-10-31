@@ -1,6 +1,6 @@
 .header {
   width: 98vw;
-  background: #0694c1;
+  background: #0A84FF;
   color: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -13,7 +13,6 @@
 .navicon {
   padding: 13px;
   padding-bottom: 8px;
-  background: #0694c1;
   transition: opacity 0.3s ease;
 }
 
@@ -24,7 +23,6 @@
 
 .title {
   padding: 8px;
-  background: #0694c1;
 }
 
 @media only screen and (max-width: 576px) {

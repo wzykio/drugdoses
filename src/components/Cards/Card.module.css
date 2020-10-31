@@ -14,7 +14,7 @@
   position: relative;
   width: 45vw;
   min-height: 25vh;
-  background: #ddcf4f;
+  background: #ffec3d;
   border-radius: 3px;
   margin: 0.5em;
   font-family: Roboto;
@@ -27,8 +27,8 @@
 	align-items: center
 }
 .cardA h3 {
-  line-height: 1em;
-  font-size: 1em;
+  line-height: 1.8em;
+  font-size: 1.5em;
 }
 .cardA p {
   
@@ -40,7 +40,7 @@
 .cardB {
   width: 45vw;
   min-height: 25vh;
-  background: #44a94e;
+  background: #8cff98;
   border-radius: 3px;
   margin: 0.5em;
   font-family: Roboto;
@@ -53,8 +53,8 @@
 	align-items: center
 }
 .cardB h3 {
-  line-height: 1em;
-  font-size: 1em;
+  line-height: 1.8em;
+  font-size: 1.5em;
 }
 .cardB p {
  
@@ -65,7 +65,7 @@
 .cardC {
   width: 45vw;
   min-height: 25vh;
-  background: #33b9e3;
+  background: #56d7ff;
   border-radius: 3px;
   margin: 0.5em;
   font-family: Roboto;
@@ -78,8 +78,8 @@
 	align-items: center
 }
 .cardC h3 {
-  line-height: 1em;
-  font-size: 1em;
+  line-height: 1.8em;
+  font-size: 1.5em;
 }
 .cardC p {
  
@@ -89,7 +89,7 @@
 .cardD {
   width: 45vw;
   min-height: 25vh;
-  background: #f16f6f;
+  background: #ff8787;
   border-radius: 3px;
   margin: 0.5em;
   font-family: Roboto;

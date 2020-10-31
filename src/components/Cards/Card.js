@@ -12,7 +12,7 @@ const Card = () => {
 
   return (
     <div className={viewCard ? style.cardWrapper : style.unvisible}>
-      <div className={style.alert}> Uwaga! Poniższe dawki TYLKO w przypadkach nagłego zatrzymania krążenia!</div>
+      <div className={style.alert}> {drugsCardiac.warningCardiac}</div>
       <div className={style.sec}>
         <div className={style.cardA}>
           <h3>{drugsCardiac.adrenaline.dose} {(weight * 10).toFixed(2)} µg</h3>

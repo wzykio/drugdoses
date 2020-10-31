@@ -4,28 +4,28 @@ const creatorsData = [
   {
     name: 'Bartek',
     github: 'https://github.com/bszczypior',
-    description: 'Project Manager'
+    description: 'Lead Coder'
   },
   {
     name: 'Marysia',
     github: 'https://github.com/maria-mac',
-    description: 'React Programmer'
+    description: 'Coder'
   },
   {
     name: 'Małgosia',
     github: 'https://github.com/ireshka',
-    description: 'React Programmer'
+    description: 'Coder'
   },
   {
     name: 'Marcin',
     github: 'https://github.com/',
-    description: 'React Programmer'
+    description: 'Coder'
   },
   {
     name: 'Kamil',
     linkedin: 'https://www.linkedin.com/in/kamil-wezyk/',
     github: 'https://github.com/Gogolian',
-    description: 'Project Lead. Technical knowledge supplier'
+    description: 'Project Lead'
   },
 ];
 
