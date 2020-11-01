@@ -14,6 +14,7 @@
   background-color: white;
   font-weight: 500;
   /* border-top: 8px solid #0A84FF; */
+  border: 0px;
   box-shadow: inset 0 8px 0 #0A84FF;
   /* border-radius: 4px 4px 0 0; */
   padding: 4vw 8vw 4vw 6vw;
@@ -35,6 +36,7 @@
 
 .button p {
   margin: 0 auto;
+  font-size: 2.8vmin;
 }
 
 .button:hover {
