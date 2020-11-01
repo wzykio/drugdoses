@@ -9,53 +9,45 @@ const Button = () => {
   const [{ langu }, dispatch] = useContext(StoreContext);
   const { medicalCaseChooseButton : button } = lang[langu];
 
-  const [activeEnyDoses, setActiveEnyDoses] = useState(false);
+  const [, setActiveOtherDoses] = useState(false);
   const [activeResuscytationDoses, setresuscytationDoses] = useState(true);
 
-  const selectEnyDoses = () => {
-    setActiveEnyDoses(true);
+  const selectOtherDoses = () => {
+    setActiveOtherDoses(true);
     setresuscytationDoses(false);
     dispatch({ type: 'CHANGE_ACTIVE_ENY' });
   };
   const selectResuscytationDoses = () => {
     setresuscytationDoses(true);
-    setActiveEnyDoses(false);
+    setActiveOtherDoses(false);
     dispatch({ type: 'CHANGE_ACTIVE_RES' });
   };
 
   return (
     <div className={style.wrapper}>
-      <label
+      <button
         // style={{borderRadius: '4px 0 0 4px'}}
         className={classNames({
           [style.button]: true,
           [style.inactive]: !activeResuscytationDoses,
         })}
+        onClick={selectResuscytationDoses}
       >
         <FaCheck />
         <p>{button.cardiac}</p>
-        <input
-          type='radio'
-          checked={activeResuscytationDoses}
-          onChange={selectResuscytationDoses}
-        />
-      </label>
+      </button>
 
-      <label
+      <button
         // style={{borderRadius: '0 4px 4px 0'}}
         className={classNames({
           [style.button]: true,
           [style.inactive]: activeResuscytationDoses,
         })}
+        onClick={selectOtherDoses}
       >
         <FaCheck />
         <p>{button.other}</p>
-        <input
-          type='radio'
-          checked={activeEnyDoses}
-          onChange={selectEnyDoses}
-        />
-      </label>
+      </button>
     </div>
   );
 };

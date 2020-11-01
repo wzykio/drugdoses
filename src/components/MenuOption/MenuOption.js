@@ -7,6 +7,7 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import KgLbs from '../KgLbs/KgLbs.js';
 import LegendContent from '../Legend/Legendcontent';
 import AboutContent from '../AboutContent/AboutContent';
+import LegalContent from '../Legal/LegalContent'
 
 const elements = {
   settings: 'settings',
@@ -35,7 +36,9 @@ const Legal = (langu) => {
   return (
     <div className={style.content}>
       <h2 className={style.heading}>{legal.heading}</h2>
-      <div className={style.body}>Legal content </div>
+      <div className={style.body}>
+        <LegalContent />
+      </div>
     </div>
   );
 };

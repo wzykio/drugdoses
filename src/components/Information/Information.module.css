@@ -42,7 +42,8 @@
 
 .accept {
   font-size: 2.2em;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: 1pt;
   line-height: 1.3;
   background-color: #bf4dc9;
   color: #fff;
@@ -56,7 +57,7 @@
 .accept:hover {
   background-color: #f11717;
   color: #f0f8ff;
-  letter-spacing: 0.7pt;
+  letter-spacing: 1pt;
   font-size: 3em;
   padding: 1.2em 2em 1.4em;
 }
