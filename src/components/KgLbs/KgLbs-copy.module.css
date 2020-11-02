@@ -23,9 +23,9 @@
 .button p {
   position: relative;
   font-family: Muli;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
+  
+  
+  
   line-height: 37px;
   color: white;
 
@@ -48,10 +48,10 @@
 }
 .buttonUnactive p {
   font-family: Muli;
-  font-size: 25px;
+  
 }
 .checkedIcon {
-  font-size: 30px;
+  
   color: white;
 }
 .checkedIconUnactive {

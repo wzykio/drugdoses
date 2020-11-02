@@ -9,30 +9,36 @@ const Card = () => {
   const { drugsCardiac } = lang[langu];
   const weight = state.weight * units;
 
+  let u = units === 1 ? "kg" : "lbs";
 
   return (
     <div className={viewCard ? style.cardWrapper : style.invisible}>
-      <div className={style.alert}> {drugsCardiac.warningCardiac}</div>
+      <h3 className={style.alert}> {drugsCardiac.warningCardiac}</h3>
       <div className={style.sec}>
         <div className={style.cardA}>
-          <h3>{drugsCardiac.adrenaline.dose} {(weight * 10).toFixed(2)} µg</h3>
+          <h4>{drugsCardiac.adrenaline.name}</h4>
+          <p>{drugsCardiac.dose} {(weight * 10).toFixed(2)} µg</p>
           <p>{drugsCardiac.adrenaline.preparation}</p>
-          <h3>{drugsCardiac.administer} {(weight / 10).toFixed(1)} ml</h3>
+          <p>{drugsCardiac.administer} {(weight / 10).toFixed(1)} ml</p>
+          <p>{drugsCardiac.childOfWeight} {state.weight} {u}</p>
         </div>
         <div className={style.cardB}>
-          <h3>{drugsCardiac.amiodarone.dose} {(weight * 5).toFixed(2)} mg</h3>
+          <h4>{drugsCardiac.amiodarone.name}</h4>
+          <p>{drugsCardiac.dose} {(weight * 5).toFixed(2)} mg</p>
           <p>{drugsCardiac.amiodarone.preparation}</p>
-          <h3>{drugsCardiac.administer} {(weight * 1).toFixed(1)} ml</h3>
+          <p>{drugsCardiac.administer} {(weight * 1).toFixed(1)} ml</p>
         </div>
       </div>
       <div className={style.sec}>
         <div className={style.cardC}>
-          <h3>{drugsCardiac.atropine.dose} {weight >= 5 ? ((weight * 2) / 100).toFixed(2) : 0.1} mg</h3>
+          <h4>{drugsCardiac.atropine.name}</h4>
+          <p>{drugsCardiac.dose} {weight >= 5 ? ((weight * 2) / 100).toFixed(2) : 0.1} mg</p>
           <p>{drugsCardiac.atropine.preparation}</p>
-          <h3>{drugsCardiac.administer} {weight >= 5 ? (weight / 10).toFixed(2) : 0.5} ml</h3>
+          <p>{drugsCardiac.administer} {weight >= 5 ? (weight / 10).toFixed(2) : 0.5} ml</p>
         </div>
         <div className={style.cardD}>
-          <h3>{drugsCardiac.defibrillation} - {(weight * 4).toFixed(2)} J</h3>
+          <h4>{drugsCardiac.defibrillation.name}</h4>
+          <p>{drugsCardiac.dose} - {(weight * 4).toFixed(2)} J</p>
         </div>
       </div>
     </div>

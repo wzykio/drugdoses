@@ -9,8 +9,7 @@ const Creator = ({ creator }) => {
       <div className={style.wrapper}>
         { avatar ? <img src={avatar} alt={name} className={style.avatar} /> : null }
         <div className={style.info}>
-          <h4 className={`${style.info__element} ${style.info__name}`}>{name}</h4>
-          <p className={style.description}>{description}</p>
+          <h4 className={`${style.info__element} ${style.info__name}`}>{name}</h4><p className={style.description}>{description}</p>
           { linkedin ? <a href={linkedin} className={`${style.info__element} ${style.link}`}>
             <FaLinkedin className={style.icon}/>Linkedin
           </a> : null }

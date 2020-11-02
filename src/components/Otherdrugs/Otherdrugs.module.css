@@ -7,17 +7,36 @@
   padding: 1em;
 }
 
-.otherdrugsItemAdrenalina {
+.otherdrugsWrapper p {
+  padding: 0.6em 0;
+}
+.otherdrugsWrapper h2 {
+  padding: 0.4em 0 1em 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.otherdrugsItemAdrenalina,
+.otherdrugsItemAdenozyna,
+.otherdrugsItemDeksametazon,
+.otherdrugsItemDiazepam,
+.otherdrugsItemFentanyl,
+.otherdrugsItemFlumazenil,
+.otherdrugsItemHydrocortison,
+.otherdrugsItemMagnez,
+.otherdrugsItemMorfina,
+.otherdrugsItemParacetamol {
   width: 85vw;
-  min-height: 25vh;
-  background-color: #efe26f;
   margin: 0.5em;
   border-radius: 4px;
-  display: grid;
+  display: flex;
   padding: 1.6em 2em 1.7em;
-  /* flex-direction: column;*/
-  box-shadow: 1px 1px 0 #ccc054;
+  flex-direction: column;
   text-align: left;
+}
+
+.otherdrugsItemAdrenalina {
+  display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 75%;
   grid-template-areas:
@@ -26,11 +45,35 @@
   justify-content: center;
   column-gap: 10px;
   row-gap: 5px;
+  background-color: #efe26f;
+  box-shadow: 1px 1px 0 #948a2e;
+  background: linear-gradient(140deg, #efe26f 0%, #e2d457 100%);
 }
+
+.otherdrugsItemDeksametazon {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 60%;
+  grid-template-areas:
+  "top top top"
+  "left middle right";
+  justify-content: flex-start;
+  column-gap: 10px;
+  row-gap: 15px;
+  background-color: #dd8f4f;
+  box-shadow: 1px 1px 0 #6b3911;
+  background: linear-gradient(140deg, #eea061 0%, #bb6d2d 100%);
+}
+
+.otherdrugsItemAdenozyna {
+  background-color: #dd4f4f;
+  box-shadow: 1px 1px 0 #772121;
+  background: linear-gradient(140deg, #f17373 0%, #bd4040 100%);
+}
+
+
 .adrenalina {
   color: #161616;
-  /* font-size: 2.3em;
-  font-weight: 400;*/
   grid-area: top;
   height: 100%;
 }
@@ -56,14 +99,8 @@
   display: border-box;
   padding: 10px;
 }
-.otherdrugsItemAdrenalina h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
+
 .otherdrugsItemAdrenalina p {
-  font-size: larger;
   color: #2a2922;
   line-height: 1.4em;
   margin-bottom: 0.75em;
@@ -71,283 +108,82 @@
   padding: 7px;
   border-radius: 4px;
 }
-.otherdrugsItemAdenozyna {
-  width: 85vw;
-  min-height: 25vh;
-  background-color: #dd4f4f;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
-  box-shadow: 1px 1px 0 #9f3333;
-  text-align: left;
-}
 
-.otherdrugsItemAdenozyna p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemAdenozyna h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
-
-.otherdrugsItemDeksametazon {
-  width: 85vw;
-  min-height: 25vh;
-  background-color: #dd8f4f;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: grid;
-  padding: 1.6em 1em 1.7em;
-  /* flex-direction: column;*/
-  box-shadow: 1px 1px 0 #ab6125;
-  text-align: left;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 60%;
-  grid-template-areas:
-    "top top top"
-    "left middle right";
-  justify-content: center;
-  column-gap: 10px;
-  row-gap: 15px;
-}
 .deksametazon {
   color: #161616;
-  /* font-size: 2.3em;
-  font-weight: 400;*/
   grid-area: top;
   height: 100%;
 }
-.anafilaksja {
-  background-color: #dda171;
-  width: 100%;
-  height: 100%;
-  grid-area: left;
-  color: #2a2922;
-  line-height: 1.4em;
-  border-radius: 4px;
-  display: border-box;
-  padding: 5px;
-}
-.astma {
-  background-color: #dda171;
-  width: 100%;
-  grid-area: middle;
-  color: #2a2922;
-  line-height: 1.4em;
-  border-radius: 4px;
-  display: border-box;
-  padding: 5px;
-}
+
+.anafilaksja,
+.astma,
 .zapaleniekrtani {
   background-color: #dda171;
   width: 100%;
-  grid-area: right;
   color: #2a2922;
   line-height: 1.4em;
   border-radius: 4px;
   display: border-box;
   padding: 5px;
 }
+.anafilaksja {
+  grid-area: left;
+}
+.astma {
+  grid-area: middle;
+}
+.zapaleniekrtani {
+  grid-area: right;
+}
+
 .otherdrugsItemDeksametazon p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
   background-color: #eba770;
   padding: 7px;
   border-radius: 4px;
 }
-.otherdrugsItemDeksametazon h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
 .otherdrugsItemDiazepam {
-  width: 85vw;
-  min-height: 25vh;
   background-color: #54dd4f;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
-  box-shadow: 1px 1px 0 #2d9b29;
-  text-align: left;
+  box-shadow: 1px 1px 0 #1d701a;
+  background: linear-gradient(140deg, #8eee8b 0%, #47a044 100%);
 }
-.otherdrugsItemDiazepam p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemDiazepam h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
-
 .otherdrugsItemFentanyl {
-  width: 80vw;
-  min-height: 25vh;
   background-color: #4f69dd;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
   box-shadow: 1px 1px 0 #ccc054;
-  text-align: left;
 }
-.otherdrugsItemFentanyl p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemFentanyl h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
-
 .otherdrugsItemFlumazenil {
-  width: 85vw;
-  min-height: 25vh;
   background-color: #dd4fae;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
   box-shadow: 1px 1px 0 #903070;
-  text-align: left;
-}
-.otherdrugsItemFlumazenil p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemFlumazenil h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
+  background: linear-gradient(140deg, #f79bd8 0%, #b8368c 100%);
 }
 .otherdrugsItemHydrocortison {
-  width: 85vw;
-  min-height: 25vh;
   background-color: #b2a169;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
   box-shadow: 1px 1px 0 #5c4d1d;
-  text-align: left;
+  background: linear-gradient(140deg, #d6c691 0%, #8b7c4a 100%);
 }
-
-.otherdrugsItemHydrocortison p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemHydrocortison h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
-
 .otherdrugsItemMagnez {
-  width: 85vw;
-  min-height: 25vh;
-  background-color: #0dad6b;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
-  box-shadow: 1px 1px 0 #045332;
-  text-align: left;
-}
-.otherdrugsItemMagnez p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemMagnez h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
+  background-color: #60b1ca;
+  box-shadow: 1px 1px 0 #184350;
+  background: linear-gradient(140deg, #95ddff 0%, #3c89a0 100%);
 }
 .otherdrugsItemMorfina {
-  width: 85vw;
-  min-height: 25vh;
   background-color: #ffa125;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
-  box-shadow: 1px 1px 0 #b37a2e;
-  text-align: left;
-}
-.otherdrugsItemMorfina p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemMorfina h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
+  box-shadow: 1px 1px 0 #7e531c;
+  background: linear-gradient(140deg, #ffb451 0%, #c4750e 100%);
 }
 .otherdrugsItemParacetamol {
-  width: 85vw;
-  min-height: 25vh;
   background-color: #9b9b9b;
-  margin: 0.5em;
-  border-radius: 4px;
-  display: flex;
-  padding: 1.6em 2em 1.7em;
-  flex-direction: column;
   box-shadow: 1px 1px 0 #515151;
-  text-align: left;
+  background: linear-gradient(140deg, #c9c9c9 0%, #808080 100%);
+
 }
-.otherdrugsItemParacetamol p {
-  font-size: larger;
-  color: #2a2922;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-.otherdrugsItemParacetamol h2 {
-  color: #161616;
-  font-size: 2.3em;
-  font-weight: 400;
-  margin-bottom: 0.3em;
-}
+
 .alert {
   color: red;
-  font-weight: bold;
   background-color: rgb(252, 242, 255);
   padding: 8px 16px;
   border-radius: 4px;
+  font-weight: 500;
+  margin-top: 0.6em;
 }
 .invisible {
   display: none;

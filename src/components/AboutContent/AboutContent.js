@@ -12,13 +12,13 @@ const AboutContent = () => {
   return (
     <>
       <article className={style.article}>
-        <h3 className={style.subheading}>{about.subheadingCompany}</h3>
+        <h4 className={style.subheading}>{about.subheadingCompany}</h4>
         <p className={style.content}>
           {about.contentCompany} {about.website}
         </p>
       </article>
       <article className={style.article}>
-        <h3 className={style.subheading}>{about.subheadingTeam}</h3>
+        <h4 className={style.subheading}>{about.subheadingTeam}</h4>
         <div className={style.creators}>
           {creators.map((creator) => (
             <Creator creator={creator} />

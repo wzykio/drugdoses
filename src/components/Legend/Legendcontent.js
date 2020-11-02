@@ -39,19 +39,19 @@ const Legendcontent = () => {
   return (
     <div className={style.LegendWrapper}>
       <div className={style.section}>
-        <h3 className={style.sectiontitle}>{legend.access.heading}</h3>
+        <h4 className={style.sectiontitle}>{legend.access.heading}</h4>
         {access.map((item) => (
           <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>{legend.units.heading}</h3>
+        <h4>{legend.units.heading}</h4>
         {units.map((item) => (
           <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}
       </div>
       <div className={style.section}>
-        <h3>{legend.drugs.heading}</h3>
+        <h4>{legend.drugs.heading}</h4>
         {list.map((item) => (
           <p key={item.name} className={style.sectionelement}>{item.name}</p>
         ))}

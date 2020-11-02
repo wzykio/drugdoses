@@ -7,19 +7,21 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.15rem;
+  
 }
 
 .icon {
   padding: 16px;
   padding-bottom: 10px;
-  font-size: 1.5rem;
 }
 
 .navicon {
   padding: 20px 28px 15px 0;
-  font-size: 1.5rem;
   transition: opacity 0.3s ease;
+}
+
+.navicon svg {
+  font-size: 1.5rem;
 }
 
 .navicon :hover{
@@ -33,19 +35,15 @@
   align-self: center;
 }
 
+.title p{
+  font-size: 1.2rem;
+}
+
 .title svg{
   margin: 0 20px 0 0;
-  font-size: 1.4rem;
-  height:1em;
-  width:1em;
+  font-size: 1.5rem;
+  height:1.5rem;
+  width:1.5rem;
   top: .12em;
   position: relative;
-}
-
-.menuopen{
-  background-color: turquoise;
-}
-
-.menuclosed{
-  background-color:thistle;
 }
