@@ -106,7 +106,8 @@ export const lang = {
       },
       legal: {
         heading: "Nota prawna",
-        content: `Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.`,
+        content: "Pomimo wszelkich starań, nie możemy zagwarantować 100% precyzji doboru dawek. Aplikacja przeznaczona dla ratowników medycznych którzy są w stanie zweryfikować poprawność dawek podaną przez Aplikację.",
+        content2: 'Pamiętaj że podając leki to TY bierzesz odpowiedzialność za zdrowie i życie pacjenta.',
       },
       legend: {
         heading: "Legenda",
@@ -167,17 +168,18 @@ export const lang = {
           "Dilute 1 ampule of adrenaline in 10ml of 0.9% NaCl (normal saline)",
       },
       amiodarone: {
-        dose: "Amiodarone",
+        name: "Amiodarone",
         preparation: "Dilute 100mg of Amiodarone in 20ml of 5% dextrose",
       },
       atropine: {
-        dose: "Atropine",
+        name: "Atropine",
         preparation:
           "Dilute 2 ampules of atropine in 10ml of 0.9% NaCl (normal saline)",
       },
       defibrillation: {
         name: "Defibrillation",
       },
+      childOfWeight: `Dose for a child weighing`
     },
     drugsOther: {
       administer: "Administer",
@@ -262,6 +264,7 @@ export const lang = {
       legal: {
         heading: "Legal note",
         content: `Każdy pacjent to indywidualna sytuacja. Farmakoterapia i jej dawki powinny być weryfikowane indywidualnie pod względem każdego pacjenta.`,
+        content2: ``,
       },
       legend: {
         heading: "Legend",

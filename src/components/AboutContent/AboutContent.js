@@ -14,8 +14,14 @@ const AboutContent = () => {
       <article className={style.article}>
         <h4 className={style.subheading}>{about.subheadingCompany}</h4>
         <p className={style.content}>
-          {about.contentCompany} {about.website}
+          {about.contentCompany}<br/>
+          <a href={about.website}>{about.website}</a>
         </p>
+      </article>
+      <article className={style.article}>
+        <p>Projekt Open Source na licencji MIT</p>
+        <p>Copyright (c) 2020 wzykio</p>
+        <a href="https://github.com/wzykio/drugdoses" rel="noreferrer" target="_blank">https://github.com/wzykio/drugdoses</a>
       </article>
       <article className={style.article}>
         <h4 className={style.subheading}>{about.subheadingTeam}</h4>
