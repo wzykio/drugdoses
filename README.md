@@ -25,3 +25,10 @@ He already made a working demo app, which we are now porting to Reactjs.
 The project is aimed to hit android and iOS devices as well as Desktop and mobile web version.
 
 The project is currently under development.
+
+
+
+Projekt Open Source na licencji MIT
+
+Copyright (c) 2020 wzykio
+https://github.com/wzykio/drugdoses
