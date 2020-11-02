@@ -14,7 +14,8 @@ const AboutContent = () => {
       <article className={style.article}>
         <h4 className={style.subheading}>{about.subheadingCompany}</h4>
         <p className={style.content}>
-          {about.contentCompany} {about.website}
+          {about.contentCompany}<br/>
+          <a href={about.website}>{about.website}</a>
         </p>
       </article>
       <article className={style.article}>

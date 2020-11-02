@@ -2,30 +2,27 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.header {
-  color: #dc143c;
-  
-  padding-top: 5vmin;
-  text-transform: uppercase;
-}
-
-.header2 {
-  color: #dc143c;
-  
-  padding: 1vmin 0vmin;
-}
-
-.disclaimer,
-.disclaimer2 {
-  
-  line-height: 1.7;
-  width: 90%;
-  align-self: center;
-  padding: 5vmin 0;
-}
-
-.disclaimer2{
   color: red;
+  line-height: 1.5em;
 }
+
+.LegalWrapper h1 {
+  padding: 5vmin 0 2vmin 0;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.LegalWrapper h2,
+.LegalWrapper h4,
+.LegalWrapper h3,
+.LegalWrapper p {
+  padding-top: 4vmin;
+  font-weight: 400;
+}
+
+.LegalWrapper p,
+.LegalWrapper h3{
+  color: black;
+}
+
