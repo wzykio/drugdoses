@@ -23,6 +23,7 @@ export const lang = {
       defibrillation: {
         name: "Defibrylacja",
       },
+      childOfWeight: `Dawka dla dziecka o wadze`
     },
     drugsOther: {
       administer: "Podaj",

@@ -44,6 +44,7 @@ h3 {
 .wrapper h4{
   text-align: center;
   font-size: 1.5em;
+  padding: 0.5em 0 1em 0;
 }
 
 input {
@@ -59,4 +60,18 @@ input {
   color: #737b7d;
   min-width: 1.6em;
   max-width: 20vw;
+}
+
+.unitplaceholder{
+  position: absolute;
+  font-size: 1.8em;
+  color: #acacac;
+  margin-top: 2px;
+  margin-left: 2.2em;
+  pointer-events: none;
+}
+
+.measurement{
+  visibility: hidden;
+  position: absolute;
 }

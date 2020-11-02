@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import style from "./Weight.module.css";
 import AlertBox from "./AlertBox/AlertBox";
 import { StoreContext } from "../../states/Store";
@@ -8,6 +8,9 @@ const Weight = () => {
   const [state, dispatch] = useContext(StoreContext);
   const { units, langu } = state;
   const { heading } = lang[langu].weight;
+
+  const measurement = useRef(null)
+  const placeholder = useRef(null)
  
   let u = units === 1 ? "kg" : "lbs";
   let [alertVisible, setAlertVisibility] = useState(false);
@@ -17,6 +20,9 @@ const Weight = () => {
       dispatch({ type: "ZERO" });
       setAlertVisibility(true);
     }
+
+    placeholder.current.style.marginLeft = `${measurement.current.scrollWidth/15 + 0.8}em`
+
   }, [dispatch, state.weight]);
 
   const checkWeight = () => {
@@ -33,7 +39,7 @@ const Weight = () => {
 
   return (
     <div className={style.wrapper}>
-      <h4>{heading}:</h4>
+      <h4>{heading} ({u}):</h4>
       <div className={style.buttons}>
         <button
           className={style.buttonB}
@@ -59,6 +65,8 @@ const Weight = () => {
           onChange={chandleChangeInput}
           type="number"
         ></input>
+        <span ref={placeholder} className={style.unitplaceholder}>{u}</span>
+        <label ref={measurement} className={style.measurement}>{state.weight}</label>
         <button
           className={style.buttonA}
           onClick={() => {

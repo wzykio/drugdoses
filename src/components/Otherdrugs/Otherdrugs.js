@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import style from './Otherdrugs.module.css';
 import { StoreContext } from '../../states/Store';
 import { lang } from '../../states/localization/index';
+import {ChildOfWeight} from '../ChildOfWeight/ChildOfWeight'
 
 const Otherdrugs = () => {
   const [state, ] = useContext(StoreContext);
@@ -30,6 +31,9 @@ const Otherdrugs = () => {
           <br />
           {drugsOther.administer} {(weight / 10).toFixed(2)} ml s.c.{' '}
         </span>
+        <span style={{gridArea: "bottom"}}>
+          <ChildOfWeight />
+        </span>
       </div>
 
       <div className={style.otherdrugsItemAdenozyna}>
@@ -43,6 +47,7 @@ const Otherdrugs = () => {
           {drugsOther.adenosine.dose2} {((weight / 10) * 2).toFixed(2)} mg i.v. -{' '}
           {((weight / 10) * 2).toFixed(2)} ml
         </p>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemDeksametazon}>
@@ -62,6 +67,9 @@ const Otherdrugs = () => {
           <br /> <br />
           {(0.15 * weight).toFixed(2)} mg i.v.
         </span>
+        <span className={style.gridBottom}>
+          <ChildOfWeight />
+        </span>
       </div>
 
       <div className={style.otherdrugsItemDiazepam}>
@@ -77,6 +85,7 @@ const Otherdrugs = () => {
         <div className={style.alert}>
           {drugsOther.diazepam.alert}
         </div>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemFlumazenil}>
@@ -86,6 +95,7 @@ const Otherdrugs = () => {
           {drugsOther.flumazenil.doseDetails}
         </p>
         <p>{drugsOther.flumazenil.administration}</p>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemHydrocortison}>
@@ -97,6 +107,7 @@ const Otherdrugs = () => {
         <p>
           {drugsOther.administer} {weight.toFixed(2)} ml i.v./i.o.
         </p>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemMagnez}>
@@ -108,6 +119,7 @@ const Otherdrugs = () => {
           {drugsOther.magnesium.administration} {((weight * 2) / 10).toFixed(2)}{' '}
           ml i.v/i.o.
         </p>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemMorfina}>
@@ -119,6 +131,7 @@ const Otherdrugs = () => {
         <p>
           {drugsOther.administer} {(weight / 10).toFixed(2)} ml i.v/i.o.
         </p>
+        <ChildOfWeight />
       </div>
 
       <div className={style.otherdrugsItemParacetamol}>
@@ -126,6 +139,7 @@ const Otherdrugs = () => {
         <p>
           {drugsOther.dose} {(weight * 10).toFixed(2)} mg p.r.
         </p>
+        <ChildOfWeight />
       </div>
     </div>
   );

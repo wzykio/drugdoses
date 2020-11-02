@@ -38,7 +38,7 @@ const setInitialSettingValues = (setting) => {
 };
 
 const initialState = {
-  weight: 1,
+  weight: 10,
   inputweight: null,
   showEny: false,
   showCard: true,
