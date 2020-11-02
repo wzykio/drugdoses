@@ -20,6 +20,10 @@
   grid-template-columns: 1fr;
 }
 
+.article p {
+  padding-bottom: 1vmin;
+}
+
 @media (min-width: 900px) {
   .creators {
     gap: 1em;

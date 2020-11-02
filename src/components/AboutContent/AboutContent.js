@@ -19,6 +19,11 @@ const AboutContent = () => {
         </p>
       </article>
       <article className={style.article}>
+        <p>Projekt Open Source na licencji MIT</p>
+        <p>Copyright (c) 2020 wzykio</p>
+        <a href="https://github.com/wzykio/drugdoses" rel="noreferrer" target="_blank">https://github.com/wzykio/drugdoses</a>
+      </article>
+      <article className={style.article}>
         <h4 className={style.subheading}>{about.subheadingTeam}</h4>
         <div className={style.creators}>
           {creators.map((creator) => (
