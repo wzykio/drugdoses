@@ -9,18 +9,6 @@ const Information = () => {
   const [{ langu }] = useContext(StoreContext);
   const { information } = lang[langu];
 
-  let inter;
-
-  let myMouseEnter = () => {
-    inter = setInterval( () => {
-      window.scrollTo(0,1000)
-    }, 5)
-  }
-
-  let myMouseLeave = () => {
-    clearInterval(inter)
-  }
-
   return (
     <div className={warningVisability ? style.information : style.hidden}>
       <h1 className={style.header}>{information.heading}</h1>
@@ -36,10 +24,7 @@ const Information = () => {
         onClick={ () => {
           setWarningVisability(false)
           window.scrollTo({ top: 0 })
-          clearInterval(inter)
         }}
-        onMouseEnter={ myMouseEnter }
-        onMouseLeave={ myMouseLeave }
       >{information.consent1}<br></br>{information.consent2}</button>
     </div>
   );
