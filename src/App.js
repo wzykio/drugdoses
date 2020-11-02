@@ -18,8 +18,8 @@ function App() {
     <Information />
     <Header />
     <MenuOption/>
-    <Button  />
     <Weight/>
+    <Button  />
     <Card/>
     <Otherdrugs/>
     </div>
