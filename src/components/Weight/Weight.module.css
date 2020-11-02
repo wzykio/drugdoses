@@ -1,8 +1,10 @@
 .wrapper {
-  margin: 4vw 4vw 1vw 4vw;
-  width: 92vw;
+  padding: 4vw;
+  width: 98vw;
   display: flex;
   flex-direction: column;
+  background: #202340;
+  color: white;
 }
 
 h3 {
@@ -38,7 +40,7 @@ h3 {
 }
 
 .wrapper button:hover {
-  background: #08629e;
+  background: #a71fa0;
 }
 
 .wrapper h4{
