@@ -30,7 +30,7 @@ const LanguageSwitcher = () => {
   return (
     <>
       <fieldset className={style.wrapper}>
-        <h3 className={style.heading}>{settings.languageChose}</h3>
+        <h4 className={style.heading}>{settings.languageChose}</h4>
         {availableLanguages.map((lang) => {
           const { name } = lang;
           const { shortcut } = lang;

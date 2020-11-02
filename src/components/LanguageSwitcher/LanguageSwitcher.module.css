@@ -1,13 +1,13 @@
 .wrapper {
   border: none;
-  font-size: 1.3em;
+  
   margin: 2em auto 2em;
   max-width: 24vw;
   padding: 1rem;
 }
 
 .heading {
-  font-size: 1.2em;
+  
 }
 
 .wrapper {
@@ -27,7 +27,7 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 1.15em;
+  
   justify-content: flex-start;
   line-height: 1;
   position: relative;
@@ -53,7 +53,7 @@
 
 .radio__input:checked ~ .radio__label {
   color: var(--accent-color);
-  font-weight: bold;
+  
   transition: color .3s;
 }
 

@@ -10,105 +10,55 @@
   display: flex;
   flex-direction: row;
 }
+
+.cardWrapper h4 {
+  padding: 0.4em 0 1em 0;
+  font-size: 1.5rem;
+}
+
+.cardWrapper p {
+  padding: 0.6em 0;
+}
+
+.cardA,
+.cardB,
+.cardC,
+.cardD{
+  width: 45vw;
+  min-height: 25vh;
+  border-radius: 3px;
+  margin: 0.5em;
+  padding: 1.6em 2.4em 1.7em;
+  color: white;
+}
+
 .cardA {
-  position: relative;
-  width: 45vw;
-  min-height: 25vh;
-  background: #ffec3d;
-  border-radius: 3px;
-  margin: 0.5em;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0.4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-	align-items: center
+  background-color: #a5810b;
+  box-shadow: 1px 1px 0 #473702;
+  background: linear-gradient(140deg, #b48d0d 0%, #795e06 100%);
 }
-.cardA h3 {
-  line-height: 1.8em;
-  font-size: 1.5em;
-}
-.cardA p {
-  
-  line-height: 1.3em;
-  font-size: 1.3em;
-  
-  
-}
+
 .cardB {
-  width: 45vw;
-  min-height: 25vh;
-  background: #8cff98;
-  border-radius: 3px;
-  margin: 0.5em;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0.4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-	align-items: center
+  background: #3a8837;
+  box-shadow: 1px 1px 0 #183618;
+  background: linear-gradient(140deg, #459e42 0%, #255f23 100%);
 }
-.cardB h3 {
-  line-height: 1.8em;
-  font-size: 1.5em;
-}
-.cardB p {
- 
-  line-height: 1.3em;
-  font-size: 1.3em;
- 
-}
+
 .cardC {
-  width: 45vw;
-  min-height: 25vh;
-  background: #56d7ff;
-  border-radius: 3px;
-  margin: 0.5em;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0.4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-	align-items: center
+  background: #275561;
+  box-shadow: 1px 1px 0 #0a1d22;
+  background: linear-gradient(140deg, #326c7a 0%, #183b44 100%);
 }
-.cardC h3 {
-  line-height: 1.8em;
-  font-size: 1.5em;
-}
-.cardC p {
- 
-  line-height: 1.3em;
-  font-size: 1.3em;
-}
+
 .cardD {
-  width: 45vw;
-  min-height: 25vh;
-  background: #ff8787;
-  border-radius: 3px;
-  margin: 0.5em;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4em;
+  background: #8d230f;
+  box-shadow: 1px 1px 0 #2e0902;
+  background: linear-gradient(140deg, #b13118 0%, #721907 100%);
 }
-.cardD h3 {
-  line-height: 1.3em;
-  font-size: 1.3em;
-  color: black
-}
+
 .invisible{
   display: none;
 }
-
 
 .alert{
   padding: 1.5vh 2.5vw;
@@ -116,5 +66,4 @@
   border-radius: 5px;
   margin: 2vh 1vw;
   color: red;
-  font-weight: bold;
 }

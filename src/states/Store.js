@@ -60,7 +60,7 @@ function reducer(state, action) {
     case 'MINUS_FIVE':
       return { ...state, weight: state.weight - 5 };
     case 'ZERO':
-      return { ...state, weight: 0 };
+      return { ...state, weight: 1 };
     case 'ADD_HANDLE':
       return { ...state, weight: action.payload };
     case 'CHANGE_ACTIVE_ENY':

@@ -38,7 +38,7 @@
 }
 
 .heading {
-  font-size: 2rem;
+  
   margin: 1rem 0;
   text-align: center;
 }
@@ -65,7 +65,7 @@
 
 .icon {
   color: black;
-  font-size: 1.5rem;
+  
 }
 
 .closeButton:hover .icon {

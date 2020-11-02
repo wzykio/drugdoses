@@ -9,32 +9,31 @@ const Weight = () => {
   const { units, langu } = state;
   const { heading } = lang[langu].weight;
  
-  let u = "";
-  units === 1 ? (u = "kg") : (u = "lbs");
+  let u = units === 1 ? "kg" : "lbs";
   let [alertVisible, setAlertVisibility] = useState(false);
 
   useEffect(() => {
-    if (state.weight < 0) {
+    if (state.weight <= 0) {
       dispatch({ type: "ZERO" });
       setAlertVisibility(true);
     }
   }, [dispatch, state.weight]);
 
   const checkWeight = () => {
-    if (state.weight >= 0) {
+    if (state.weight > 0) {
       setAlertVisibility(false);
     }
   };
 
   const chandleChangeInput = (e) => {
-    e.target.value <= 0
+    e.target.value <= 1
       ? dispatch({ type: "ZERO" })
       : dispatch({ type: "ADD_HANDLE", payload: Number(e.target.value) });
   };
 
   return (
     <div className={style.wrapper}>
-      <h3>{heading}</h3>
+      <h4>{heading}:</h4>
       <div className={style.buttons}>
         <button
           className={style.buttonB}
