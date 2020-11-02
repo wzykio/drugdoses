@@ -38,11 +38,13 @@
 .otherdrugsItemAdrenalina {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 20% 60% 20%;
   grid-template-areas:
     "top top"
-    "left right";
-  justify-content: center;
+    "left right"
+    "bottom bottom";
+  justify-content: flex-start;
+  align-content: center;
   column-gap: 10px;
   row-gap: 5px;
   background-color: #efe26f;
@@ -50,19 +52,26 @@
   background: linear-gradient(140deg, #efe26f 0%, #e2d457 100%);
 }
 
+.gridBottom{
+  grid-area: bottom;
+  padding-bottom: 10px;
+}
+
 .otherdrugsItemDeksametazon {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 60%;
+  grid-template-rows: 20% 60% 20%;
   grid-template-areas:
   "top top top"
-  "left middle right";
+  "left middle right"
+  "bottom bottom bottom";
   justify-content: flex-start;
   column-gap: 10px;
   row-gap: 15px;
   background-color: #dd8f4f;
   box-shadow: 1px 1px 0 #6b3911;
   background: linear-gradient(140deg, #eea061 0%, #bb6d2d 100%);
+  align-content: center;
 }
 
 .otherdrugsItemAdenozyna {
@@ -97,7 +106,6 @@
   line-height: 1.4em;
   border-radius: 4px;
   display: border-box;
-  padding: 10px;
 }
 
 .otherdrugsItemAdrenalina p {

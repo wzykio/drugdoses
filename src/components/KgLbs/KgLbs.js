@@ -6,9 +6,10 @@ import { StoreContext, supportedSettings } from "../../states/Store";
 import { setItemStorage } from '../../helpers/handleStorage';
 
 const KgLbs = () => {
-  const [, dispath] = useContext(StoreContext);
-  const [activelbs, setActivelbs] = useState(false);
-  const [activeKg, setKg] = useState(true);
+  const [store, dispath] = useContext(StoreContext);
+
+  const [activelbs, setActivelbs] = useState(store.units !== 1);
+  const [activeKg, setKg] = useState(store.units === 1);
 
   const selectlbs = () => {
     setActivelbs(true);
