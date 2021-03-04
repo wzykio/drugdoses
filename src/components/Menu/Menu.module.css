@@ -1,6 +1,6 @@
 .menuClosed {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-height: 0;
   opacity: 0;
   pointer-events: none;
@@ -9,7 +9,7 @@
 
 .menuOpened {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background: #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -19,12 +19,12 @@
 
 .menuBlock ul {
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
 }
 
 .listItem {
   position: relative;
-  width: 100vw;
+  width: 100%;
   line-height: 24px;
   /* identical to box height, or 150% */
 
