@@ -24,7 +24,7 @@
   padding: 2rem;
   top: 0;
   left: 0;
-  opacity: 100%;
+  opacity: 1;
   pointer-events: all;
   transition: all 0.1s ease;
 }
