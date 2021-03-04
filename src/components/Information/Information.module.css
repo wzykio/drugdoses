@@ -1,6 +1,12 @@
 .information {
   position: absolute;
   margin: 0;
+  top: 0;
+  bottom: 0;
+  height: 2000px;
+  box-sizing: border-box;
+  max-width: 950px;
+  margin: 0 auto;
   display: flex;
   flex-flow: column;
   z-index: 2;
@@ -8,7 +14,6 @@
   padding: 5vmin;
   min-height: 150vh;
   text-align: center;
-  padding-bottom: 250px;
 }
 
 .hidden {

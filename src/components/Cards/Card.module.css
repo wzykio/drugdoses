@@ -1,5 +1,5 @@
 .cardWrapper {
-  width: 98vw;
+  width: auto;
   position: relative;
   top: 1vh;
   display: flex;
@@ -24,7 +24,7 @@
 .cardB,
 .cardC,
 .cardD{
-  width: 45vw;
+  width: 100%;
   min-height: 25vh;
   border-radius: 3px;
   margin: 0.5em;
@@ -61,9 +61,13 @@
 }
 
 .alert{
-  padding: 1.5vh 2.5vw;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 2vh 2.5vw;
   border: 3px solid red;
   border-radius: 5px;
-  margin: 2vh 1vw;
+  margin: 3vh 0vw;
   color: red;
 }

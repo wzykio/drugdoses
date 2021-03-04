@@ -1,5 +1,5 @@
 .wrapper {
-  width: 98vw;
+  width: auto;
   display: flex;
   align-items: normal;
   justify-content: center;
@@ -19,7 +19,7 @@
   /* border-radius: 4px 4px 0 0; */
   padding: 4vw 8vw 4vw 6vw;
   transition: 0.15s ease;
-  width: 45vw;
+  width: 100%;
   margin-top: 20px;
 }
 

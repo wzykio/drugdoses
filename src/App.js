@@ -14,15 +14,15 @@ function App() {
   
   return (
     <Store>
-    <div className='App'>
-    <Information />
-    <Header />
-    <MenuOption/>
-    <Weight/>
-    <Button  />
-    <Card/>
-    <Otherdrugs/>
-    </div>
+      <div className='App'>
+        <Information />
+        <Header />
+        <MenuOption/>
+        <Weight/>
+        <Button  />
+        <Card/>
+        <Otherdrugs/>
+      </div>
     </Store>
   );
 }

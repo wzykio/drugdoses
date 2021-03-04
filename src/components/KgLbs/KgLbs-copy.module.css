@@ -1,6 +1,6 @@
 .buttonWrapper {
+  width: auto;
   position: relative;
-  width: 98vw;
   top: 21vh;
   display: flex;
   align-items: center;
@@ -22,9 +22,6 @@
 }
 .button p {
   position: relative;
-  font-family: Muli;
-  
-  
   
   line-height: 37px;
   color: white;
@@ -47,7 +44,6 @@
   display: none;
 }
 .buttonUnactive p {
-  font-family: Muli;
   
 }
 .checkedIcon {
