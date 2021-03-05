@@ -19,20 +19,13 @@ const Header = () => {
         <div className={style.title}>
           <p><FaPills></FaPills>{header.top}</p>
         </div>
-        <div className={style.navicon}>
-          {openMenu ? (
-            <IoMdClose 
-              onClick={() => {
-                !showMenuOption && dispatch({ type: "TOGGLE_MENU" })
-              }}
-            />
-          ) : (
-            <GiHamburgerMenu
-              onClick={() => {
-                !showMenuOption && dispatch({ type: "TOGGLE_MENU" })
-              }}
-            />
-          )}
+        <div
+          className={style.navicon}
+          onClick={() => {
+            !showMenuOption && dispatch({ type: "TOGGLE_MENU" })
+          }}
+        >
+          {openMenu ? <IoMdClose /> : <GiHamburgerMenu /> }
         </div>
       </div>
       <Menu/>

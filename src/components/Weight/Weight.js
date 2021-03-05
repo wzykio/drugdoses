@@ -10,7 +10,7 @@ const Weight = () => {
   const { heading } = lang[langu].weight;
 
   const measurement = useRef(null)
-  const placeholder = useRef(null)
+  // const placeholder = useRef(null)
  
   let u = units === 1 ? "kg" : "lbs";
   let [alertVisible, setAlertVisibility] = useState(false);
@@ -21,7 +21,7 @@ const Weight = () => {
       setAlertVisibility(true);
     }
 
-    placeholder.current.style.marginLeft = `${measurement.current.scrollWidth/15 + 0.8}em`
+    // placeholder.current.style.marginLeft = `${measurement.current.scrollWidth/15 + 0.8}em`
 
   }, [dispatch, state.weight]);
 
@@ -65,7 +65,7 @@ const Weight = () => {
           onChange={chandleChangeInput}
           type="number"
         ></input>
-        <span ref={placeholder} className={style.unitplaceholder}>{u}</span>
+        {/* <span ref={placeholder} className={style.unitplaceholder}>{u}</span> */}
         <label ref={measurement} className={style.measurement}>{state.weight}</label>
         <button
           className={style.buttonA}

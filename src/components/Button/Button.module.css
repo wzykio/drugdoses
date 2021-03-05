@@ -15,9 +15,10 @@
   
   /* border-top: 8px solid #0A84FF; */
   border: 0px;
+  border-radius: 0;
   box-shadow: inset 0 5px 0 #0A84FF;
   /* border-radius: 4px 4px 0 0; */
-  padding: 4vw 8vw 4vw 6vw;
+  padding: 4vh 8vw 4vh 6vw;
   transition: 0.15s ease;
   width: 100%;
   margin-top: 20px;
@@ -31,7 +32,7 @@
   position: absolute;
   opacity: 1;
   transition: 0.15s ease;
-  margin-left: -20px;
+  margin-left: -12px;
 }
 
 .button p {

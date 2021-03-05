@@ -7,7 +7,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
 }
 
 .icon {
@@ -17,6 +16,7 @@
 
 .navicon {
   transition: opacity 0.3s ease;
+  padding: 25px 35px;
 }
 
 .navicon svg {
@@ -31,6 +31,7 @@
 .title {
   display: inline-flex;
   align-self: center;
+  padding-left: 30px;
 }
 
 .title p{
